@@ -10,29 +10,27 @@ public class adminDashboard {
     public adminDashboard (){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-//Levent
-    @FindBy (xpath = "test")
-    public WebElement testlelemti01;
-    @FindBy (xpath = "test")
-    public WebElement testlelemti02;
-    @FindBy (xpath = "test")
-    public WebElement testlelemti03;
-    @FindBy (xpath = "test")
-    public WebElement testlelemti04;
-    @FindBy (xpath = "test")
-    public WebElement testlelemti05;
-    @FindBy (xpath = "test")
-    public WebElement testlelemti06;
-    @FindBy (xpath = "test")
-    public WebElement testlelemti07;
-    @FindBy (xpath = "test")
-    public WebElement testlelemti08;
-    @FindBy (xpath = "test")
-    public WebElement testlelemti09032131290;
-    @FindBy (xpath = "test")
-    public WebElement testlelemti1011a12300;
 
-    //Ismail
+
+    //---------------İsmail Kaya---------------\\
+
+    //---------------Levent Seflek---------------\\
+
+    //---------------Merve Nur---------------\\
+
+    //---------------Rana Nur---------------\\
+
+    //---------------Mehmet Muavviz---------------\\
+
+    //---------------Bünyamin Sait---------------\\
+
+    //---------------Mustafa İsmail---------------\\
+
+    //---------------Dilek ---------------\\
+
+    //---------------Fatma demir---------------\\
+
+    //---------------Sarkan Adiguzelov---------------\\
 
 
 }
