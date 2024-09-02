@@ -10,7 +10,7 @@ public class adminDashboard {
     public adminDashboard (){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
+//Levent
     @FindBy (xpath = "test")
     public WebElement testlelemti01;
     @FindBy (xpath = "test")
@@ -31,5 +31,8 @@ public class adminDashboard {
     public WebElement testlelemti09032131290;
     @FindBy (xpath = "test")
     public WebElement testlelemti1011a12300;
+
+    //Ismail
+
 
 }
