@@ -28,8 +28,8 @@ public class adminDashboard {
     @FindBy (xpath = "test")
     public WebElement testlelemti08;
     @FindBy (xpath = "test")
-    public WebElement testlelemti09090;
+    public WebElement testlelemti09032131290;
     @FindBy (xpath = "test")
-    public WebElement testlelemti1010;
+    public WebElement testlelemti1011a12300;
 
 }
