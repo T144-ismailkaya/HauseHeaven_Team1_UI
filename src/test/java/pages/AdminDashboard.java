@@ -5,17 +5,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class adminDashboard {
+public class AdminDashboard {
 
-    public adminDashboard (){
+    public AdminDashboard(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
 
     //---------------İsmail Kaya---------------\\
-
+    @FindBy (xpath = "test02")
+    public WebElement  testelementbuttonuElementi;
     //---------------Levent Seflek---------------\\
-
+    @FindBy (xpath = "test01")
+    public WebElement  seftestelementbuttonuElementi;
     //---------------Merve Nur---------------\\
 
     //---------------Rana Nur---------------\\
@@ -31,6 +33,7 @@ public class adminDashboard {
     //---------------Fatma demir---------------\\
 
     //---------------Sarkan Adiguzelov---------------\\
+
 
 
 }
