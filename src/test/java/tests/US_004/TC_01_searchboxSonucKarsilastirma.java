@@ -1,10 +1,7 @@
 package tests.US_004;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AdminDashboard;
 import pages.HomePage;
 import pages.UserDashboard;
 import utilities.ConfigReader;
@@ -14,7 +11,7 @@ import utilities.TestBaseRapor;
 
 import java.util.List;
 
-public class TC_01 extends TestBaseRapor {
+public class TC_01_searchboxSonucKarsilastirma extends TestBaseRapor {
 
     @Test
     public void TC01searchBoxaramaTesti() {
