@@ -40,10 +40,11 @@ public class Driver {
                     break;
 
                 default:
-
                     ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--disable-search-engine-choice-screen");
+                    driver = new ChromeDriver(options);
                     //options.addArguments("--disable-search-engine-choice-screen");// hoca satir
-                    options.addArguments("--incognito");
+                    //options.addArguments("--incognito");
                     //cozum2 dene gerekekirse
                     //options.addArguments("--disable-autofill-profile-save-prompt");
                     //options.addArguments("--disable-save-password-bubble");
