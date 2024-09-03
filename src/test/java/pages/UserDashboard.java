@@ -5,6 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+public class UserDashboard {
+    public UserDashboard(){ PageFactory.initElements(Driver.getDriver(),this);}
+
+
 import java.awt.*;
 import java.util.List;
 
@@ -15,6 +19,5 @@ public class UserDashboard {
     }
         @FindBy (xpath = "//*[@class='listing-locate']")
         public List<WebElement> sefUsersearchedList;
-
 
 }
