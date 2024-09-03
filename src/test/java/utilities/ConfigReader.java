@@ -8,9 +8,9 @@ public class ConfigReader {
 
     static Properties properties;
 
-    static {
+    static {// static blok herseyden once calisir
 
-        String dosyaYolu= "src/configuration.properties";
+        String dosyaYolu= "configuration.properties";
         try {
 
             FileInputStream fis= new FileInputStream(dosyaYolu);
@@ -20,9 +20,7 @@ public class ConfigReader {
 
         } catch (IOException e) {
             System.out.println("properties dosyasi okunamadi");
-
         }
-
     }
 
     public static String getProperty(String key){
