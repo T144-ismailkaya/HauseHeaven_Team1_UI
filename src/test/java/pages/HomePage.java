@@ -64,8 +64,29 @@ public class HomePage{
     @FindBy (xpath = "//*[@class='js-cookie-consent-agree cookie-consent__agree']")
     public WebElement sefUsercookies;
 
-    @FindBy (xpath = "test")
-    public WebElement aaaelementi;
+
+
+    @FindBy (id = "minprice")
+    public WebElement sefSearchBoxMinPriceDDM;
+
+    @FindBy (id = "maxprice")
+    public WebElement sefSearchBoxMaxPriceDDM;
+
+    @FindBy (id = "ptypes")
+    public WebElement sefSearchBoxPropertyTypeDDM;
+
+    @FindBy (id = "select-bedroom")
+    public WebElement sefSearchBoxBedroomTypeDDM;
+
+
+
+
+
+
+
+
+
+
     //Levent-------
 
 }
