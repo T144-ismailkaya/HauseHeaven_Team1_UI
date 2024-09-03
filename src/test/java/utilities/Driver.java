@@ -41,17 +41,12 @@ public class Driver {
 
                 default:
 
-                    WebDriverManager.chromedriver().setup();
-                    ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--disable-search-engine-choice-screen");
-
                     ChromeOptions options = new ChromeOptions();
                     //options.addArguments("--disable-search-engine-choice-screen");// hoca satir
                     options.addArguments("--incognito");
                     //cozum2 dene gerekekirse
                     //options.addArguments("--disable-autofill-profile-save-prompt");
                     //options.addArguments("--disable-save-password-bubble");
-
                     driver = new ChromeDriver(options);
             }
             driver.manage().window().maximize();
@@ -68,4 +63,5 @@ public class Driver {
         driver.quit();
         driver = null;
     }
+
 }

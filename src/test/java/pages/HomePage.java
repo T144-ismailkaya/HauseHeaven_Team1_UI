@@ -17,13 +17,6 @@ public class HomePage {
     @FindBy (xpath = "//*[@class='ipt-title']")
     public WebElement listingPropertiesYazisi;
 
-public class HomePage{
-
-    public HomePage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-
-    }
-
     // [Hause Heaven] - [Header] Bölümünün elementleri. \\
 
     @FindBy(xpath = "//*[normalize-space(text())='Home']")

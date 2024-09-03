@@ -18,7 +18,7 @@ public class TC_R001 {
         String actualYazi=homePage.listingPropertiesYazisi.getText();
 
         Assert.assertEquals(actualYazi,expectedYazi);
-        Driver.closeDriver();
+        Driver.quitDriver();
 
     }
 }
