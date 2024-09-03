@@ -64,7 +64,8 @@ public class HomePage{
     @FindBy (xpath = "//*[@class='js-cookie-consent-agree cookie-consent__agree']")
     public WebElement sefUsercookies;
 
-
+    @FindBy (xpath = "test")
+    public WebElement aaaelementi;
     //Levent-------
 
 }
