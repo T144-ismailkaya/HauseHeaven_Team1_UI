@@ -1,6 +1,5 @@
 package utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -9,58 +8,64 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
+
 public class Driver {
-    /*
-     JUnit'de WebDriver objesi TestBase'den geliyordu
-     TestNG extends ile baglanma zorunlulugunu ortadan kaldirmak
-     ve testi yazanlara daha fazla kontrol imkani vermek icin
-     TestBase yerine Driver class'inda static 2 method ile
-     driver olusturma ve kapatma islemlerini yapmayi tercih etmistir
-     */
+
     private Driver(){
-        // Bu constructor default constructor ile ayni islevi yapan parametresiz constructor'dir
-        // buna erisimi kontrol edebilecegimiz icin bu constructor'i olusturduk
+        // Driver class'indan obje olusturulmasini engellemek icin
+        // Singleton Pattern kullandik
     }
-    static WebDriver driver; // biz deger atamadigimiz icin Java default olarak null point eder
+
+    // TestNG WebDriver objesini bize dondurecek getDriver() ile WebDriver objesi olusturur
+
+    public static WebDriver driver;
+
     public static WebDriver getDriver(){
-        String browser = ConfigReader.getProperty("browser");
+
         if (driver == null){
-            switch (browser){
-                case "safari" :
-                    WebDriverManager.safaridriver().setup();
-                    driver= new SafariDriver();
+            String secilenBrowser = ConfigReader.getProperty("browser");
+
+            switch (secilenBrowser){
+
+                case "firefox" :
+                    driver = new FirefoxDriver();
                     break;
-                case "firefox":
-                    WebDriverManager.firefoxdriver().setup();
-                    driver= new FirefoxDriver();
-                    break;
+
                 case "edge" :
-                    WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                     break;
-                /*
-                case "headless-chrome" :
-                    ChromeOptions chromeOptions=new ChromeOptions();
-                    chromeOptions.setHeadless(true);
-                    driver=new ChromeDriver(chromeOptions);
+
+                case "safari" :
+                    driver = new SafariDriver();
                     break;
-                 */
+
                 default:
+
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--disable-search-engine-choice-screen");
+
+                    ChromeOptions options = new ChromeOptions();
+                    //options.addArguments("--disable-search-engine-choice-screen");// hoca satir
+                    options.addArguments("--incognito");
+                    //cozum2 dene gerekekirse
+                    //options.addArguments("--disable-autofill-profile-save-prompt");
+                    //options.addArguments("--disable-save-password-bubble");
+
                     driver = new ChromeDriver(options);
             }
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         }
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
         return driver;
     }
-    public static void closeDriver(){
-        if (driver != null){
-            driver.close();
-            driver=null;
-        }
+
+    public static void quitDriver(){
+        driver.quit();
+        driver = null;
     }
 }
