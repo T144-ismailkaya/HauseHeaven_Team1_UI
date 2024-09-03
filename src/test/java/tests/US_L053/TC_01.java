@@ -2,16 +2,19 @@ package tests.US_L053;
 
 import org.testng.annotations.Test;
 import pages.AdminDashboard;
+import utilities.ConfigReader;
+import utilities.Driver;
 
 public class TC_01 {
 
-@Test
+    @Test
+    public void TC01() {
+        AdminDashboard adminDashboard = new AdminDashboard();
+        Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
 
-    public  void TC01 (){
-    AdminDashboard adminDashboard=new AdminDashboard();
-    System.out.println("Konya");
+        System.out.println("Konya");
 
 
-}
+    }
 
 }
