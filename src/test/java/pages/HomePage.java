@@ -9,6 +9,7 @@ public class HomePage{
 
     public HomePage(){
         PageFactory.initElements(Driver.getDriver(),this);
+
     }
 
     // [Hause Heaven] - [Header] Bölümünün elementleri. \\

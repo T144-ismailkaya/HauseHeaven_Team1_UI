@@ -1,15 +1,23 @@
 package tests.US_IK008;
 
 import org.testng.annotations.Test;
+import utilities.ConfigReader;
+import utilities.Driver;
+import utilities.TestBaseRapor;
 
-public class TC_01 {
+public class TC_01 extends TestBaseRapor {
 
     @Test
     public void test01(){
+        extentTest = extentReports.createTest("Anasayfaya testi");
+        Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+        extentTest.pass("Anasayfaya gider");
 
         System.out.println("Hello Konya");
+        extentTest.info("Hello Konya yazıldı");
 
-        System.out.println("ali Topu at at ali at");
+
+
 
     }
 
