@@ -9,13 +9,7 @@ public class HomePage {
     public HomePage (){PageFactory.initElements(Driver.getDriver(),this);}
 
 
-    //---------------Rana Nur---------------\\
 
-    @FindBy(xpath = "//*[@id='navigation']/div[2]/ul[1]/li[2]")
-    public WebElement HomePageListingLink;
-
-    @FindBy (xpath = "//*[@class='ipt-title']")
-    public WebElement listingPropertiesYazisi;
 
     // [Hause Heaven] - [Header] Bölümünün elementleri. \\
 
@@ -93,5 +87,119 @@ public class HomePage {
 
 
     //Levent-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //---------------Rana Nur---------------\\
+
+    @FindBy(xpath = "//*[@id='navigation']/div[2]/ul[1]/li[2]")
+    public WebElement HomePageListingLink;
+
+    @FindBy (xpath = "//*[@class='ipt-title']")
+    public WebElement listingPropertiesYazisi;
+
+    @FindBy (xpath = "//*[@class=\"m-0\"]")
+    public WebElement listingResultsYazisi;
+
 
 }
