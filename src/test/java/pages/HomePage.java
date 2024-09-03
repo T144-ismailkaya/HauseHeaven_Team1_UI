@@ -52,4 +52,20 @@ public class HomePage{
     @FindBy(xpath = "(//*[normalize-space(text())='Login'])[3]")
     public WebElement loginButonu;
 
+
+    //Levent---------/
+
+    @FindBy (xpath = "//*[@id=\"frmhomesearch\"]/div[2]/button")
+    public WebElement  sefUserBodysearchButtonElementi;
+
+    @FindBy (xpath = "//*[@class=\"form-control\"]")
+    public WebElement sefUserSearhforloactionboxElementi;
+
+    @FindBy (xpath = "//*[@class='js-cookie-consent-agree cookie-consent__agree']")
+    public WebElement sefUsercookies;
+
+    @FindBy (xpath = "test")
+    public WebElement aaaelementi;
+    //Levent-------
+
 }
