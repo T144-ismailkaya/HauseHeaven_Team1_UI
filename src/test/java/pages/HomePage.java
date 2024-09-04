@@ -90,8 +90,77 @@ public class HomePage{
     @FindBy (className = "img-footer")
     public  WebElement sefFooterLogo;
 
-    @FindBy (xpath = "col-lg-3 col-md-4")
+    @FindBy (xpath = "//*[@class='col-lg-3 col-md-4']")
     public  WebElement seffooterAddresselementi;
+
+    @FindBy (xpath = "//*[text()='Terms & Conditions']")
+    public  WebElement sefFooterTermsandCondtionsElementi;
+
+    @FindBy (xpath = "//*[text()='All properties']")
+    public  WebElement sefFooterAllPropertiesElementi;
+
+    @FindBy (xpath = "//*[text()='Houses for sale']")
+    public  WebElement sefFooterHouseForSaleElementi;
+
+    @FindBy (xpath = "//*[text()='Houses for rent']")
+    public  WebElement sefFooterHouseForRentElementi;
+
+    @FindBy (xpath = "//*[text()='The Benefits Of Investing In Emerging Real Estate Markets']")
+    public  WebElement sefFooterBenefirInvestingElementi;
+
+    @FindBy (xpath = "//*[text()='A Guide To Negotiating The Best Deal On Your Dream Home']")
+    public  WebElement sefFooterAGuideToNegoElementi;
+
+    @FindBy (xpath = "//*[text()='The Rise Of Sustainable Homes: Building For A Greener Future']")
+    public  WebElement sefFooterRiseOfSustainebaleElementi;
+
+    @FindBy (xpath = "//*[text()='How to Stage Your Home for a Quick and Profitable Sale']")
+    public  WebElement sefFooterHowtoStageElementi;
+
+    @FindBy (xpath = "//*[text()='Investing in Vacation Rental Properties: A Lucrative Opportunity']")
+    public  WebElement sefFooterInvestingVacationElementi;
+
+    @FindBy (xpath = "//*[text()='Get It Now']")
+    public  WebElement sefFooterGoogleAPPelementi;
+
+    @FindBy (xpath = "//*[text()='Now it Available']")
+    public  WebElement sefFooterAppleAPPElementi;
+
+    @FindBy (xpath = "//*[text()='About us']")
+    public  WebElement sefFooterAboutUsElementi;
+
+    @FindBy (xpath = "//span[normalize-space()='Contact us']" )
+    public WebElement sefFooterContactUsElmenti;
+
+    @FindBy (xpath = "//*[@placeholder='Enter your email']")
+    public  WebElement sefFooterSubscribeBox;
+
+    @FindBy (xpath = "(//*[text()='Subscribe'])[2]")
+    public  WebElement getSefFooterSubscribeBoxButtonElementi;
+
+    @FindBy (xpath = "//i[@class='ti-arrow-up']")
+    public  WebElement sefFooterUpArrowElementi;
+
+    @FindBy (className = "ipn-subtitle")
+    public WebElement sefFooterHeaderTitle;
+
+    @FindBy (xpath = "//*[@title=\"Facebook\"]")
+    public  WebElement getSefFooterFacebookBoxElementi;
+
+    @FindBy (xpath = "//*[@title='Twitter']")
+    public  WebElement getSefTwitterBoxButtonElementi;
+
+    @FindBy (xpath = "//*[@title='Instagram']")
+    public  WebElement getSefFooterInstagramButtonElementi;
+
+    @FindBy (xpath = "//*[@title='Linkedin']")
+    public  WebElement getSefFooterLinkedinButtonElementi;
+
+    @FindBy (xpath = "//*[@title='Pinterest']")
+    public  WebElement getSefFooterPintestButtonElementi;
+
+
+
 
     //Levent Son-------/
 
