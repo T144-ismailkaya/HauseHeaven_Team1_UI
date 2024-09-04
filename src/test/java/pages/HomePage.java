@@ -5,11 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class HomePage {
-    public HomePage (){PageFactory.initElements(Driver.getDriver(),this);}
+public class HomePage{
 
+    public HomePage(){
+        PageFactory.initElements(Driver.getDriver(),this);
 
-
+    }
 
     // [Hause Heaven] - [Header] Bölümünün elementleri. \\
 
@@ -63,29 +64,8 @@ public class HomePage {
     @FindBy (xpath = "//*[@class='js-cookie-consent-agree cookie-consent__agree']")
     public WebElement sefUsercookies;
 
-
-
-    @FindBy (id = "minprice")
-    public WebElement sefSearchBoxMinPriceDDM;
-
-    @FindBy (id = "maxprice")
-    public WebElement sefSearchBoxMaxPriceDDM;
-
-    @FindBy (id = "ptypes")
-    public WebElement sefSearchBoxPropertyTypeDDM;
-
-    @FindBy (id = "select-bedroom")
-    public WebElement sefSearchBoxBedroomTypeDDM;
-
-
-
-
-
-
-
-
-
-
+    @FindBy (xpath = "test")
+    public WebElement aaaelementi;
     //Levent-------
 
 
@@ -190,16 +170,198 @@ public class HomePage {
 
 
 
-    //---------------Rana Nur---------------\\
 
-    @FindBy(xpath = "//*[@id='navigation']/div[2]/ul[1]/li[2]")
-    public WebElement HomePageListingLink;
 
-    @FindBy (xpath = "//*[@class='ipt-title']")
-    public WebElement listingPropertiesYazisi;
 
-    @FindBy (xpath = "//*[@class=\"m-0\"]")
-    public WebElement listingResultsYazisi;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // mervenur --------------
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement contactnamekutusuElementi;
+
+    @FindBy(xpath = "(//input[@name='email'])[1]")
+    public  WebElement contactemailkutusElementi;
+
+    @FindBy(xpath = "//input[@name='subject']")
+    public WebElement contactsubjectkutusuElementi;
+
+    @FindBy(xpath = "//input[@name='phone']")
+    public WebElement contactphonekutusuElementi;
+
+    @FindBy(xpath = "//textarea[@name='content']")
+    public WebElement contactmesajkutusuElementi;
+
+    @FindBy(xpath = "(//button[@type='submit'])[1]")
+    public WebElement contactsendmeesagebutonu;
+
+    @FindBy(xpath = "//i[@class='lni-facebook']")
+    public WebElement listingsayfasiilanfacebookElementi;
+
+    @FindBy(xpath = "//i[@class='lni-twitter']")
+    public WebElement listingsayfasiilantwitterElementi;
+
+    @FindBy(xpath = "//i[@class='lni-linkedin']")
+    public WebElement listingsayfasiilanlinkedinElementi;
+
+    @FindBy(xpath = "//textarea[@name='comment']")
+    public WebElement listingmesajkutusuElementi;
+
+    @FindBy(xpath = "(//button[@type='submit'])[1]")
+    public WebElement listingmesajkutususubmitbutonu;
+
+    @FindBy (xpath ="//span[@class='title']")
+    public WebElement admintestimonialselementi;
+
+    @FindBy(xpath = "(//button[@value='apply'])[1]")
+    public WebElement admintestimonialssavebutonu;
+
+    @FindBy(xpath = "(//button[@value='save'])[1]")
+    public WebElement admintestimonialssaveexitbutonu;
+
+    @FindBy(xpath = "//span[@data-action='create']")
+    public WebElement admintestimonialscreatebutonu;
+
+    @FindBy(xpath = "//button[@data-result='content']")
+    public WebElement admintestimonialscreateshowhidebutonu;
+
+    @FindBy(xpath = "//input[@placeholder='Name']")
+    public WebElement admintestimonialscreatenamekutusu;
+
+    @FindBy(xpath = "//input[@placeholder='Position/Company']")
+    public WebElement admintestimonialscreatepositionkutusu;
+
+    @FindBy(xpath = "//div[@role='textbox']")
+    public WebElement admintestimonialscreatemesajkutusu;
+
+    @FindBy(xpath = "//input[@id='name']")
+    public WebElement listingconsultsnamekutusu;
+
+    @FindBy (xpath = "//input[@name='phone']")
+    public WebElement listingconsultsphonekutusu;
+
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement listingconsultsemailkutusu;
+
+    @FindBy(xpath = "//textarea[@name='content']")
+    public WebElement listingconsultsmesajkutusu;
+
+    @FindBy(xpath = "(//button[@type='submit'])[2]")
+    public WebElement listingconsultssendmessagebutonu;
+
+    @FindBy(xpath = "//input[@class='form-control']")
+    public WebElement adminloginemailkutusu;
+
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement adminloginpasswordkutusu;
+
+    @FindBy(xpath = "//span[@class='signin']")
+    public WebElement adminloginsigninbutonu;
 
 }
