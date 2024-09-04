@@ -101,9 +101,39 @@ public class HomePage{
 
     //Mustafa İsmail---/
 
+    @FindBy (xpath = "//*[@class=\"img-fluid mx-auto\"]")
+    public WebElement agentsPhotoElementList;
+
+    @FindBy (xpath = "//div/ul/li/strong[text()=\"Phone:\"]")
+    public WebElement agentsPhoneNumberTextsList;
+
+    @FindBy (xpath = "//div/ul/li/strong[text()=\"Email:\"]")
+    public WebElement agentsEmailTextsList;
+
+    @FindBy (xpath = "//*[@class=\"ipt-title\"]")
+    public WebElement agentDetailTitle;
+
+    @FindBy (xpath = "//*[@class=\"prt-view\"]")
+    public List <WebElement> agentViewButonuList;
+
     //Mustafa İsmail Son/
 
     //Rana Nur---------/
+
+    @FindBy(xpath = "//*[@id='navigation']/div[2]/ul[1]/li[2]")
+    public WebElement HomePageListingLink;
+
+    @FindBy (xpath = "//*[@class='ipt-title']")
+    public WebElement listingPropertiesYazisi;
+
+    @FindBy (xpath = "//*[@class=\"m-0\"]")
+    public WebElement listingResultsYazisi;
+
+    @FindBy (xpath = "(//*[@class='page-link'])[4]")
+    public WebElement listingPageDigerSayfayaGecmeButonu;
+
+    @FindBy (xpath = "(//*[@class='prt-link-detail'])[5]")
+    public WebElement listingUcuncuSayfaIlanYaziElementi;
 
     //Rana Nur Son-----/
 
