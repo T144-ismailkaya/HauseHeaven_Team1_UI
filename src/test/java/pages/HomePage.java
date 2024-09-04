@@ -113,6 +113,33 @@ public class HomePage{
 
     //Fatma (FDM)------/
 
+    @FindBy (xpath = "//*[@class='image-cover hero-banner']")
+    public WebElement buyukResim;
+
+    @FindBy (xpath = "//*[@class='hero-search']")
+    public WebElement FindAccessibleHomesToRentFormu;
+
+    @FindBy (xpath = "//div[@class='input-with-icon']")
+    public WebElement formSearchForALocation;
+
+    @FindBy (xpath = "(//*[@class='select2-selection select2-selection--single'])[1]")
+    public WebElement formMinPrice;
+
+    @FindBy (xpath = "(//*[@class='select2-selection select2-selection--single'])[2]")
+    public WebElement formMaxPrice;
+
+    @FindBy (xpath = "(//*[@class='select2-selection select2-selection--single'])[3]")
+    public WebElement formPropertyType;
+
+    @FindBy (xpath = "(//*[@class='select2-selection select2-selection--single'])[4]")
+    public WebElement formBedRooms ;
+
+    @FindBy (xpath = "(//*[@class='select2-selection select2-selection--single'])[5]")
+    public WebElement formPropertyLocation;
+
+    @FindBy (xpath = "//button[normalize-space()='Search Result']")
+    public WebElement formSearchResult;
+
     //Fatma (FDM) Son--/
 
     //Mehmet Muavviz---/
