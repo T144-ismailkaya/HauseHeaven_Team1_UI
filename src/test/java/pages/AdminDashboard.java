@@ -29,31 +29,31 @@ public class AdminDashboard {
     @FindBy(xpath = "//*[normalize-space(text())='Real Estate']")
     public WebElement realEstateButonu;
 
-    @FindBy(xpath = "//*[normalize-space(text())='Properties']")
+    @FindBy(id = "cms-plugins-property")
     public WebElement propertiesButonu;
 
-    @FindBy(xpath = "//*[normalize-space(text())='Projects']")
+    @FindBy(id = "cms-plugins-project")
     public WebElement projectsButonu;
 
-    @FindBy(xpath = "//*[normalize-space(text())='Features']")
+    @FindBy(id = "cms-plugins-re-feature")
     public WebElement featuresButonu;
 
-    @FindBy(xpath = "//*[normalize-space(text())='Facilities']")
+    @FindBy(id = "cms-plugins-facility")
     public WebElement facilitiesButonu;
 
-    @FindBy(xpath = "//*[normalize-space(text())='Investors']")
+    @FindBy(id = "cms-plugins-investor")
     public WebElement investorsButonu;
 
-    @FindBy(xpath = "(//*[normalize-space(text())='Categories'])[2]")
+    @FindBy(id = "cms-plugins-real-estate-category")
     public WebElement categoriesButonu;
 
-    @FindBy(xpath = "//*[normalize-space(text())='Types']")
+    @FindBy(id = "cms-plugins-real-estate-type")
     public WebElement typesButonu;
 
-    @FindBy(xpath = "//*[normalize-space(text())='Reviews']")
+    @FindBy(id = "cms-real-estate-review")
     public WebElement reviewsButonu;
 
-    @FindBy(xpath = "//*[normalize-space(text())='Settings']")
+    @FindBy(id = "cms-plugins-real-estate-settings")
     public WebElement settingsButonu;
 
     @FindBy(xpath = "(//*[@class='breadcrumb-item active'])[2]")
