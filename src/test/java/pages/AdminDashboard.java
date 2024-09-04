@@ -11,27 +11,89 @@ public class AdminDashboard {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    // [Hause Heaven Admin] - [Login fonksiyonu] Bölümünün elementleri
+
+    @FindBy(xpath = "//*[@name='username']")
+    public WebElement usernameTextbox;
+
+    @FindBy(xpath = "//*[@name='password']")
+    public WebElement passwordAdminTextbox;
+
+    @FindBy(className = "signin")
+    public WebElement signInButonu;
+
+    @FindBy(xpath = "(//*[@class='breadcrumb-item active'])[1]")
+    public WebElement settingsSayfaDogrulama;
 
     //---------------İsmail Kaya---------------\\
-    @FindBy (xpath = "test02")
-    public WebElement  testelementbuttonuElementi;
+    @FindBy(xpath = "//*[normalize-space(text())='Real Estate']")
+    public WebElement realEstateButonu;
+
+    @FindBy(id = "cms-plugins-property")
+    public WebElement propertiesButonu;
+
+    @FindBy(id = "cms-plugins-project")
+    public WebElement projectsButonu;
+
+    @FindBy(id = "cms-plugins-re-feature")
+    public WebElement featuresButonu;
+
+    @FindBy(id = "cms-plugins-facility")
+    public WebElement facilitiesButonu;
+
+    @FindBy(id = "cms-plugins-investor")
+    public WebElement investorsButonu;
+
+    @FindBy(id = "cms-plugins-real-estate-category")
+    public WebElement categoriesButonu;
+
+    @FindBy(id = "cms-plugins-real-estate-type")
+    public WebElement typesButonu;
+
+    @FindBy(id = "cms-real-estate-review")
+    public WebElement reviewsButonu;
+
+    @FindBy(id = "cms-plugins-real-estate-settings")
+    public WebElement settingsButonu;
+
+    @FindBy(xpath = "(//*[@class='breadcrumb-item active'])[2]")
+    public WebElement sayfaDogrulama;
+
+    //-------------İsmail Kaya Son--------------\\
+
     //---------------Levent Seflek---------------\\
+
     @FindBy (xpath = "test01")
     public WebElement  seftestelementbuttonuElementi;
-    //---------------Merve Nur---------------\\
+
+    //---------------Levent Seflek Son------------\\
+
+    //---------------Dilek---------------\\
+
+    //---------------Dilek Son---------------\\
+
+    //---------------Mustafa İsmail--------------\\
+
+    //---------------Mustafa İsmail Son---------------\\
 
     //---------------Rana Nur---------------\\
 
+    //---------------Rana Nur Son---------------\\
+
+    //---------------Bünyamin---------------\\
+
+    //---------------Bünyamin Son---------------\\
+
+    //---------------Fatma (FDM)---------------\\
+
+    //---------------Fatma (FDM) Son---------------\\
+
     //---------------Mehmet Muavviz---------------\\
 
-    //---------------Bünyamin Sait---------------\\
+    //---------------Mehmet Muavviz Son---------------\\
 
-    //---------------Mustafa İsmail---------------\\
+    //---------------Merve Nur---------------\\
 
-    //---------------Dilek ---------------\\
-
-    //---------------Fatma demir---------------\\
-
-    //---------------Sarkan Adiguzelov---------------\\
+    //---------------Merve Nur Son---------------\\
 
 }

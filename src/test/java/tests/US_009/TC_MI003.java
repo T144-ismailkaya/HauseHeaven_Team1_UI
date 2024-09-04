@@ -1,4 +1,4 @@
-package tests.US_MI009;
+package tests.US_009;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

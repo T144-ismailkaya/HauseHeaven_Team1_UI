@@ -1,4 +1,4 @@
-package tests.US_MI009;
+package tests.US_009;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
