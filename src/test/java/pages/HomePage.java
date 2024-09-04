@@ -90,7 +90,7 @@ public class HomePage{
     @FindBy (className = "img-footer")
     public  WebElement sefFooterLogo;
 
-    @FindBy (className = "col-lg-3 col-md-4")
+    @FindBy (xpath = "col-lg-3 col-md-4")
     public  WebElement seffooterAddresselementi;
 
     //Levent Son-------/
