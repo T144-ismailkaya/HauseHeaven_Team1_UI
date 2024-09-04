@@ -1,4 +1,4 @@
-package tests.US_IK008;
+package tests.US_008;
 
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
