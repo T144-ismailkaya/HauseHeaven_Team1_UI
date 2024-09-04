@@ -48,7 +48,7 @@ public class Driver {
                     //cozum2 dene gerekekirse
                     //options.addArguments("--disable-autofill-profile-save-prompt");
                     //options.addArguments("--disable-save-password-bubble");
-                    driver = new ChromeDriver(options);
+                    //driver = new ChromeDriver(options);
             }
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
