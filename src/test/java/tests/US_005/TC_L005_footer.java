@@ -4,13 +4,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.UserDashboard;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
+import utilities.*;
 
 import java.util.List;
 
-public class TC_L005_footer {
+public class TC_L005_footer  {
     @Test
     public void TC_L005footerTest(){
 
