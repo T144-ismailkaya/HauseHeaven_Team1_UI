@@ -6,23 +6,30 @@ import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
-public class TC_R003 {
+public class TC_R003 extends TestBaseRapor {
     @Test
     public void Test01() throws InterruptedException {
+        extentTest=extentReports.createTest("Listing sayfasindaki mulklerin bilgilerinin dogrulanmasi testi");
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+        extentTest.pass("Tarayici acildi ve Hause Heaven sitesine gidildi.");
 
         HomePage homePage = new HomePage();
         homePage.HomePageListingLink.click();
+        extentTest.pass("Headerdaki listing linkine tiklandi.");
 
         ReusableMethods.hover(homePage.listingPageDigerSayfayaGecmeButonu);
         homePage.listingPageDigerSayfayaGecmeButonu.click();
+        extentTest.pass("Diger sayfaya gecmek icin, sayfanin altina scroll yapildi ve diger sayfaya gecildi.");
 
         ReusableMethods.hover(homePage.listingUcuncuSayfaIlanYaziElementi);
-        homePage.listingUcuncuSayfaIlanYaziElementi.isDisplayed();
+        Assert.assertTrue(homePage.listingUcuncuSayfaIlanYaziElementi.isDisplayed());
+        extentTest.pass("3. sayfada bir ilanda, ilanin yazi elementinin olup olmadigi kontrol edildi.");
 
 
         Driver.quitDriver();
+        extentTest.pass("Ziyaretci browseri kapatir.");
 
 
     }
