@@ -10,7 +10,8 @@ import utilities.TestBaseRapor;
 public class TC_R001 extends TestBaseRapor {
     @Test
     public void Test01(){
-        extentTest=extentReports.createTest("Home page Listing linkininin calistigina dair test");
+        extentTest=extentReports.createTest
+                ("Home page Listing linkininin calistigina dair test");
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
         extentTest.pass("Tarayici acildi ve Hause Heaven sitesine gidildi.");
         HomePage homePage=new HomePage();
