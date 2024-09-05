@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
+import org.testng.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,6 +46,12 @@ public class ReusableMethods {
             }
         }
         Driver.getDriver().switchTo().window(origin);
+    }
+
+    //========Url Karşılaştırma=====//
+    public static void erisimTesti(String expectedUrl){
+        String actualUrl = Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(actualUrl,expectedUrl);
     }
 
 
