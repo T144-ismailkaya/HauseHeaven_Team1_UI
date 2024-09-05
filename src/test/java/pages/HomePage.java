@@ -159,6 +159,49 @@ public class HomePage{
     @FindBy (xpath = "//*[@id='select2-city_id-results']")
     public WebElement listingSayfasiCitySearchResult;
 
+    @FindBy (xpath = "(//*[@class='prt-link-detail'])[1]")
+    public WebElement listingSayfasiBakuMulku;
+
+    @FindBy (xpath = "//*[@id='select2-sort_by-container']")
+    public WebElement listingSayfasiSortButonu;
+
+    @FindBy (xpath = "//*[@id='select2-sort_by-result-2uod-date_asc']")
+    public WebElement sortOldest;
+
+    @FindBy (xpath = "//*[@class='select2-search__field']")
+    public WebElement sortButonu;
+
+    @FindBy (xpath = "//*[@class='select2-selection__clear']")
+    public WebElement sortSiralamaSilme;
+
+    @FindBy (xpath = "//*[@id='sort_by']")
+    public WebElement sortSelect;
+
+    @FindBy (xpath = "//*[@class='btn btn btn-theme-light-2 rounded full-width mt-3']")
+    public WebElement findNewHomeButonu;
+
+    @FindBy (xpath = "//*[@class='m-0']")
+    public WebElement listingde0ResultYazisi;
+
+    @FindBy (xpath = "(//*[@class='page-link'])[3]")
+    public WebElement sayfaDegistirmeButonu2;
+
+    @FindBy (xpath = "(//*[@class='page-link'])[4]")
+    public WebElement sayfaDegistirmeButonu3;
+
+    @FindBy (xpath = "(//*[@class='page-link'])[5]")
+    public WebElement sayfaDegistirmeButonu4;
+
+    @FindBy (xpath = "(//*[@class='page-link'])[6]")
+    public WebElement sayfaDegistirmeButonuSagaOk;
+
+    @FindBy (xpath = "(//*[@class='page-link'])[1]")
+    public WebElement sayfaDegistirmeButonuSolaOk;
+
+
+
+
+
 
     //Rana Nur Son-----/
 
