@@ -3,29 +3,40 @@ package tests.US_005;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
-import pages.UserDashboard;
-import utilities.*;
+import utilities.ConfigReader;
+import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.List;
 
-public class TC_L005_footer  {
-    @Test
-    public void TC_L005footerTest(){
+public class TC_L013footerBenfitInvesting {
 
-        UserDashboard userDashboard=new UserDashboard();
+    @Test
+    public void TC013() {
+
         HomePage homePage=new HomePage();
 
         //Ziyaretci hausehaen Url'ine giris saglar
-        Driver.getDriver().get("https://qa.hauseheaven.com/");
-       // Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+
         //Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar
         ReusableMethods.hover(homePage.SefFooterElementi);
         homePage.sefUsercookies.click();
+        //Ziyaretci footer bolumunde yer alan "Benefit of Investing" tab'ina tiklar
+        homePage.sefFooterBenefirInvestingElementi.click();
+        ReusableMethods.getFullScreenshot(Driver.getDriver());
+
+        //Ziyaretci ayni sekmede "Benefit of Investing" sayfasinin acildigini kontrol eder
+        int winHandleTimes = 1;
+        Assert.assertEquals(Driver.getDriver().getWindowHandles().size(), winHandleTimes);
+
+        //Ziyaretci "Benefit of Investing" sayfasinda asagiya footer bolumune scroll yapar
+        ReusableMethods.hover(homePage.SefFooterElementi);
         ReusableMethods.wait(2);
-        //Ziyaretci test object de bahsedilen ogelerin footer da ust basliklarin ve alt dizinlinlerin footer icinde goruntulendigini test eder.
-        List <String> footerAltUstDizinList=ReusableMethods.getStringList(homePage.sefFooterGenelList);
+        //Ziyaretci guideline da verilen footer ogelerinin "Benefit of Investing"sayfasinin altinda yer aldigini  kontrol eder
+        List<String> footerAltUstDizinList = ReusableMethods.getStringList(homePage.sefFooterGenelList);
         System.out.println(footerAltUstDizinList);
-        String expetedFooterElements="[4655 Wild Indigo St Houston Tx 77027-7080 Usa\n" +
+        String expetedFooterElements = "[4655 Wild Indigo St Houston Tx 77027-7080 Usa\n" +
                 "+1 246-345-0695\n" +
                 "info@hauseheaven.com, About\n" +
                 "About us\n" +
@@ -45,10 +56,18 @@ public class TC_L005_footer  {
                 "Now it Available]";
         for (String eachelements : footerAltUstDizinList) {
             Assert.assertTrue(expetedFooterElements.contains(eachelements));
-
         }
-        //Ziyaretci acilan  tarayici kapatir
+        //Ziyaretci halen  "Benefit of Investing sayfasinda oldgunu dogrular
+
+        String expectedUrl="https://hauseheaven.com/news/benefit-of-investing";
+        String actualUrl=Driver.getDriver().getCurrentUrl();
+
+        Assert.assertEquals(actualUrl,expectedUrl);
+
+        //Ziyratci tarayiciyi kapatir
+
         Driver.quitDriver();
 
     }
 }
+

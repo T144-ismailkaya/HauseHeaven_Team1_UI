@@ -7,7 +7,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class TC_L006_footerAdress {
+public class TC_L006_footerAdress  {
 
     @Test
     public void Test06(){

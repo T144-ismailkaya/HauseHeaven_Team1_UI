@@ -3,29 +3,36 @@ package tests.US_005;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
-import pages.UserDashboard;
-import utilities.*;
+import utilities.ConfigReader;
+import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.List;
 
-public class TC_L005_footer  {
+public class TC_L010footerAllproperties {
+
     @Test
-    public void TC_L005footerTest(){
+    public void TC010 (){
 
-        UserDashboard userDashboard=new UserDashboard();
         HomePage homePage=new HomePage();
-
         //Ziyaretci hausehaen Url'ine giris saglar
-        Driver.getDriver().get("https://qa.hauseheaven.com/");
-       // Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+        Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+
         //Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar
         ReusableMethods.hover(homePage.SefFooterElementi);
         homePage.sefUsercookies.click();
+        //Ziyaretci footer bolumunde yer alan "All Properties " tab'ina tiklar
+       homePage.sefFooterAllPropertiesElementi.click();
+        //Ziyaretci ayni sekmede "All Properties " sayfasinin acildigini kontrol eder
+        int winHandleTimes = 1;
+        Assert.assertEquals(Driver.getDriver().getWindowHandles().size(), winHandleTimes);
+        //Ziyaretci "All Properties " sayfasinda asagiya footer bolumune scroll yapar
+        ReusableMethods.hover(homePage.SefFooterElementi);
         ReusableMethods.wait(2);
-        //Ziyaretci test object de bahsedilen ogelerin footer da ust basliklarin ve alt dizinlinlerin footer icinde goruntulendigini test eder.
-        List <String> footerAltUstDizinList=ReusableMethods.getStringList(homePage.sefFooterGenelList);
+        //Ziyaretci guideline da verilen footer ogelerinin "All Properties "sayfasinin altinda yer aldigini  kontrol eder
+        List<String> footerAltUstDizinList = ReusableMethods.getStringList(homePage.sefFooterGenelList);
         System.out.println(footerAltUstDizinList);
-        String expetedFooterElements="[4655 Wild Indigo St Houston Tx 77027-7080 Usa\n" +
+        String expetedFooterElements = "[4655 Wild Indigo St Houston Tx 77027-7080 Usa\n" +
                 "+1 246-345-0695\n" +
                 "info@hauseheaven.com, About\n" +
                 "About us\n" +
@@ -45,10 +52,15 @@ public class TC_L005_footer  {
                 "Now it Available]";
         for (String eachelements : footerAltUstDizinList) {
             Assert.assertTrue(expetedFooterElements.contains(eachelements));
-
         }
-        //Ziyaretci acilan  tarayici kapatir
-        Driver.quitDriver();
+        //Ziyaretci halen  "All Properties  sayfasinda oldgunu dogrular
+        String expectedUrl="https://qa.hauseheaven.com/properties";
+        String actualUrl=Driver.getDriver().getCurrentUrl();
 
+        Assert.assertEquals(actualUrl,expectedUrl);
+
+        //Ziyratci tarayiciyi kapatir
+
+        Driver.quitDriver();
     }
 }
