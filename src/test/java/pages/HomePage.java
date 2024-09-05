@@ -104,6 +104,12 @@ public class HomePage{
     @FindBy (xpath = "//*[@class=\"img-fluid mx-auto\"]")
     public WebElement agentsPhotoElementList;
 
+    @FindBy (xpath = "//div[@class=\"col-lg-4 col-md-6 col-sm-12\"]")
+    public WebElement agentsPageAllAgentsList;
+
+    @FindBy (xpath = "//div[@class=\"fr-grid-footer\"]")
+    public WebElement agentsPropertiesTextsList;
+
     @FindBy (xpath = "//div/ul/li/strong[text()=\"Phone:\"]")
     public WebElement agentsPhoneNumberTextsList;
 
