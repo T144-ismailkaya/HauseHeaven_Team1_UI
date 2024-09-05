@@ -202,6 +202,11 @@ public class HomePage{
     @FindBy(xpath = "//i[@class='lni-facebook']")
     public WebElement listingsayfasiilanfacebookElementi;
 
+    @FindBy(xpath = "//*[@id=\"ismain-homes\"]/div/div[2]/section/div/div[1]/div/div/h2")
+    public WebElement listinglinkisayfası;
+
+
+
     @FindBy(xpath = "//i[@class='lni-twitter']")
     public WebElement listingsayfasiilantwitterElementi;
 
@@ -273,6 +278,18 @@ public class HomePage{
 
     @FindBy(xpath = "//*[@id=\"contact\"]/div[1]/form/div[4]/div[1]")
     public WebElement contactmessagesuccessfully;
+
+    @FindBy(xpath = "//*[@id=\"contact\"]/div[1]/form/div[4]/div[2]")
+    public WebElement contactmessageerror;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/section/div/div[2]/div/div/div/h3")
+    public  WebElement contactdırections;
+
+    @FindBy(xpath = "//*[@class='ti-home']")
+    public WebElement contactreachuselementi;
+
+    @FindBy(xpath = "//*[@id=\"mapDiv\"]/div/div[3]/div[3]/div/div/div/div/a")
+    public WebElement contactharitagoruntule;
 
     //Merve Nur Son----/
 
