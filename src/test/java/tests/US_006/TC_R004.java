@@ -13,8 +13,10 @@ import utilities.TestBaseRapor;
 public class TC_R004 extends TestBaseRapor {
     @Test
     public void Test01() throws InterruptedException {
+
         extentTest=extentReports.createTest
                 ("Listing sayfasindaki arama formunda arama yapilmasi testi");
+
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
         extentTest.pass("Tarayici acildi ve Hause Heaven sitesine gidildi.");
 
@@ -33,6 +35,7 @@ public class TC_R004 extends TestBaseRapor {
         homePage.listingSayfasiCitySearch.sendKeys("Borden Town");
         ReusableMethods.bekle(3);
         extentTest.pass("Listing sayfasina Borden Town ismi gonderilir ve click yapilir");
+
         String actualResult = homePage.listingSayfasiCitySearchResult.getText();
         String expectedResult = "Borden Town,";
         if (actualResult.equalsIgnoreCase(expectedResult)) {

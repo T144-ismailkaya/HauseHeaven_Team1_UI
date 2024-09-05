@@ -11,8 +11,10 @@ import utilities.TestBaseRapor;
 public class TC_R003 extends TestBaseRapor {
     @Test
     public void Test01() throws InterruptedException {
+
         extentTest=extentReports.createTest
                 ("Listing sayfasindaki mulklerin bilgilerinin dogrulanmasi testi");
+
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
         extentTest.pass("Tarayici acildi ve Hause Heaven sitesine gidildi.");
 
@@ -33,7 +35,6 @@ public class TC_R003 extends TestBaseRapor {
 
         Assert.assertTrue(homePage.listingUcuncuSayfaFotografElementi.isDisplayed());
         extentTest.pass("3. sayfada bir ilanda, ilanin fotograf elementinin olup olmadigi kontrol edildi.");
-
 
         Driver.getDriver().quit();
         extentTest.pass("Ziyaretci browseri kapatir.");
