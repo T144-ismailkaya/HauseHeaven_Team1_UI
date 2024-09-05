@@ -147,6 +147,19 @@ public class HomePage{
     @FindBy(xpath = "(//*[@class=\"listing-img-wrapper\"])[1]")
     public WebElement listingUcuncuSayfaFotografElementi;
 
+    @FindBy (xpath = "(//*[@class='form-control'])[1]")
+    public WebElement listingSayfasiSearchForALocationKutusu;
+
+    @FindBy (xpath ="//*[@id='select2-city_id-container']" )
+    public WebElement listingSayfasiCityDDM;
+
+    @FindBy (xpath = "//*[@class='select2-search__field']")
+    public WebElement listingSayfasiCitySearch;
+
+    @FindBy (xpath = "//*[@id='select2-city_id-results']")
+    public WebElement listingSayfasiCitySearchResult;
+
+
     //Rana Nur Son-----/
 
     //Bünyamin---------/
