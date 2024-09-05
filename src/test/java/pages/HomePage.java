@@ -135,6 +135,12 @@ public class HomePage{
     @FindBy (xpath = "(//*[@class='prt-link-detail'])[5]")
     public WebElement listingUcuncuSayfaIlanYaziElementi;
 
+    @FindBy (xpath = "(//*[@class='listing-card-info-price'])[1]")
+    public WebElement listingUcuncuSayfaFiyatElementi;
+
+    @FindBy(xpath = "(//*[@class=\"listing-img-wrapper\"])[1]")
+    public WebElement listingUcuncuSayfaFotografElementi;
+
     //Rana Nur Son-----/
 
     //Bünyamin---------/
