@@ -35,7 +35,7 @@ public class TC_R003 extends TestBaseRapor {
         extentTest.pass("3. sayfada bir ilanda, ilanin fotograf elementinin olup olmadigi kontrol edildi.");
 
 
-        Driver.quitDriver();
+        Driver.getDriver().quit();
         extentTest.pass("Ziyaretci browseri kapatir.");
 
 

@@ -13,7 +13,7 @@ public void Test01(){
     extentTest.pass("Tarayici acildi ve Hause Heaven sitesine gidildi.");
 
 
-    Driver.quitDriver();
+    Driver.getDriver().quit();
     extentTest.pass("Ziyaretci browseri kapatir.");
 }
 }

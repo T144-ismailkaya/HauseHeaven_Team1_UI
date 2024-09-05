@@ -15,7 +15,7 @@ public class TC_R009 extends TestBaseRapor {
         extentTest.pass("Tarayici acildi ve Hause Heaven sitesine gidildi.");
 
 
-        Driver.quitDriver();
+        Driver.getDriver().quit();
         extentTest.pass("Ziyaretci browseri kapatir.");
     }
 }

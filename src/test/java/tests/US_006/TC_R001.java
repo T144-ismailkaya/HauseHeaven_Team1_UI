@@ -26,7 +26,7 @@ public class TC_R001 extends TestBaseRapor {
         Assert.assertEquals(actualYazi,expectedYazi);
         extentTest.pass("Mulk sayisinin listelendigi goruldu.");
 
-        Driver.quitDriver();
+        Driver.getDriver().quit();
         extentTest.pass("Ziyaretci browseri kapatir.");
 
 

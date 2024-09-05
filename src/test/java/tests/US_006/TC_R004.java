@@ -19,7 +19,7 @@ public class TC_R004 extends TestBaseRapor {
         extentTest.pass("Headerdaki listing linkine tiklandi.");
 
 
-        Driver.quitDriver();
+        Driver.getDriver().quit();
         extentTest.pass("Ziyaretci browseri kapatir.");
     }
 }

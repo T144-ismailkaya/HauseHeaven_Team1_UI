@@ -24,7 +24,7 @@ public class TC_R002 extends TestBaseRapor {
 
         Assert.assertNotEquals(actualYazi,expectedYazisiDegil);
         extentTest.pass("Properties yazisinin oldugu goruldu.");
-        Driver.quitDriver();
+        Driver.getDriver().quit();
         extentTest.pass("Ziyaretci browseri kapatir.");
 
 

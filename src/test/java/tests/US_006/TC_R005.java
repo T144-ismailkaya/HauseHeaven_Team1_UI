@@ -18,7 +18,7 @@ public class TC_R005 extends TestBaseRapor {
         homePage.HomePageListingLink.click();
         extentTest.pass("Headerdaki listing linkine tiklandi.");
 
-        Driver.quitDriver();
+        Driver.getDriver().quit();
         extentTest.pass("Ziyaretci browseri kapatir.");
     }
 }
