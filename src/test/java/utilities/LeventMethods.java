@@ -1,6 +1,7 @@
 package utilities;
 
 import org.testng.Assert;
+import pages.AdminDashboard;
 import pages.HomePage;
 
 import java.util.List;
@@ -57,12 +58,37 @@ public class LeventMethods {
 
     public static void admingirisDashboard (){
 
-
+        AdminDashboard adminDashboard=new AdminDashboard();
         //Admin admin hauseheaven'url erisim saglar
+        Driver.getDriver().get(ConfigReader.getProperty("hauseAdminUrl"));
         //Adminhausehaven Login sayfasinda Login box kutusu icerseinde  yer alan Email/Username box'ina  saglanan email yazar
+        adminDashboard.usernameTextbox.click();
+        adminDashboard.usernameTextbox.sendKeys("leventseflek.admin@hauseheaven.com");
         //Adminhausehaven Login sayfasinda Login box kutusu icerseinde  yer alan Password box'ina onceden verilmis passoword'u  yazar
-        //Adminhausehaven Login sayfasinda Login box kutusu icerseinde  yer alan  Login Butonuna tiklar
+        adminDashboard.passwordAdminTextbox.sendKeys("Hven.150820");
+        //Adminhausehaven Login sayfasinda Login box kutusu icerseinde  yer alan  Login Butonuna
+        adminDashboard.signInButonu.click();
         //Adminhausehaven admin sitesine basarili sekilde giris yapildigini kontrol eder
+        String expectedUrl="https://qa.hauseheaven.com/admin";
+        String actualUrl=Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(actualUrl,expectedUrl);
 
     }
+
+
+    public static  void adminLogoutTesti (){
+        AdminDashboard adminDashboard=new AdminDashboard();
+        //Admin Headerlda yer alan "User Name " tiklar
+        adminDashboard.sefadminHeaderUserNameButtonu.click();
+        //Admin acilan dropdown menude "Log out " tiklar
+        adminDashboard.sefadminHeaderLogoutButtonu.click();
+        //Admin basari sekilde cikis yapildigini kontrol eder
+        ReusableMethods.waitForVisibility(adminDashboard.sefadminLogoutConfirmMsgelementi,10);
+        Assert.assertTrue(adminDashboard.sefadminLogoutConfirmMsgelementi.isDisplayed());
+        //Admin taraciyi kapatir
+        Driver.quitDriver();
+
+    }
+
+
 }
