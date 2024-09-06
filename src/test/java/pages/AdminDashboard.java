@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class AdminDashboard {
 
     public AdminDashboard(){
@@ -65,6 +67,35 @@ public class AdminDashboard {
 
     @FindBy (xpath = "test01")
     public WebElement  seftestelementbuttonuElementi;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[3]")
+    public WebElement sefadminsideDashBlogButtonElementi;
+
+    @FindBy (xpath = "(//*[@class='sub-menu  hidden-ul '])[1]")
+    public List<WebElement> sefadminsideDashBlogList;
+
+    @FindBy (xpath = "//*[@class='username d-none d-sm-inline']")
+    public WebElement sefadminHeaderUserNameButtonu;
+
+    @FindBy (xpath = "//*[@class='btn-logout']")
+    public WebElement sefadminHeaderLogoutButtonu;
+
+
+    @FindBy (xpath = "//div[@class='toast-message']")
+    public WebElement sefadminLogoutConfirmMsgelementi;
+
+    @FindBy (id = "cms-plugins-blog-post")
+    public WebElement sefSidenNavPostselementi;
+
+    @FindBy (xpath = "//*[@class=' text-start column-key-name']")
+    public List<WebElement> sefadminPostPageList;
+
+    @FindBy (xpath = "//*[@class='page-sidebar-menu page-header-fixed '] ")
+    public WebElement sefadminSidedDashElementi;
+
+    @FindBy (id = "cms-plugins-blog-tags")
+    public WebElement sefAdminTagButton;
+
 
     //---------------Levent Seflek Son------------\\
 
