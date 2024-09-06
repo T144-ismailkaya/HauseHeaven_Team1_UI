@@ -64,7 +64,5 @@ public class TC_IK006 extends TestBaseRapor {
         buton.click();
         String actualText = adminDashboard.sayfaDogrulama.getText();
         softAssert.assertEquals(actualText, expectedText, "Sayfa metni şunun için eşleşmiyor: " + expectedText);
-        //ReusableMethods.bekle(2);
-        //Driver.getDriver().navigate().back();
     }
 }
