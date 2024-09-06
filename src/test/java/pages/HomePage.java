@@ -119,7 +119,7 @@ public class HomePage{
     @FindBy (xpath = "//*[@class='hero-search']")
     public WebElement FindAccessibleHomesToRentFormu;
 
-    @FindBy (xpath = "//div[@class='input-with-icon']")
+    @FindBy (xpath = "//*[@class='form-control']")
     public WebElement formSearchForALocation;
 
     @FindBy (xpath = "(//*[@class='select2-selection select2-selection--single'])[1]")
@@ -139,6 +139,15 @@ public class HomePage{
 
     @FindBy (xpath = "//button[normalize-space()='Search Result']")
     public WebElement formSearchResult;
+
+    @FindBy (xpath = "//*[@class='m-0']")
+    public WebElement ActualSonuc;
+
+
+    @FindBy (xpath = "")
+    public WebElement ExpectedSonuc;
+
+
 
     //Fatma (FDM) Son--/
 
