@@ -192,6 +192,27 @@ public class HomePage {
     @FindBy(xpath = "//*[@class=\"prt-view\"]")
     public List<WebElement> agentViewButonuList;
 
+    @FindBy(xpath = "(//*[@rel=\"nofollow\"])[2]")
+    public WebElement logoutButonu;
+
+    @FindBy (xpath = "(//*[@rel=\"nofollow\"])[1]")
+    public WebElement accountDashboardButonu;
+
+    @FindBy (xpath = "//*[@title=\"Settings\"]")
+    public WebElement accountDashboardSettingsButonu;
+
+    @FindBy (xpath = "//*[@class=\"btn btn-primary fw6\"]")
+    public WebElement adSettingsSaveButonu;
+
+    @FindBy (xpath = "//*[@name=\"phone\"]")
+    public WebElement adSettingsPhoneTextBox;
+
+    @FindBy (xpath = "//*[@class=\"alert alert-success alert-dismissible\"]")
+    public WebElement alert;
+
+
+
+
     //Mustafa İsmail Son/
 
     //Rana Nur---------/
