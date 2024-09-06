@@ -359,12 +359,32 @@ public class HomePage {
     @FindBy(xpath = "(//button[@type='submit'])[1]")
     public WebElement contactsendmeesagebutonu;
 
-    @FindBy(xpath = "//i[@class='lni-facebook']")
+    @FindBy(xpath = "//*[@id=\"app\"]/section/div[2]/div[1]/div[2]/div[1]/ul/li[1]/div/a[1]/i")
     public WebElement listingsayfasiilanfacebookElementi;
 
     @FindBy(xpath = "//*[@id=\"ismain-homes\"]/div/div[2]/section/div/div[1]/div/div/h2")
     public WebElement listinglinkisayfası;
 
+    @FindBy(xpath = "//*[@class='blue-skin']")
+    public WebElement listingsayfabası;
+
+    @FindBy(xpath = "(//*[@type='submit'])[1]")
+    public WebElement listingfindbybutonu;
+
+    @FindBy(xpath = "(//*[@class='icon-actions-wrapper'])[1]")
+    public WebElement listingwishlistbutonu;
+
+    @FindBy(xpath = "//*[@id=\"alert-container\"]")
+    public WebElement listingwislistaddbutonu;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/section/div/div[2]/div[2]/div[2]/div[1]/div/div[1]/div[1]/div/div")
+    public WebElement listingseciliilan;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/section/div[2]/div[1]/div[1]/div[6]/div[1]/a/h4")
+    public  WebElement listingilangalery;
+
+    @FindBy(xpath = "//*[@id=\"main-wrapper\"]/div[5]/div/section/div/div/div/div/a")
+    public  WebElement  contactsingontoday;
 
     @FindBy(xpath = "//i[@class='lni-twitter']")
     public WebElement listingsayfasiilantwitterElementi;
@@ -372,11 +392,28 @@ public class HomePage {
     @FindBy(xpath = "//i[@class='lni-linkedin']")
     public WebElement listingsayfasiilanlinkedinElementi;
 
-    @FindBy(xpath = "//textarea[@name='comment']")
+    @FindBy(xpath = "(//a[normalize-space()='Share'])[1]")
+    public WebElement listingshare;
+
+    @FindBy(xpath = "//body//div[@id='main-wrapper']//div[@class='row']//div[@class='row']//div[1]//div[1]//div[1]//a[3]")
+    public WebElement listingpuansevice;
+
+
+    @FindBy(xpath = "//div[@id='clTen']//div[2]//div[1]//div[1]//a[4]")
+    public WebElement listingpuanvalue;
+
+    @FindBy(xpath = "//div[3]//div[1]//div[1]//a[5]")
+    public  WebElement listingpuanlocation;
+
+    @FindBy(xpath = "//div[@id='app']//div[4]//div[1]//div[1]//a[3]")
+    public WebElement listingpuancleanlines;
+
+
+    @FindBy(xpath = "textarea[placeholder='Messages']")
     public WebElement listingmesajkutusuElementi;
 
-    @FindBy(xpath = "(//button[@type='submit'])[1]")
-    public WebElement listingmesajkutususubmitbutonu;
+    @FindBy(xpath = "(//button[normalize-space()='Submit Review'])[1]") //*[@class='btn btn-theme-light-2 rounded']
+    public WebElement listingmesajkutususubmitbutonu; //"//*[@id=\"clTen\"]/div/form/div[2]/div[2]/div/button"
 
     @FindBy(xpath = "//span[@class='title']")
     public WebElement admintestimonialselementi;
@@ -417,6 +454,15 @@ public class HomePage {
     @FindBy(xpath = "(//button[@type='submit'])[2]")
     public WebElement listingconsultssendmessagebutonu;
 
+    @FindBy(xpath = "//div[@id='alert-container']")
+    public WebElement listingmesajuyarıelemnti;
+
+    @FindBy(xpath = "//div[@id='alert-container']")
+    public WebElement listingmesajgonderildielemnti;
+
+    @FindBy(xpath = "//*[@id=\"navigation\"]/div[2]/ul[1]/li[7]/a")
+    public WebElement singupbutonu;
+
     @FindBy(xpath = "//input[@class='form-control']")
     public WebElement adminloginemailkutusu;
 
@@ -447,8 +493,26 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='ti-home']")
     public WebElement contactreachuselementi;
 
-    @FindBy(xpath = "//*[@id=\"mapDiv\"]/div/div[3]/div[3]/div/div/div/div/a")
+    @FindBy(xpath = "//*[text()='Use ctrl + scroll to zoom the map']")
     public WebElement contactharitagoruntule;
+    @FindBy (xpath = "//*[@id=\"app\"]/section/div/div[2]/div/div/div/div[2]/div/iframe")
+    public WebElement contcatiframe;
+
+    @FindBy(id = "//*[@id='first_name']")
+    public WebElement singupfirsname;
+
+    @FindBy(id = "//*[@id='last_name']")
+    public WebElement singuplastname;
+
+    @FindBy(id = "//*[@id='username']")
+    public  WebElement singuousername;
+
+    @FindBy (id = "//*[@id='password-confirm']")
+    public WebElement singupconfirmpassword;
+
+    @FindBy(xpath = "//*[@type='submit']")
+    public WebElement singupregister;
+
 
     //Merve Nur Son----/
 
