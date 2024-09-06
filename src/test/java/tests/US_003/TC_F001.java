@@ -8,6 +8,8 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
+import static utilities.TestBaseRapor.extentReports;
+
 public class TC_F001 extends TestBaseRapor {
 
 
@@ -21,7 +23,7 @@ public class TC_F001 extends TestBaseRapor {
         HomePage homePage=new HomePage();
        // extentTest = extentReports.createTest("Belirtilen görüntünün ana sayfada görüntülenmesini istiyorum.");
 
-       // extentTest = extentReports.createTest("Anasayfada buyuk resim testi");
+       //extentTest = extentReports.createTest("Anasayfada buyuk resim testi");
 
 
 
