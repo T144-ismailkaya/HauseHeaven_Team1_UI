@@ -122,6 +122,9 @@ public class IsmailPage {
     @FindBy(xpath = "//*[@name='password']")
     public WebElement passwordAdminTextbox;
 
+    @FindBy(className = "signin")
+    public WebElement adminSignInButonu;
+
     @FindBy(xpath = "//*[normalize-space(text())='Payments']")
     public WebElement paymentsButonu;
 
@@ -163,5 +166,11 @@ public class IsmailPage {
 
     @FindBy(id = "slug-error")
     public WebElement slugHataMesaji;
+
+    @FindBy(xpath = "//*[@class='h3']")
+    public WebElement projeUrunIsmi;
+
+    @FindBy(xpath = "//*[@class='prt-price-fix mt-3']")
+    public WebElement projeUrunFiyati;
 
 }

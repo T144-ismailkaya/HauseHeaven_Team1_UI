@@ -22,10 +22,9 @@ public class TC_IK007 extends TestBaseRapor {
         ReusableMethods.erisimTesti(ConfigReader.getProperty("hauseAdminUrl"));
         extentTest.pass("Admin admin sayfasına erişir");
         IsmailPage ismailPage = new IsmailPage();
-        AdminDashboard adminDashboard = new AdminDashboard();
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
-        IsmailMethods.hauseHeavenAdminLogin(adminDashboard,"ismailkaya.admin@hauseheaven.com","Hven.150820");
+        IsmailMethods.hauseHeavenAdminLogin(ismailPage,"ismailkaya.admin@hauseheaven.com","Hven.150820");
 
         /*
         adminDashboard.usernameTextbox.sendKeys("ismailkaya.admin@hauseheaven.com");
