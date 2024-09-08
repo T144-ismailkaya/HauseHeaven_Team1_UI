@@ -421,6 +421,15 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='nav-menus-wrapper']")
     public WebElement HeaderLinki;
 
+    @FindBy (xpath = "//*[@class='modal-body']")
+    public WebElement logInSayfasiKayitKutusu;
+
+    @FindBy (xpath = "(//*[@class='login-item'])[1]")
+    public WebElement HeaderKKIsmi;
+
+    @FindBy (xpath = "//*[@class='col-lg-12 col-md-12']")
+    public WebElement agentsPageAllAgentsTitle;
+
     //Mehmet Muavviz Son/
 
     //Merve Nur--------/
