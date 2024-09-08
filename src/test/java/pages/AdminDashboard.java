@@ -109,6 +109,34 @@ public class AdminDashboard {
 
     //---------------Rana Nur---------------\\
 
+    @FindBy (xpath = "(//*[@class='title'])[7]")
+    public WebElement adminNewsletter;
+
+    @FindBy (xpath = "(//*[@class='form-control input-sm'])[1]")
+    public WebElement adminSearch;
+
+    @FindBy (xpath = "(//*[@class='d-none d-sm-inline'])[1]")
+    public WebElement showFromYazisi;
+
+    @FindBy (xpath = "(//*[@class='fa fa-trash'])[1]")
+    public WebElement adminDashboardNewsletterDeleteButonu;
+
+    @FindBy (xpath = "//*[@class='float-end btn btn-danger delete-crud-entry']")
+    public WebElement newsletterDeleteConfirmButonu;
+
+    @FindBy(xpath = "//*[@class='toast-message']")
+    public WebElement deleteSuccesfullyMessage;
+
+    @FindBy (xpath = "//*[@class='fa fa-download']")
+    public WebElement exportButonu;
+
+    @FindBy (xpath = "//*[@class='dt-button dropdown-item buttons-csv']")
+    public WebElement CSVFormatIndirme;
+
+    @FindBy (xpath = "(//*[@class='form-control input-sm'])[2]")
+    public WebElement mesajlariSiralamaButonu;
+
+
     //---------------Rana Nur Son---------------\\
 
     //---------------Bünyamin---------------\\

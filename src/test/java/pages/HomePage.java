@@ -289,6 +289,84 @@ public class HomePage {
     @FindBy (xpath = "(//*[@class='page-link'])[1]")
     public WebElement sayfaDegistirmeButonuSolaOk;
 
+    @FindBy (xpath = "//*[@class='fas fa-user']")
+    public WebElement kayitliKullaniciUserLinki;
+
+    @FindBy (xpath = "//*[@class='far fa-edit mr1']")
+    public WebElement ilanGirmeWriteaPropertyLinki;
+
+    @FindBy (xpath = "//*[@class='badge badge-info']")
+    public WebElement ilanGirmeBuyCreditsKrediBilgisi;
+
+    @FindBy (xpath = "//*[@title='credits']")
+    public WebElement ilanGirmeBuyCreditsLinki;
+
+    @FindBy (xpath = "(//*[@class='btn btn-primary mt-2'])[2]")
+    public WebElement ilanGirmeBuyCreditSinglePostPurchase;
+
+    @FindBy (xpath = "(//*[@type='text'])[1]")
+    public WebElement krediKartiCardNumberKutusu;
+
+    @FindBy (xpath = "(//*[@class='form-control jp-card-invalid'])[1]")
+    public WebElement krediKartiAyGunButonu;
+
+    @FindBy (xpath = "(//*[@class='form-control jp-card-invalid'])[2]")
+    public WebElement krediKartiAdSoyadButonu;
+
+    @FindBy (xpath = "//*[@id='stripe-cvc']")
+    public WebElement krediKartiGuvenlikBilgisiButonu;
+
+    @FindBy (xpath = "//*[@class='payment-checkout-btn btn btn-info']")
+    public WebElement krediKartiPurchasebutonu;
+
+    @FindBy(xpath = "(//*[@class='form-control'])[1]")
+    public WebElement ilanYayinlamaFormuTitleKutusu;
+
+    @FindBy (xpath = "//*[@class='ck-placeholder']")
+    public WebElement ilanYayinlamaFormuContentKutusu;
+
+    @FindBy (xpath = "//*[@id='location']")
+    public WebElement ilanYayinlamaFormuPropertyLocationKutusu;
+
+    @FindBy (xpath = "//*[@class='btn btn-sm btn-info']")
+    public WebElement ilanYayinlamaFormuSaveAndExitButonu;
+
+    @FindBy (xpath = "//*[@id='alert-container']/div")
+    public WebElement ilanCreatedSuccesfuly;
+
+    @FindBy (xpath = "//*[@title='Properties']")
+    public WebElement kayitlikullaniciPropertiesLinki;
+
+    @FindBy (xpath = "//*[@type='search']")
+    public WebElement kayitlikullaniciSearchKutusu;
+
+    @FindBy (xpath = "//*[@class='dataTables_empty']")
+    public WebElement noRecordYazisi;
+
+    @FindBy (xpath = "//*[@class='d-none d-sm-inline']")
+    public WebElement showFromYazisi;
+
+    @FindBy (xpath = "//*[@class='fas fa-sync']")
+    public WebElement reloadButonu;
+
+    @FindBy (xpath = "//*[@class='alert alert-success alert-dismissible']")
+    public WebElement newsletterSuccesfullAlert;
+
+    @FindBy (xpath = "//*[@class='alert alert-danger alert-dismissible']")
+    public WebElement theEmailHasAlreadyBeenTaken;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
