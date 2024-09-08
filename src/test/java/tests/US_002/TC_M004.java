@@ -9,12 +9,13 @@ import utilities.TestBaseRapor;
 
 import static utilities.Driver.driver;
 
-public class TC_M001 extends TestBaseRapor {
+public class TC_M004 extends TestBaseRapor {
 
     @Test
-    public void Test01(){
+    public void Test04(){
 
-        extentTest = extentReports.createTest("Ziyaretçi olarak HH Anasayfası'nın ulaşılabilir olması testi");
+        extentTest = extentReports.createTest(
+                "HH Anasayfa’da Menü’nün en sol tarafında HH Logo'su olduğu ve tıklandığında anasayfaya gidildiği testi");
 
         //Ziyaretçi browser’ı açar, HauseHeaven URL’ini girer ve enter’a basar
 
@@ -28,24 +29,15 @@ public class TC_M001 extends TestBaseRapor {
         Assert.assertEquals(actualUrl,expectedUrl);
         extentTest.pass("Hause Heaven Anasayfa'da olduğu test edildi.");
 
-        //Daha sonra her hangi bir linke tıklayarak başka bir sayfaya geçer.
+        //Logoya tıklar ve yönlendildiği sayfanın yüklenmesini bekler.
         HomePage homePage=new HomePage();
-        homePage.listingButonu.click();
-        extentTest.info("Her hangi bir linke tıklayarak başka bir sayfaya gidildi.");
+        homePage.hauseheavenlogo.click();
+        extentTest.info("Logoya tıklandı");
 
-        //HauseHeaven Anasayfası dışında olduğunu test eder.
-        actualUrl= driver.getCurrentUrl();
-        Assert.assertNotEquals(actualUrl,expectedUrl);
-        extentTest.pass("HauseHeaven Anasayfası dışında olduğunu test edildi.");
-
-        //Bulunduğu sayfada Home linkine tıklar.
-        homePage.homeButonu.click();
-        extentTest.info("Sayfada Home linkine tıklandı.");
-
-        //Tekrar HauseHeaven Anasayfaya geldiğini doğrular
+        //HauseHeaven Anasayfada olduğunu doğrular
         actualUrl= driver.getCurrentUrl();
         Assert.assertEquals(actualUrl,expectedUrl);
-        extentTest.pass("Tekrar HauseHeaven Anasayfası'na gelindiği test edildi.");
+        extentTest.pass("HauseHeaven Anasayfası'nda olduğu test edildi.");
 
         //Sayfayı kapatır
         Driver.quitDriver();
