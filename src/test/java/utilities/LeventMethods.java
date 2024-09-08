@@ -90,5 +90,11 @@ public class LeventMethods {
 
     }
 
+    public static void urlTest(String expectedurl){
+       String  actualUrl=Driver.getDriver().getCurrentUrl();
+        Assert.assertEquals(actualUrl,expectedurl);
+    }
+
+
 
 }

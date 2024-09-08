@@ -338,7 +338,7 @@ public class HomePage {
     @FindBy(xpath = "(//button[@type='submit'])[1]")
     public WebElement contactsendmeesagebutonu;
 
-    @FindBy(xpath = "//i[@class='lni-facebook']")
+    @FindBy(xpath = "//*[@title='Facebook']")
     public WebElement listingsayfasiilanfacebookElementi;
 
     @FindBy(xpath = "//*[@id=\"ismain-homes\"]/div/div[2]/section/div/div[1]/div/div/h2")
