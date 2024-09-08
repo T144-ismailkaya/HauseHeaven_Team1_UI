@@ -46,7 +46,7 @@ public class AdminDashboard {
     @FindBy(id = "cms-plugins-investor")
     public WebElement investorsButonu;
 
-    @FindBy(xpath = "//a[@href='https://qa.hauseheaven.com/admin/blog/categories']")
+    @FindBy(id = "cms-plugins-real-estate-category")
     public WebElement categoriesButonu;
 
     @FindBy(id = "cms-plugins-real-estate-type")
