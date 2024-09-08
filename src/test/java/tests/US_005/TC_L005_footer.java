@@ -7,23 +7,26 @@ import pages.UserDashboard;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import java.util.List;
 
-public class TC_L005_footer {
+public class TC_L005_footer extends TestBaseRapor {
     @Test
     public void TC_L005footerTest(){
+        extentTest = extentReports.createTest("Footer Ogeleri Testi");
 
         UserDashboard userDashboard=new UserDashboard();
         HomePage homePage=new HomePage();
 
         //Ziyaretci hausehaen Url'ine giris saglar
         Driver.getDriver().get("https://qa.hauseheaven.com/");
-       // Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
-        //Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar
+        extentTest.pass("Ziyaretci hausehaen Url'ine giris saglar");
+         //Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar
         ReusableMethods.hover(homePage.SefFooterElementi);
         homePage.sefUsercookies.click();
         ReusableMethods.wait(2);
+        extentTest.pass("iyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar");
         //Ziyaretci test object de bahsedilen ogelerin footer da ust basliklarin ve alt dizinlinlerin footer icinde goruntulendigini test eder.
         List <String> footerAltUstDizinList=ReusableMethods.getStringList(homePage.sefFooterGenelList);
         System.out.println(footerAltUstDizinList);
@@ -47,10 +50,11 @@ public class TC_L005_footer {
                 "Now it Available]";
         for (String eachelements : footerAltUstDizinList) {
             Assert.assertTrue(expetedFooterElements.contains(eachelements));
-
+            extentTest.pass("Ziyaretci test object de bahsedilen ogelerin footer da ust basliklarin ve alt dizinlinlerin footer icinde goruntulendigini test eder");
         }
         //Ziyaretci acilan  tarayici kapatir
         Driver.quitDriver();
+        extentTest.pass("Ziyaretci acilan  tarayici kapatir");
 
     }
 }

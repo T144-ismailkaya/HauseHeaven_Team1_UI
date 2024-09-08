@@ -6,30 +6,39 @@ import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import java.util.List;
 
-public class TC_L009FooterTermsCondition {
+public class TC_L009FooterTermsCondition extends TestBaseRapor {
 
     @Test
 
     public void TC09() {
+        extentTest = extentReports.createTest("Negatif DDM Testi");
+
         HomePage homePage = new HomePage();
         //Ziyaretci hausehaen Url'ine giris saglar
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+        extentTest.pass("Ziyaretci hausehaen Url'ine giris saglar");
+
 
         //Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar
         ReusableMethods.hover(homePage.SefFooterElementi);
         homePage.sefUsercookies.click();
+        extentTest.pass("Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar");
         //Ziyaretci footer bolumunde yer alan "Terms and Condtions" tab'ina tiklar
         homePage.sefFooterTermsandCondtionsElementi.click();
+        extentTest.pass("Ziyaretci footer bolumunde yer alan \"Terms and Condtions\" tab'ina tiklar");
         //Ziyaretci ayni sekmede "Terms and Condtions" sayfasinin acildigini kontrol eder
         int winHandleTimes = 1;
         Assert.assertEquals(Driver.getDriver().getWindowHandles().size(), winHandleTimes);
+        extentTest.pass("Ziyaretci ayni sekmede \"Terms and Condtions\" sayfasinin acildigini kontrol eder");
 
         //Ziyaretci "Terms and Condtions" sayfasinda asagiya footer bolumune scroll yapar
         ReusableMethods.hover(homePage.SefFooterElementi);
         ReusableMethods.wait(2);
+        extentTest.pass("Ziyaretci \"Terms and Condtions\" sayfasinda asagiya footer bolumune scroll yapar");
         //Ziyaretci guideline da verilen footer ogelerinin "Terms and Conditons"sayfasinin altinda yer aldigini  kontrol eder
         List<String> footerAltUstDizinList = ReusableMethods.getStringList(homePage.sefFooterGenelList);
         System.out.println(footerAltUstDizinList);
@@ -54,13 +63,16 @@ public class TC_L009FooterTermsCondition {
         for (String eachelements : footerAltUstDizinList) {
             Assert.assertTrue(expetedFooterElements.contains(eachelements));
         }
+        extentTest.pass("Ziyaretci \"Terms and Condtions\" sayfasinda asagiya footer bolumune scroll yapar");
 
         //Ziyaretci halen  "Terms and Condtions sayfasinda oldgunu dogrular
         String expectedUrl = "https://qa.hauseheaven.com/terms-amp-conditions";
         String actualUrl = Driver.getDriver().getCurrentUrl();
+        extentTest.pass("Ziyaretci halen  \"Terms and Condtions sayfasinda oldgunu dogrular");
 
         //Ziyratci tarayiciyi kapatir
         Driver.quitDriver();
+        extentTest.pass("Ziyratci tarayiciyi kapatir");
 
     }
 }

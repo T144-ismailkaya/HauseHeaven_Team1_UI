@@ -46,7 +46,7 @@ public class AdminDashboard {
     @FindBy(id = "cms-plugins-investor")
     public WebElement investorsButonu;
 
-    @FindBy(id = "cms-plugins-real-estate-category")
+    @FindBy(xpath = "//a[@href='https://qa.hauseheaven.com/admin/blog/categories']")
     public WebElement categoriesButonu;
 
     @FindBy(id = "cms-plugins-real-estate-type")
@@ -95,6 +95,72 @@ public class AdminDashboard {
 
     @FindBy (id = "cms-plugins-blog-tags")
     public WebElement sefAdminTagButton;
+
+    @FindBy (id= "cms-plugins-location")
+    public WebElement sefadminLocationButtonElementi;
+
+    @FindBy (id= "cms-plugins-country")
+    public WebElement sefadminCountiresButtonElementi;
+
+    @FindBy (xpath = "//*[@class=' text-start column-key-name']")
+    public List<WebElement> sefadminCountiresUlkeList;
+
+    @FindBy (xpath = "//*[@class='btn btn-secondary action-item']")
+    public WebElement sefadminCountiresCreateButtonElementi;
+
+    @FindBy (xpath = "//span[normalize-space()='Reload']")
+    public WebElement sefadminCountiresReloadButtonElementi;
+
+    @FindBy (xpath = "(//*[@class='form-control'])[1]")
+    public WebElement sefadminCountiresNameBoxElementi;
+
+    @FindBy (xpath = "(//*[@class='form-control'])[2]")
+    public WebElement sefadminCountiresNationalityElementi;
+
+    @FindBy (xpath = "//*[@id=\"code\"]")
+    public WebElement sefadminCountiresISOBoxElementi;
+
+    @FindBy (xpath = "//*[@id='dial_code']" )
+    public WebElement sefadminCountiresDialCodeBoxElementi;
+
+    @FindBy (xpath = "//*[@id='order']")
+    public WebElement sefadminCountiresOrderBoxElementi;
+
+    @FindBy (xpath = "//*[@id='select2-status-container']")
+    public WebElement sefadminCountiresStatusBoxElementi;
+
+    @FindBy(xpath = "//select[@class='form-control select-full ui-select select2-hidden-accessible']")
+    public WebElement sefadminCountiresPublishedselectElementi;
+
+    @FindBy(xpath = "(//*[@class='btn btn-success'])[1]")
+    public WebElement sefadminCountiresSaveElementi;
+
+    @FindBy(xpath = "//*[@id=\"botble-location-forms-country-form\"]/div[2]/div[2]/div[1]/div[2]/div/button[1]")
+    public WebElement sefadminCountiresSaveExitElementi;
+
+    @FindBy(xpath = "//*[@data-bs-original-title='Edit']")
+    public WebElement sefadminCountiresEditButtonElementi;
+
+    @FindBy (xpath = "//input[@placeholder='Search...']")
+    public WebElement sefadminSearchboxElementi;
+
+    @FindBy (xpath = "//div[@class='toast-message']")
+    public WebElement sefadminCreateEditPageKayyitMSGElementi;
+
+    @FindBy (xpath = "//tr[@class='even']//a[@role='button']")
+    public WebElement sefadminDeleteButton;
+
+    @FindBy (xpath = "//*[@id=\"main\"]/div[2]/div/div/div[3]/button[2]")
+    public WebElement sefadminDeleteConfirmMsg;
+
+
+
+
+
+
+
+
+
 
 
     //---------------Levent Seflek Son------------\\
