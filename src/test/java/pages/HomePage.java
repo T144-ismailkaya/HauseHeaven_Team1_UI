@@ -496,7 +496,7 @@ public class HomePage {
     @FindBy(xpath = "(//button[normalize-space()='Submit Review'])[1]") //*[@class='btn btn-theme-light-2 rounded']
     public WebElement listingmesajkutususubmitbutonu; //"//*[@id=\"clTen\"]/div/form/div[2]/div[2]/div/button"
 
-    @FindBy(xpath = "//span[@class='title']")
+
     public WebElement admintestimonialselementi;
 
     @FindBy(xpath = "(//button[@value='apply'])[1]")
@@ -511,7 +511,19 @@ public class HomePage {
     @FindBy(xpath = "//button[@data-result='content']")
     public WebElement admintestimonialscreateshowhidebutonu;
 
-    @FindBy(xpath = "//input[@placeholder='Name']")
+    @FindBy(xpath = "//span[@id='ck-editor__aria-label_e4c827a881f678b22153621a0a2a09ed3']")
+    public WebElement createshowyazistilibutonu;
+
+    @FindBy (xpath = "//a[@class='btn_gallery btn btn-primary']")
+    public WebElement createaddmediabutonu;
+
+    @FindBy(name  = "(//*[@type='button'])[43]")
+    public WebElement createaddmediainserbutonu;
+
+    @FindBy(xpath = "//*[@data-id='2111']")
+    public WebElement addmediaresim;
+
+    @FindBy(xpath = "(//input[@id='name'])[1]")
     public WebElement admintestimonialscreatenamekutusu;
 
     @FindBy(xpath = "//input[@placeholder='Position/Company']")
@@ -534,6 +546,20 @@ public class HomePage {
 
     @FindBy(xpath = "(//button[@type='submit'])[2]")
     public WebElement listingconsultssendmessagebutonu;
+
+    @FindBy(xpath = "(//i[@class='fa fa-trash'])[1]")
+    public WebElement admintestimonialsdeletebutonu;
+    @FindBy (xpath = "//div[@class='modal fade modal-confirm-delete show']//div[@class='modal-header bg-danger']")
+    public WebElement admintestimonialsconfirmdeletebutonu;
+
+    @FindBy(xpath = "//button[@class='float-end btn btn-danger delete-crud-entry']")
+    public WebElement adminconfirmpenceresideletebutonu;
+
+    @FindBy(xpath = "//div[@class='toast-title']")
+    public WebElement admindeletesuccess;
+
+    @FindBy(xpath = "//tbody/tr[2]/td[7]/div[1]/a[1]/i[1]")
+    public WebElement admintestimonialseditbutonu;
 
     @FindBy(xpath = "//div[@id='alert-container']")
     public WebElement listingmesajuyarıelemnti;
