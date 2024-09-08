@@ -8,6 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Driver {
 
@@ -40,8 +42,15 @@ public class Driver {
                     break;
 
                 default:
+                    //dosya indirme esnasinda dosyayi indirecegi lokasyonu belirlemek icin ve search enginei acmamasi icin kurulum.
+                    String downloadFilePath = System.getProperty("user.dir") + "\\downloads";
+                    System.out.println(downloadFilePath);
+                    Map<String, Object> prefs = new HashMap<>();
+                    prefs.put("download.default_directory", downloadFilePath);
                     ChromeOptions options = new ChromeOptions();
+                    options.setExperimentalOption("prefs", prefs);
                     options.addArguments("--disable-search-engine-choice-screen");
+
                     driver = new ChromeDriver(options);
                     //options.addArguments("--disable-search-engine-choice-screen");// hoca satir
                     //options.addArguments("--incognito");

@@ -10,30 +10,30 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class TC_ME01  {
+public class TC_ME01  extends TestBaseRapor{
 
     @Test
-    public  void contactsayfasiTesti(){
+    public  void test01() {
 
         HomePage homePage=new HomePage();
-       // extentTest =extentReports.createTest("Contact sayfası tıklandığında iletişim bilgilerinin görünür olduğu testi");
+        extentTest =extentReports.createTest("Contact sayfası tıklandığında iletişim bilgilerinin görünür olduğu testi");
 
-       // Ziyaretçi HauseHeaven url girer.
+        extentTest .pass ("Ziyaretçi HauseHeaven url girer.");
       Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
 
-        // Ziyaretçi HauseHeaven anasayfa header a ulaşır.
-        Assert.assertTrue(homePage.hauseheavenlogo.isDisplayed());
+        extentTest .pass(" Ziyaretçi HauseHeaven anasayfa header a ulaşır. " );
+                        Assert.assertTrue(homePage.hauseheavenlogo.isDisplayed());
 
-       // Ziyaretçi Contact linkine tıklar
+        extentTest .pass ("Ziyaretçi Contact linkine tıklar");
         homePage.contactlinkibutonu.click();
 
-        // Ziyaretçi Contact sayfasına ulaşır.
+        extentTest .pass(" Ziyaretçi Contact sayfasına ulaşır.");
         Assert.assertTrue(homePage.contactgetıntuchelementı.isDisplayed());
 
-        // Ziyaretçi Contact sayfasının header kısmını görür.
+        extentTest .pass(" Ziyaretçi Contact sayfasının header kısmını görür.");
        ReusableMethods.hover(homePage.contactdırections);
 
-       // Ziyaretçi Contact sayfasında get in touch kısmında adres,email ve phonekısımlarını görerek iletişim bilgilerinin görünür olduğunu doğrular
+        extentTest .pass(" Ziyaretçi Contact sayfasında get in touch kısmında adres,email ve phonekısımlarını görerek iletişim bilgilerinin görünür olduğunu doğrular");
         Assert.assertTrue(homePage.contactnamekutusuElementi.isDisplayed());
         Assert.assertTrue(homePage.contactemailkutusElementi.isDisplayed());
         Assert.assertTrue(homePage.contactphonekutusuElementi.isDisplayed());
@@ -41,7 +41,7 @@ public class TC_ME01  {
         Assert.assertTrue(homePage.contactmesajkutusuElementi.isDisplayed());
 
 
-      // Ziyaretçi sekmeyi kapatır.
+        extentTest .pass(" Ziyaretçi sekmeyi kapatır");
 
         Driver.getDriver().quit();
 
