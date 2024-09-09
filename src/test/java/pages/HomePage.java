@@ -407,11 +407,22 @@ public class HomePage {
     @FindBy(xpath = "//button[normalize-space()='Search Result']")
     public WebElement formSearchResult;
 
+    @FindBy (xpath = "(//*[@class='listing-img-wrapper'])[1]")
+    public WebElement ExpectedSonuc;
     @FindBy (xpath = "//*[@class='m-0']")
     public WebElement ActualSonuc;
 
-    @FindBy (xpath = "")
-    public WebElement ExpectedSonuc;
+    @FindBy (xpath = "//h2[normalize-space()='How It Works?']")
+    public WebElement HowItWorks;
+
+    @FindBy (xpath = "(//*[@class='middle-icon-features-content'])[1]")
+    public WebElement EvaluateProperty;
+
+    @FindBy (xpath = "(//*[@class='middle-icon-features-content'])[2]")
+    public WebElement MeetYourAgent;
+
+    @FindBy (xpath = "(//*[@class='middle-icon-features-content'])[3]")
+    public WebElement CloseTheDeal;
 
     //Fatma (FDM) Son--/
 
