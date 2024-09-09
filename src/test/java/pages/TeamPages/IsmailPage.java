@@ -23,6 +23,9 @@ public class IsmailPage {
     @FindBy(xpath = "//h4[@class='mb-0']")
     public WebElement projeSayisiElementi;
 
+    @FindBy(xpath = "//*[normalize-space(text())='Projects']")
+    public WebElement homeProjectsButonu;
+
     @FindBy(xpath = "//*[@class='h3']")
     public WebElement urunIsmi;
 

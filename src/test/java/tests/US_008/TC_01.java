@@ -18,13 +18,17 @@ public class TC_01 extends TestBaseRapor {
 
     @Test
     public void test01(){
+        extentTest = extentReports.createTest("Ziyaretçi olarak Prejects sayfasındaki proje sayısını görüntüleyebilmek istiyorum");
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+        extentTest.pass("Ziyaretçi Hause Heaven sayfasına erişir");
 
         IsmailPage ismailPage = new IsmailPage();
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
         ismailPage.allowCookies.click();
-        ismailPage.projectsButonu.click();
+        extentTest.pass("Ziyaretçi sitede bulunan cookies'i kabul eder");
+        ismailPage.homeProjectsButonu.click();
+        extentTest.pass("Ziyaretçi header bölümünde yer alan Projects butonuna basar");
 
         String projeString = ismailPage.projeSayisiElementi.getText();
 
@@ -43,8 +47,10 @@ public class TC_01 extends TestBaseRapor {
         int actualSayi = stringList.size();
 
         Assert.assertEquals(actualSayi, expectedSayi);
+        extentTest.pass("Ziyaretçi proje sayısını görüntüler ve doğrular");
 
         Driver.quitDriver();
+        extentTest.pass("Ziyaretçi browser'ı kapatır.");
     }
 
 }
