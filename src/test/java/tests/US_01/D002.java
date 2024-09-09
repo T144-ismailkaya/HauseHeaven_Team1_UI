@@ -19,6 +19,8 @@ public class D002 {
         driver.manage().window().maximize();
         // 1. Ziyaretçi Hause Heaven URL'ini girer
         driver.get("https://www.hauseheaven.com");
+        driver.quit();
+
     }
 
     @Test
@@ -28,12 +30,7 @@ public class D002 {
         driver.manage().window().maximize();
         // 1. Ziyaretçi Hause Heaven URL'ini girer
         driver.get("https://www.hauseheaven.com");
+        driver.quit();
     }
-    @AfterMethod
-    public void tearDown() {
-        // 4. Sekmeyi kapat
-        if (driver != null) {
-            driver.quit(); // Tarayıcıyı kapatır
-        }
-}
+
 }
