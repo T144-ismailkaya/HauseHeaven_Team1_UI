@@ -162,7 +162,6 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='alert alert-success alert-dismissible']")
     public WebElement seffooterSubscribeConfirmYaziElementi;
 
-
     //Levent Son-------/
 
     //Dilek------------/
