@@ -546,7 +546,28 @@ public class HomePage {
     @FindBy(xpath = "(//button[normalize-space()='Submit Review'])[1]") //*[@class='btn btn-theme-light-2 rounded']
     public WebElement listingmesajkutususubmitbutonu; //"//*[@id=\"clTen\"]/div/form/div[2]/div[2]/div/button"
 
+    @FindBy(xpath = "//*[@id='name']")
+    public WebElement listingconsultnamekutusu;
+    @FindBy(xpath = " //*[@name='phone']")
+    public  WebElement listingphonebutonu;
+    @FindBy(xpath = "//*[@id='email']")
+    public WebElement listingemailbutonu;
+    @FindBy(xpath = " //*[@name='content']")
+    public  WebElement listingmesajkutusu;
+    @FindBy(xpath = "//*[@id=\"consult-form\"]/div/div[6]/button")
+    public WebElement listingsendmesajbutonu;
+    @FindBy (xpath = "(//div[@id='alert-container'])[1]")
+    public WebElement listingsuccessfully;
 
+    @FindBy(xpath = " (//div[@id='alert-container'])[1]")
+    public WebElement listingmesajuyaributonu;
+    @FindBy(xpath = "(//div[@id='stack-footer'])[1]")
+    public WebElement loginuyarımesajı;
+
+
+
+
+    @FindBy(xpath = "//*[@id=\"cms-plugins-testimonial\"]/a")
     public WebElement admintestimonialselementi;
 
     @FindBy(xpath = "(//button[@value='apply'])[1]")
@@ -567,8 +588,11 @@ public class HomePage {
     @FindBy (xpath = "//a[@class='btn_gallery btn btn-primary']")
     public WebElement createaddmediabutonu;
 
-    @FindBy(name  = "(//*[@type='button'])[43]")
+    @FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/footer[1]/button[1]")
     public WebElement createaddmediainserbutonu;
+
+    @FindBy(xpath = "//*[@id='name-error']")
+    public WebElement createnamenegatiftestiuyarı;
 
     @FindBy(xpath = "//*[@data-id='2111']")
     public WebElement addmediaresim;
@@ -669,6 +693,25 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@type='submit']")
     public WebElement singupregister;
+    @FindBy(xpath = "//*[@id=\"cms-core-dashboard\"]/a")
+    public WebElement admindaosboardlinki;
+    @FindBy(xpath = "//*[@id=\"cms-plugins-consult\"]/a ")
+    public WebElement admindaosboardconsultbutonu;
+    @FindBy(xpath = " (//a[@role='button'])[1]")
+    public WebElement daosboardconsultdeletebutonu;
+    @FindBy(xpath = " //*[@id=\"main\"]/div[2]/div/div/div[1]")
+    public WebElement doasboardconfirmpenceresi;
+    @FindBy(xpath = " (//button[@class='float-end btn btn-danger delete-crud-entry'])[1]")
+    public WebElement doasboardconfirmdeletebutonu;
+    @FindBy(xpath = "//div[@class='toast-title']")
+    public WebElement daosboarddeletedsuccessfullybutonu;
+    @FindBy(xpath = "//tbody/tr[1]/td[8]/div[1]/a[1]/i[1]")
+    public WebElement dasboardeditbutonu;
+    @FindBy(xpath = "//*[@id=\"botble-real-estate-forms-consult-form\"]/div/div[1]/div/div[2]/p/i")
+    public WebElement daosboarddetailsbutonu;
+
+
+
 
 
     //Merve Nur Son----/
