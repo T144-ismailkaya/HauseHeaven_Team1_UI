@@ -60,11 +60,11 @@ public class TC_ME04 extends TestBaseRapor {
 
 
 
-        Driver.getDriver().switchTo().frame(homePage.contcatiframe);
-        homePage.contcatiframe.click();
-        homePage.contcatiframe.click();
-        homePage.contcatiframe.click();
-        homePage.contcatiframe.click();
+      //  Driver.getDriver().switchTo().frame(homePage.contcatiframe);
+       // homePage.contcatiframe.click();
+      //  homePage.contcatiframe.click();
+      //  homePage.contcatiframe.click();
+     //  homePage.contcatiframe.click();
 
        //actions.doubleClick(homePage.contactharitagoruntule).perform();
 
