@@ -44,7 +44,6 @@ public class Driver {
                 default:
                     //dosya indirme esnasinda dosyayi indirecegi lokasyonu belirlemek icin ve search enginei acmamasi icin kurulum.
                     String downloadFilePath = System.getProperty("user.dir") + "\\downloads";
-                    System.out.println(downloadFilePath);
                     Map<String, Object> prefs = new HashMap<>();
                     prefs.put("download.default_directory", downloadFilePath);
                     ChromeOptions options = new ChromeOptions();
