@@ -355,6 +355,37 @@ public class HomePage {
     @FindBy (xpath = "//*[@class='alert alert-danger alert-dismissible']")
     public WebElement theEmailHasAlreadyBeenTaken;
 
+    @FindBy (xpath = "//*[@class='ipt-title']")
+    public WebElement contactSayfasiContactYazisi;
+
+    @FindBy (xpath = "(//*[@class='form-control simple'])[1]")
+    public WebElement contactSayfasiFormName;
+
+    @FindBy (xpath = "(//*[@class='form-control simple'])[2]")
+    public WebElement contactSayfasiFormEmail;
+
+    @FindBy (xpath = "(//*[@class='form-control simple'])[3]")
+    public WebElement contactSayfasiFormSubject;
+
+    @FindBy (xpath = "(//*[@class='form-control simple'])[4]")
+    public WebElement contactSayfasiFormPhone;
+
+    @FindBy (xpath = "(//*[@class='form-control simple'])[5]")
+    public WebElement contactSayfasiFormMessage;
+
+    @FindBy (xpath = "//*[@class='btn btn-theme-light-2 rounded']")
+    public WebElement contactSayfasiSendMessageButonu;
+
+    @FindBy (xpath = "//*[@class='contact-message contact-success-message']")
+    public WebElement contactSayfasiFormuSendMessageSuccesfullyYazisi;
+
+    @FindBy (xpath ="//*[@class='contact-message contact-error-message']")
+    public WebElement contactSayfasiHataMesaji;
+
+
+
+
+
 
 
 
