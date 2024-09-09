@@ -45,6 +45,21 @@ public class UserDashboard {
 
     //---------------Fatma (FDM)---------------\\
 
+    @FindBy (xpath = "//input[@id='email']")
+    public WebElement kayitliKullaniciUsernameButonu;
+
+    @FindBy (xpath = "(//input[@id='password']")
+    public WebElement kayitliKullaniciPasswordButonu;
+
+    @FindBy (xpath = "//*[@class='btn btn-md full-width btn-theme-light-2 rounded']")
+    public WebElement KayitliKullaniciLoginButonu;
+
+    @FindBy (xpath = "//a[@rel='nofollow'][normalize-space()='Logout']")
+    public WebElement Logout;
+
+    @FindBy (xpath = "//a[normalize-space()='Sign In']")
+    public WebElement SignIn;
+
     //---------------Fatma (FDM) Son---------------\\
 
     //---------------Mehmet Muavviz---------------\\
