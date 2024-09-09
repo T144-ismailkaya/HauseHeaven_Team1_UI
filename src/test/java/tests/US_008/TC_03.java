@@ -10,39 +10,46 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.TeamPages.IsmailPage;
-import utilities.ConfigReader;
-import utilities.Driver;
-import utilities.ReusableMethods;
+import utilities.*;
 
 import java.time.Duration;
 import java.util.List;
 
-public class TC_03 {
+public class TC_03 extends TestBaseRapor {
 
     @Test
     public void test01() {
+        extentTest = extentReports.createTest("Ziyaretçi olarak Prejects sayfasındaki proje detaylarını görüntüleyebilmek istiyorum");
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+        extentTest.pass("Ziyaretçi Hause Heaven sayfasına erişir");
 
         IsmailPage ismailPage = new IsmailPage();
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         Actions actions = new Actions(Driver.getDriver());
 
         ismailPage.allowCookies.click();
-        ismailPage.projectsButonu.click();
+        extentTest.pass("Ziyaretçi sitede bulunan cookies'i kabul eder");
+        ismailPage.homeProjectsButonu.click();
+        extentTest.pass("Ziyaretçi header bölümünde yer alan Projects butonuna basar");
 
         js.executeScript("window.scrollBy(0, 500);");
         ReusableMethods.bekle(1);
 
+        extentTest.pass("Ziyaretçi açılan proje sayfasında herhangi bir projeye tıklar");
         List<WebElement> projelerinDescription = Driver.getDriver().findElements(By.xpath("//*[@class='listing-short-description']"));
+        extentTest.pass("Ziyaretçi projenin ismini doğrular");
         List<WebElement> projelerinLocation = Driver.getDriver().findElements(By.xpath("//*[@class='foot-location d-flex']"));
+        extentTest.pass("Ziyaretçi projenin description'u doğrular;");
         List<WebElement> projeIsimleriBasliklari = Driver.getDriver().findElements(By.xpath("//*[@class='prt-link-detail text-uppercase']"));
+        extentTest.pass("Ziyaretçi location'u doğrular;");
+        extentTest.pass("Ziyaretçi diğer bilgileri doğrular");
 
         for (int i = 0; i < projeIsimleriBasliklari.size(); i++) {
-            checkElementVisibility(projeIsimleriBasliklari, i);
-            checkElementVisibility(projelerinDescription, i);
-            checkElementVisibility(projelerinLocation, i);
+            IsmailMethods.checkElementVisibility(projeIsimleriBasliklari, i);
+            IsmailMethods.checkElementVisibility(projelerinDescription, i);
+            IsmailMethods.checkElementVisibility(projelerinLocation, i);
 
-            clickAndVerifyDetails(projeIsimleriBasliklari, i);
+            IsmailMethods.clickAndVerifyDetails(projeIsimleriBasliklari, i);
 
             if (i == 2 || i == 5 || i == 8) {  // 3'erli gruplarda kaydır
                 actions.sendKeys(Keys.PAGE_DOWN).perform();
@@ -51,47 +58,7 @@ public class TC_03 {
         }
 
         Driver.quitDriver();
-    }
-
-    private void checkElementVisibility(List<WebElement> elements, int index) {
-        try {
-            Assert.assertTrue(elements.get(index).isDisplayed());
-        } catch (AssertionError e) {
-            System.out.println("Element " + index + " görünür değil.");
-        }
-    }
-
-    private void clickAndVerifyDetails(List<WebElement> projeIsimleriBasliklari, int index) {
-        try {
-            IsmailPage ismailPage = new IsmailPage();
-            projeIsimleriBasliklari.get(index).click();
-            Assert.assertTrue(ismailPage.projeUrunIsmi.isDisplayed());
-            Assert.assertTrue(ismailPage.projeUrunFiyati.isDisplayed());
-            projeDetaybasliklari();
-        } catch (Exception e) {
-            System.out.println((index+1) + ". Proje görüntüleme sırasında hata oluştu: " + e.getMessage());
-        } finally {
-            Driver.getDriver().navigate().back();
-        }
-    }
-
-    public static void projeDetaybasliklari() {
-        Actions actions = new Actions(Driver.getDriver());
-        List<WebElement> projeDetayBasliklari = Driver.getDriver().findElements(By.xpath("//*[@class='property_block_title']"));
-        List<WebElement> projeDetayBodysi = Driver.getDriver().findElements(By.xpath("//*[@class='block-body']"));
-
-        try {
-            for (int i = 0; i < projeDetayBasliklari.size(); i++) {
-                Assert.assertTrue(projeDetayBasliklari.get(i).isDisplayed());
-                Assert.assertTrue(projeDetayBodysi.get(i).isDisplayed());
-
-                if (i < projeDetayBasliklari.size() - 1) {
-                    actions.sendKeys(Keys.PAGE_DOWN).perform();
-                }
-            }
-        } catch (Exception e) {
-            System.out.println("Proje detay başlıkları doğrulama sırasında hata oluştu: " + e.getMessage());
-        }
+        extentTest.pass("Ziyaretçi browser'ı kapatır.");
     }
 
 }

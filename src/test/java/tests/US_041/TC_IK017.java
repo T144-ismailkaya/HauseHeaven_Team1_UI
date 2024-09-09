@@ -1,14 +1,15 @@
 package tests.US_041;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TeamPages.IsmailPage;
 import utilities.*;
 
-public class TC_IK014 extends TestBaseRapor {
+public class TC_IK017 extends TestBaseRapor {
 
     @Test
-    public void test02(){
-        extentTest = extentReports.createTest("Admin olarak giriş yapıp Real Estate başlığının altındaki Types sayfasında yeni tür eklemek istiyorum");
+    public void test05(){
+        extentTest = extentReports.createTest("Admin olarak giriş yapıp Real Estate başlığının altındaki Types sayfasında yeni bir tür eklerken, gerekli alanlar boş bırakıldığında herhangi bir işlem yapmamalı");
         Driver.getDriver().get(ConfigReader.getProperty("hauseAdminUrl"));
         ReusableMethods.erisimTesti(ConfigReader.getProperty("hauseAdminUrl"));
         extentTest.pass("Admin admin sayfasına erişir");
@@ -22,9 +23,10 @@ public class TC_IK014 extends TestBaseRapor {
         extentTest.pass("Admin açılan menüdeki Types Butonuna basar");
         ReusableMethods.erisimTesti("https://qa.hauseheaven.com/admin/real-estate/types");
 
-        IsmailMethods.getTurEkleme("Daily Rental" , "Rental" , "Rental" , "5");
+        IsmailMethods.getTurEkleme();
 
         Driver.quitDriver();
         extentTest.pass("Admin browser'ı kapatır.");
     }
+
 }

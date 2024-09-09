@@ -20,6 +20,9 @@ public class TC_IK005 extends TestBaseRapor {
 
         SoftAssert softAssert = new SoftAssert();
 
+        ismailPage.realEstateButonu.click();
+        extentTest.pass("Admin Real Estate Butonuna basar");
+
         softAssert.assertTrue(ismailPage.propertiesButonu.isDisplayed(), "Properties menüsü bulunamadı");
         softAssert.assertTrue(ismailPage.projectsButonu.isDisplayed(), "Projects menüsü bulunamadı");
         softAssert.assertTrue(ismailPage.featuresButonu.isDisplayed(), "Features menüsü bulunamadı");
