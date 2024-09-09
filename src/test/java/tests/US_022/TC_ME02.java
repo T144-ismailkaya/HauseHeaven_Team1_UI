@@ -29,7 +29,9 @@ public class TC_ME02 extends TestBaseRapor {
         String fakeEmail=faker.internet().emailAddress();
         String fakeSifre=faker.internet().password();
         homePage.emailTextbox.sendKeys(fakeEmail);
+        ReusableMethods.bekle(2);
         homePage.passwordTextbox.sendKeys(fakeSifre);
+        ReusableMethods.bekle(2);
         homePage.loginButonu.click();
 
 

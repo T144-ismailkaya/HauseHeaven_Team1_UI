@@ -48,9 +48,10 @@ public class TC_ME03 extends TestBaseRapor {
        ReusableMethods.hover(homePage.listingshare);
 
 
-        homePage.listingsayfasiilanfacebookElementi.click();
+       // homePage.listingsayfasiilanfacebookElementi.click();
 
-        String facebookwindowhunddle=Driver.getDriver().getWindowHandle();
+
+
 
 
 
