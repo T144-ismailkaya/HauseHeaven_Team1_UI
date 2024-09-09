@@ -202,6 +202,51 @@ public class AdminDashboard {
     @FindBy (xpath = "(//*[@class='form-control input-sm'])[2]")
     public WebElement mesajlariSiralamaButonu;
 
+    @FindBy (xpath = "//*[@class='far fa-envelope']")
+    public WebElement adminContactLink;
+
+    @FindBy (xpath = "//*[@class='breadcrumb-item active']")
+    public WebElement adminContactYazisiDogrulama;
+
+    @FindBy (xpath = "(//*[@class='form-control input-sm'])[1]")
+    public WebElement adminContactSeacrhKutusu;
+
+    @FindBy (xpath = "//*[@class='dataTables_empty']")
+    public WebElement adminContactNoRecordYazisi;
+
+    @FindBy (xpath = "(//*[@class='btn btn-icon btn-sm btn-danger deleteDialog'])[1]")
+    public WebElement adminContactSayfasiDeleteButonu;
+
+    @FindBy (xpath = "//*[@class='float-end btn btn-danger delete-crud-entry']")
+    public WebElement adminContactSayfasiConfirmDeleteButonu;
+
+    @FindBy (xpath = "//*[@class='toast-message']")
+    public WebElement adminContactDeletedSuccessfullyYazisi;
+
+    @FindBy (xpath = "(//*[@class='btn btn-icon btn-sm btn-primary'])[1]")
+    public WebElement adminContactEditButonu;
+
+    @FindBy (xpath = "(//*[@class='breadcrumb-item active'])[1]")
+    public WebElement adminContactEditViewContactYazisi;
+
+    @FindBy (xpath = "//*[@id='status']")
+    public WebElement contactEditPageStatusDDM;
+
+    @FindBy (xpath = "//*[@class='btn btn-info']")
+    public WebElement contactSayfasiEditSaveExitButonu;
+
+    @FindBy (xpath = "//*[@class='toast-message']")
+    public WebElement contactSayfasiUpdatedSuccessfullyYazisi;
+
+    @FindBy (xpath = "//*[@class='fa fa-download']")
+    public WebElement adminContactExport;
+
+    @FindBy (xpath = "//*[@class='fas fa-file-csv']")
+    public WebElement adminContactCSV;
+
+    @FindBy (xpath = "//*[@name='botble-contact-tables-contact-table_length']")
+    public WebElement contactSayfasiMesajSIralama10lu;
+
 
     //---------------Rana Nur Son---------------\\
 
