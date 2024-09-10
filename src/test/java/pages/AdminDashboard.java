@@ -100,6 +100,79 @@ public class AdminDashboard {
     //---------------Levent Seflek Son------------\\
 
     //---------------Dilek---------------\\
+    @FindBy (xpath = "//*[@name='username']")
+    public WebElement adminUSerNameKutusu;
+
+    @FindBy (xpath = "//*[@name='password']")
+    public WebElement adminPasswordKutusu;
+
+    @FindBy (xpath = "//*[@class='signin']")
+    public WebElement adminSigInButonu;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[5]")
+    public WebElement adminRealEstateButonu;
+
+    @FindBy (xpath = "(//*[@class='nav-link'])[5]")
+    public WebElement adminProjectsLink;
+
+    @FindBy (xpath = "(//*[@class='breadcrumb-item active'])[2]")
+    public WebElement projectsayfasiProjectYazisi;
+
+    @FindBy (xpath = "//*[@class='fa fa-plus']")
+    public WebElement projectCreateButonu;
+
+    @FindBy (xpath = "//*[@id='name']")
+    public WebElement projectFOrmuNameKutusu;
+
+    @FindBy (xpath = "//*[@class='ck-placeholder']")
+    public WebElement projectFormuContentKutusu;
+
+    @FindBy (xpath = "//*[@id='location']")
+    public WebElement projectFOrmulocationKutusu;
+
+    @FindBy (xpath = "(//*[@class='btn btn-info'])[2]")
+    public WebElement projectFormuSaveExitButonu;
+
+    @FindBy (xpath = "//*[@class='toast-message']")
+    public WebElement projectFormUpdatesSuccessfullyYazisi;
+
+    @FindBy (xpath = "(//*[@class='fa fa-trash'])[1]")
+    public WebElement projectFormuDeleteButonu;
+
+    @FindBy (xpath = "//*[@class='float-end btn btn-danger delete-crud-entry']")
+    public WebElement projectSayfasiConfirmDeleteButonu;
+
+    @FindBy (xpath = "//*[@class='toast-message']")
+    public WebElement projectSayfasiProjesilindiktensonraSuccessfullyMesaji;
+
+    @FindBy (xpath = "(//*[@class='nav-link'])[11]")
+    public WebElement reviewLinki;
+
+    @FindBy (xpath = "(//*[@class='breadcrumb-item active'])[2]")
+    public WebElement reviewSayfasiReviewYazisi;
+
+    @FindBy (xpath = "//*[@title='Star']")
+    public WebElement reviewSayfasiStarYazisi;
+
+    @FindBy (xpath = "//*[@title='User']")
+    public WebElement reviewSayfasiUserYazisi;
+
+    @FindBy (xpath = "//*[@title='Comment']")
+    public WebElement reviewSayfasiCommetnYazisi;
+
+    @FindBy (xpath = "//*[@title='Created At']")
+    public WebElement reviewSayfasiCreatedAtYazisi;
+
+    @FindBy (xpath = "//*[@title='Operations']")
+    public WebElement reviewSayfasiOperationsYazisi;
+
+    @FindBy (xpath = "(//*[@class='fa fa-trash'])[1]")
+    public WebElement reviewSayfasiDeleteBUtonu;
+
+
+
+
+
 
     //---------------Dilek Son---------------\\
 

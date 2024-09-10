@@ -167,6 +167,55 @@ public class HomePage {
 
     //Dilek------------/
 
+    @FindBy (xpath = "(//*[@class='prt-link-detail'])[1]")
+    public WebElement anasayfadaHerhangiBirIlan;
+
+    @FindBy (xpath = "//*[normalize-space(text())='Sign Up']")
+    public WebElement headerSignUpButonu;
+
+    @FindBy (xpath = "//*[@id='first_name']")
+    public WebElement registerSayfasiFirstNameKutusu;
+
+    @FindBy (xpath = "//*[@id='last_name']")
+    public WebElement registerSayfasiLastNameKutusu;
+
+    @FindBy (xpath = "//*[@id='email']")
+    public WebElement registerSayfasiEmailKutusu;
+
+    @FindBy (xpath = "//*[@id='username']")
+    public WebElement registerSayfasiUsernameKutusu;
+
+    @FindBy (xpath = "//*[@id='password']")
+    public WebElement registerSayfasiPasswordKutusu;
+
+    @FindBy (xpath = "//*[@id='password-confirm']")
+    public WebElement registerSayfasiConfirmPasswordKutusu;
+
+    @FindBy (xpath = "//*[@class='btn btn-md full-width btn-theme-light-2 rounded']")
+    public WebElement registerSayfasiRegisterButonu;
+
+    @FindBy (xpath = "(//*[@class='mr-2'])[2]")
+    public WebElement kullaniciGirisiSignInButonu;
+
+    @FindBy(id = "email")
+    public WebElement kullaniciGirisiEmailKutusu;
+
+    @FindBy(id = "password")
+    public WebElement KullaniciGirisiPasswordKutusu;
+
+    @FindBy(xpath = "(//*[normalize-space(text())='Login'])[3]")
+    public WebElement KullaniciGirisiLoginButonu;
+
+    @FindBy (xpath = "//*[@class='fas fa-sign-out-alt']")
+    public WebElement kulaniciLogoutButonu;
+
+    @FindBy (xpath = "//*[@class='invalid-feedback d-block']")
+    public WebElement kullaniciYanlisGirisHataMesaji;
+
+
+
+
+
     //Dilek Son--------/
 
     //Mustafa İsmail---/
