@@ -171,6 +171,60 @@ public class AdminDashboard {
 
     //---------------Mustafa İsmail--------------\\
 
+    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[1]")
+    public WebElement adminDashboardBodyActivePropertiesLinki;
+
+    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[2]")
+    public WebElement adminDashboardBodyPendingPropertiesLinki;
+
+    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[3]")
+    public WebElement adminDashboardBodyExpiredPropertiesLinki;
+
+    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[4]")
+    public WebElement adminDashboardBodyAgentsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[1]")
+    public WebElement adminSidebarDashboardLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[3]")
+    public WebElement adminSidebarBlogLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[4]")
+    public WebElement adminSidebarTestimonialsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[5]")
+    public WebElement adminSidebarRealEstateLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[7]")
+    public WebElement adminSidebarNewslettersLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[8]")
+    public WebElement adminSidebarConsultsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[9]")
+    public WebElement adminSidebarAccountsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[10]")
+    public WebElement adminSidebarPackagesLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[13]")
+    public WebElement adminSidebarContactLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[14]")
+    public WebElement adminSidebarPaymentsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[15]")
+    public WebElement adminSidebarLocationsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[16]")
+    public WebElement adminSidebarMediaLinki;
+
+    @FindBy (xpath = "//*[@class='col-md-6']")
+    public WebElement adminDashboardCopyrightLinki;
+
+    @FindBy (xpath = "//*[@class='col-md-6 text-end']")
+    public WebElement adminDashboardPageLoadLinki;
+
     //---------------Mustafa İsmail Son---------------\\
 
     //---------------Rana Nur---------------\\

@@ -33,15 +33,17 @@ public class TC_IK019 extends TestBaseRapor {
         IsmailPage ismailPage = new IsmailPage();
         if (ismailPage.allowCookies.isDisplayed()){
             ismailPage.allowCookies.click();
+            extentTest.pass("Ziyaretçi sitede bulunan cookies'i kabul eder");
         }
         ismailPage.signInButonu.click();
+        extentTest.pass("Kullanıcı header bölümünde yer alan Sign In butonuna basar");
 
-        ismailPage.emailTextbox.sendKeys("ismailkaya@hauseheaven.com");
-        ismailPage.passwordTextbox.sendKeys("Hven.150820");
-        ismailPage.loginButonu.click();
+        IsmailMethods.hauseHeavenLogin(ismailPage,"ismailkaya@hauseheaven.com","Hven.150820");
 
         ismailPage.usernamePage.click();
+        extentTest.pass("Kullanıcı kendi profil sayfasına erişir");
         ismailPage.buyCredit.click();
+        extentTest.pass("Kullanıcı yan menüde bulunan Buy credits butonuna basar");
 
         WebElement paketFiyati = Driver.getDriver().findElement(By.xpath("(//*[@class='list-group-item'])[4]"));
         String paketFiyatiString = paketFiyati.getText();
@@ -51,35 +53,53 @@ public class TC_IK019 extends TestBaseRapor {
         paketFiyatiString = paketFiyatiString.substring(0, 4);
 
         ismailPage.besPostsCell.click();
+        extentTest.pass("Kullanıcı listelenen paketlerden herhangi birini seçip altında bulunan PURCHASE butonuna basar");
 
         String name = "İsmail Kaya";
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("stripe-number")));
 
+        ReusableMethods.erisimTesti("https://qa.hauseheaven.com/account/packages/3/subscribe");
+        extentTest.pass("Kullanıcı Ödeme sayfasına eriştiğini doğrular");
+
         jse.executeScript("window.scrollTo(0, 100);");
 
         ismailPage.cardNumber.sendKeys("4242424242424242");
+        extentTest.pass("Kullanıcı Card number textbox'a belirlenmiş kart numarasını girer");
+        extentTest.info("4242 4242 4242 4242");
         ismailPage.ayYil.sendKeys("0229");
+        extentTest.pass("Kullanıcı MM/YY textbox'a belirlenmiş tarih numarasını girer");
+        extentTest.info("02/29");
         ismailPage.fullName.sendKeys(name);
+        extentTest.pass("Kullanıcı Full name textbox'a sistemde kayıt olduğu ismi girer");
+        extentTest.info(name);
         ismailPage.cvc.sendKeys("379");
+        extentTest.pass("Kullanıcı CVC textbox'a belirlenmiş cvc numarasını girer");
+        extentTest.info("379");
         ismailPage.checkoutButonu.click();
+        extentTest.pass("Kullanıcı Checkout butonuna basarak işlemi onaylar");
 
         WebElement alertMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("alert-container")));
 
         String expectedMessage = "Add credit successfully!";
         String actualMessage = alertMessage.getText();
         Assert.assertEquals(actualMessage,expectedMessage);
+        extentTest.pass("Kullanıcı alert'te çıkan yazıyı doğrular");
 
         wait.until(ExpectedConditions.visibilityOf(ismailPage.logoutButonu));
         ismailPage.logoutButonu.click();
+        extentTest.pass("Kullanıcı header bölümünde yer alan Logout butonuna basar");
 
         Driver.getDriver().get(ConfigReader.getProperty("hauseAdminUrl"));
         ReusableMethods.erisimTesti(ConfigReader.getProperty("hauseAdminUrl"));
+        extentTest.pass("Kullanıcı admin sayfasına erişir");
 
         IsmailMethods.hauseHeavenAdminLogin(ismailPage, "ismailkaya.admin@hauseheaven.com", "Hven.150820");
 
         ismailPage.paymentsButonu.click();
+        extentTest.pass("Kullanıcı Payments butonuna basar");
         ismailPage.transactionsButonu.click();
+        extentTest.pass("Kullanıcı açılan menüdeki Transactions Butonuna basar");
 
         // Kart bilgileri ile girdiğimiz ismi admin sayfasındaki isimle karşılaştırma
         List<WebElement> paymentIsimList = Driver.getDriver().findElements(By.xpath("//tbody/tr[1]/td[4]"));
@@ -101,8 +121,10 @@ public class TC_IK019 extends TestBaseRapor {
         paymentStringFiyat = paymentStringFiyat.substring(0, 4);
 
         Assert.assertTrue(paketFiyatiString.contains(paymentStringFiyat));
+        extentTest.pass("Kullanıcı satın aldı işlemi görür ve doğrular ");
 
         Driver.quitDriver();
+        extentTest.pass("Kullanıcı browser'ı kapatır.");
 
     }
 }

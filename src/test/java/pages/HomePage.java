@@ -210,8 +210,29 @@ public class HomePage {
     @FindBy (xpath = "//*[@class=\"alert alert-success alert-dismissible\"]")
     public WebElement alert;
 
+    @FindBy (xpath = "(//*[@class='agents-grid'])[1]")
+    public WebElement agentsPageIlkAgent;
 
+    @FindBy (xpath = "(//*[@class='img-fluid mx-auto'])[1]")
+    public WebElement agentsPageIlkAgentFoto;
 
+    @FindBy (xpath = "(//*[@class='fr-grid-deatil'])[1]")
+    public WebElement agentsPageIlkAgentIsim;
+
+    @FindBy (xpath = "(//div/ul/li/strong[text()='Phone:'])[1]")
+    public WebElement agentsPageIlkAgentTel;
+
+    @FindBy (xpath = "(//div/ul/li/strong[text()='Email:'])[1]")
+    public WebElement agentsPageIlkAgentEmail;
+
+    @FindBy (xpath = "(//*[@class='fr-position'])[1]")
+    public WebElement agentsPageIlkAgentIlanSayisi;
+
+    @FindBy (xpath = "(//*[@class='prt-view'])[1]")
+    public WebElement agentsPageIlkAgentViewLinki;
+
+    @FindBy (xpath = "//*[@class='ipt-title']")
+    public WebElement agentsDetailPageTitleLinki;
 
     //Mustafa İsmail Son/
 
