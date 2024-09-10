@@ -145,7 +145,7 @@ public class HomePage {
     public WebElement sefFooterHeaderTitle;
 
     @FindBy(xpath = "//*[@title=\"Facebook\"]")
-    public WebElement SefFooterFacebookBoxElementi;
+    public WebElement SefFooterfacebookBoxElementi;
 
     @FindBy(xpath = "//*[@title='Twitter']")
     public WebElement SeftwitterBoxButtonElementi;
@@ -161,6 +161,7 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@class='alert alert-success alert-dismissible']")
     public WebElement seffooterSubscribeConfirmYaziElementi;
+
 
     //Levent Son-------/
 
