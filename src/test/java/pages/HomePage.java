@@ -145,7 +145,7 @@ public class HomePage {
     public WebElement sefFooterHeaderTitle;
 
     @FindBy(xpath = "//*[@title=\"Facebook\"]")
-    public WebElement SefFooterfacebookBoxElementi;
+    public WebElement SeffooterfacebookBoxElementi;
 
     @FindBy(xpath = "//*[@title='Twitter']")
     public WebElement SeftwitterBoxButtonElementi;
@@ -381,28 +381,6 @@ public class HomePage {
 
     @FindBy (xpath ="//*[@class='contact-message contact-error-message']")
     public WebElement contactSayfasiHataMesaji;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     //Rana Nur Son-----/
 
