@@ -47,6 +47,43 @@ public class MustafaPage {
     @FindBy (xpath = "//*[@class=\"badge badge-info\"]")
     public WebElement yourCreditsText;
 
+    @FindBy (xpath = "//*[@href=\"https://qa.hauseheaven.com/account/security\"]")
+    public WebElement securityButton;
+
+    @FindBy (xpath = "//*[@id=\"password\"]")
+    public WebElement newPasswordTextBox;
+
+    @FindBy (xpath = "//*[@id=\"password_confirmation\"]")
+    public WebElement confirmationPasswordTextBox;
+
+    @FindBy (xpath = "//*[@class=\"btn btn-theme-light-2\"]")
+    public WebElement updatePasswordButton;
+
+    @FindBy (xpath = "//*[@class=\"alert alert-success alert-dismissible\"]")
+    public WebElement passwordChangedAlert;
+
+    @FindBy (xpath = "(//*[@class=\"form-control\"])[1]")
+    public WebElement adminEmailTextBox;
+
+    @FindBy (xpath = "(//*[@class=\"form-control\"])[2]")
+    public WebElement adminPasswordTextBox;
+
+    @FindBy (xpath = "//*[@class=\"signin\"]")
+    public WebElement adminSigninButonu;
+
+    @FindBy (xpath = "//*[@class=\"breadcrumb-item active\"]")
+    public WebElement adminDashboardText;
+
+    @FindBy (xpath = "(//*[@class=\"nav-link nav-toggle\"])[5]")
+    public WebElement adRealEstateTitle;
+
+    @FindBy (xpath = "//*[@href=\"https://qa.hauseheaven.com/admin/real-estate/property-features\"]")
+    public WebElement adRealEstateFeatures;
+
+
+
+
+
 
 
 
