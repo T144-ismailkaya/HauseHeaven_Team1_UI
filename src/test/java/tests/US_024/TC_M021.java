@@ -3,6 +3,7 @@ package tests.US_024;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -10,13 +11,14 @@ import utilities.TestBaseRapor;
 
 import static utilities.Driver.driver;
 
-public class TC_M020 extends TestBaseRapor {
+public class TC_M021 extends TestBaseRapor {
 
     @Test
-    public void Test20 (){
+    public void Test21 (){
 
-        extentTest = extentReports.createTest("Kayıtlı Kullanıcı olarak " +
-                "Kayıtlı Emlakçıların sayfasında iken Emlakçıların ilanlarının görünür olduğu testi");
+        extentTest = extentReports.createTest("Kayıtlı Kullanıcı olarak Kayıtlı Emlakçıların sayfasında iken " +
+                "Emlakçı ilanında emlakçının fotoğrafı, ismi, telefon numarası, e-mail adresi, ilan sayısı ve View linki " +
+                "olduğu testi");
 
         //Ziyaretçi browser’ı açar, HauseHeaven URL’ini girer ve enter’a basar
 
@@ -48,9 +50,21 @@ public class TC_M020 extends TestBaseRapor {
         Assert.assertEquals(actualUrl,expectedUrl);
         extentTest.pass("Açılan sayfanın Kayıtlı Emlakçılar sayfası olduğu test edildi.");
 
-        //Kayıtlı Emlakçılar sayfasında emlakçıların ilanlarının görünür olduğunu test eder.
-        Assert.assertTrue(homePage.agentsPageIlkAgent.isDisplayed());
-        extentTest.pass("Kayıtlı Emlakçılar sayfasında emlakçıların ilanlarının görünür olduğu test edildi.");
+        //Emlakçı ilanında emlakçının fotoğrafı, ismi, telefon numarası, e-mail adresi, ilan sayısı ve
+        // View linki olduğunu test eder.
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(homePage.agentsPageIlkAgentFoto.isDisplayed(), "Emlakçı Fotoğrafı bulunamadı");
+        softAssert.assertTrue(homePage.agentsPageIlkAgentIsim.isDisplayed(), "Emlakçı İsmi bulunamadı");
+        softAssert.assertTrue(homePage.agentsPageIlkAgentTel.isDisplayed(), "Emlakçı Telefon numarası bulunamadı");
+        softAssert.assertTrue(homePage.agentsPageIlkAgentEmail.isDisplayed(), "Emlakçı Email adresi bulunamadı");
+        softAssert.assertTrue(homePage.agentsPageIlkAgentIlanSayisi.isDisplayed(), "Emlakçı İlan sayısı bulunamadı");
+        softAssert.assertTrue(homePage.agentsPageIlkAgentViewLinki.isDisplayed(), "Contacts Linki bulunamadı");
+
+        extentTest.pass("Emlakçı ilanında emlakçının fotoğrafı, ismi, telefon numarası, e-mail adresi, " +
+                "ilan sayısı ve View linki olduğu test edildi. ");
+
+        softAssert.assertAll();
+
 
         //Daha sonra Log out linkine tıklar
         homePage.logoutButonu.click();

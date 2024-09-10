@@ -6,17 +6,19 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 import static utilities.Driver.driver;
 
-public class TC_M020 extends TestBaseRapor {
+public class TC_M022 extends TestBaseRapor {
 
     @Test
-    public void Test20 (){
+    public void Test22 (){
 
         extentTest = extentReports.createTest("Kayıtlı Kullanıcı olarak " +
-                "Kayıtlı Emlakçıların sayfasında iken Emlakçıların ilanlarının görünür olduğu testi");
+                "Kayıtlı Emlakçıların sayfasında Emlakçı ilanında emlakçının fotoğrafı veya View linkine tıklandığında " +
+                "Emlakçının ilan sayfasının açıldığı testi");
 
         //Ziyaretçi browser’ı açar, HauseHeaven URL’ini girer ve enter’a basar
 
@@ -48,9 +50,27 @@ public class TC_M020 extends TestBaseRapor {
         Assert.assertEquals(actualUrl,expectedUrl);
         extentTest.pass("Açılan sayfanın Kayıtlı Emlakçılar sayfası olduğu test edildi.");
 
-        //Kayıtlı Emlakçılar sayfasında emlakçıların ilanlarının görünür olduğunu test eder.
-        Assert.assertTrue(homePage.agentsPageIlkAgent.isDisplayed());
-        extentTest.pass("Kayıtlı Emlakçılar sayfasında emlakçıların ilanlarının görünür olduğu test edildi.");
+        //Açılan sayfada Emlakçı ilanında fotoğrafa tıklar.
+        homePage.agentsPageIlkAgentFoto.click();
+        extentTest.info("Emlakçı ilanındaki fotoğrafa tıklandı.");
+
+        //Daha sonra Açılan sayfanın emlakçının ilan sayfası olduğunu test der.
+        Assert.assertTrue(homePage.agentsDetailPageTitleLinki.isDisplayed());
+        extentTest.pass("Açılan sayfanın emlakçının ilan sayfası olduğu test edildi.");
+
+        //Tekrar Agents sayfasına geri dönüldü
+        homePage.agentsButonu.click();
+        extentTest.info("Kayıtlı Emlakçılar sayfasına geri dönüldü.");
+
+        //Sayfada Emlakçı ilanında View linkine tıklar.
+        ReusableMethods.hover(homePage.agentsPageIlkAgentViewLinki);
+        homePage.agentsPageIlkAgentViewLinki.click();
+        extentTest.info("Emlakçı ilanındaki View linkine tıklandı.");
+
+        //Sonra tekrar Açılan sayfanın emlakçının ilan sayfası olduğunu test der.
+        Assert.assertTrue(homePage.agentsDetailPageTitleLinki.isDisplayed());
+        extentTest.pass("Açılan sayfanın emlakçının ilan sayfası olduğu test edildi.");
+
 
         //Daha sonra Log out linkine tıklar
         homePage.logoutButonu.click();
