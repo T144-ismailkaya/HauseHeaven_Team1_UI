@@ -1,6 +1,7 @@
 package utilities;
 
 import pages.HomePage;
+import pages.TeamPages.MustafaPage;
 
 public class MustafaMethods extends TestBaseRapor{
 
@@ -19,6 +20,23 @@ public class MustafaMethods extends TestBaseRapor{
 
         homePage.loginButonu.click();
         extentTest.pass("Login butonu tıklandı.");
+
+    }
+
+    public static void adminPageLogin(String adminUsername, String adminPassword){
+
+        MustafaPage mustafaPage = new MustafaPage();
+
+        Driver.getDriver().get(ConfigReader.getProperty("hauseAdminUrl"));
+        extentTest.pass("Hause Heaven admin sayfasına gidildi.");
+
+        mustafaPage.adminEmailTextBox.sendKeys(adminUsername);
+        mustafaPage.adminPasswordTextBox.sendKeys(adminPassword);
+        extentTest.pass("Email ve password bilgileri girildi.");
+
+        mustafaPage.adminSigninButonu.click();
+        extentTest.pass("Sign in butonu tıklandı.");
+
 
     }
 
