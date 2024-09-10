@@ -6,34 +6,52 @@ import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import java.util.List;
 
-public class TC_L016footerHowtoStage {
+public class TC_L016footerHowtoStage extends TestBaseRapor {
 
     @Test
 
-    public void  TC015 (){
+    public void  TC015footerHowToStage (){
+
+        extentTest = extentReports.createTest("footer How Stage");
+
 
         HomePage homePage=new HomePage();
 
         //Ziyaretci hausehaen Url'ine giris saglar
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
 
+        extentTest.pass("Ziyaretci hausehaen Url'ine giris saglar");
+
+
         //Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar
         ReusableMethods.hover(homePage.SefFooterElementi);
         homePage.sefUsercookies.click();
+
+        extentTest.pass("Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar");
+
         //Ziyaretci footer bolumunde yer alan "How to Stage Your Home for a Quick and Profitable Sale" tab'ina tiklar
         homePage.sefFooterHowtoStageElementi.click();
         ReusableMethods.getFullScreenshot(Driver.getDriver());
+
+        extentTest.pass("Ziyaretci footer bolumunde yer alan \"How to Stage Your Home for a Quick and Profitable Sale\" tab'ina tiklar");
+
 
         //Ziyaretci ayni sekmede "How to Stage Your Home for a Quick and Profitable Sale" sayfasinin acildigini kontrol eder
         int winHandleTimes = 1;
         Assert.assertEquals(Driver.getDriver().getWindowHandles().size(), winHandleTimes);
 
+        extentTest.pass("Ziyaretci ayni sekmede \"How to Stage Your Home for a Quick and Profitable Sale\" sayfasinin acildigini kontrol eder");
+
+
         //Ziyaretci "How to Stage Your Home for a Quick and Profitable Sale" sayfasinda asagiya footer bolumune scroll yapar
         ReusableMethods.hover(homePage.SefFooterElementi);
         ReusableMethods.wait(2);
+        extentTest.pass("How to Stage Your Home for a Quick and Profitable Sale\" sayfasinda asagiya footer bolumune scroll yapar");
+
         //Ziyaretci guideline da verilen footer ogelerinin "THow to Stage Your Home for a Quick and Profitable Sale"sayfasinin altinda yer aldigini  kontrol eder
         List<String> footerAltUstDizinList = ReusableMethods.getStringList(homePage.sefFooterGenelList);
         System.out.println(footerAltUstDizinList);
@@ -58,6 +76,8 @@ public class TC_L016footerHowtoStage {
         for (String eachelements : footerAltUstDizinList) {
             Assert.assertTrue(expetedFooterElements.contains(eachelements));
         }
+        extentTest.pass("Ziyaretci guideline da verilen footer ogelerinin \"THow to Stage Your Home for a Quick and Profitable Sale\"sayfasinin altinda yer aldigini  kontrol eder");
+
         //Ziyaretci halen  "How to Stage Your Home for a Quick and Profitable Sale" sayfasinda oldgunu dogrular
 
         String expectedUrl="https://hauseheaven.com/news/how-to-stage-your-home-for-sale";
@@ -65,9 +85,15 @@ public class TC_L016footerHowtoStage {
 
         Assert.assertEquals(actualUrl,expectedUrl);
 
+        extentTest.pass("Ziyaretci halen  \"How to Stage Your Home for a Quick and Profitable Sale\" sayfasinda oldgunu dogrular");
+
+
         //Ziyratci tarayiciyi kapatir
 
         Driver.quitDriver();
+
+        extentTest.pass("Ziyratci tarayiciyi kapatir");
+
     }
 
 }

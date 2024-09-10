@@ -6,29 +6,36 @@ import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
+import utilities.TestBaseRapor;
 
 import java.util.List;
 
-public class TC_L010footerAllproperties {
+public class TC_L010footerAllproperties extends TestBaseRapor {
 
     @Test
     public void TC010 (){
+        extentTest = extentReports.createTest("Footer All Properties Testi");
 
         HomePage homePage=new HomePage();
         //Ziyaretci hausehaen Url'ine giris saglar
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+        extentTest.pass("Ziyaretci hausehaen Url'ine giris saglar");
 
         //Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar
         ReusableMethods.hover(homePage.SefFooterElementi);
         homePage.sefUsercookies.click();
+        extentTest.pass("Ziyaretci ana sayfa yuklendikten sonra sayfa sonunda yer alan footer bolumune scroll yapar");
         //Ziyaretci footer bolumunde yer alan "All Properties " tab'ina tiklar
        homePage.sefFooterAllPropertiesElementi.click();
+        extentTest.pass("Ziyaretci footer bolumunde yer alan \"All Properties \" tab'ina tiklar");
         //Ziyaretci ayni sekmede "All Properties " sayfasinin acildigini kontrol eder
         int winHandleTimes = 1;
         Assert.assertEquals(Driver.getDriver().getWindowHandles().size(), winHandleTimes);
+        extentTest.pass("Ziyaretci ayni sekmede \"All Properties \" sayfasinin acildigini kontrol eder");
         //Ziyaretci "All Properties " sayfasinda asagiya footer bolumune scroll yapar
         ReusableMethods.hover(homePage.SefFooterElementi);
         ReusableMethods.wait(2);
+        extentTest.pass("Ziyaretci \"All Properties \" sayfasinda asagiya footer bolumune scroll yapar");
         //Ziyaretci guideline da verilen footer ogelerinin "All Properties "sayfasinin altinda yer aldigini  kontrol eder
         List<String> footerAltUstDizinList = ReusableMethods.getStringList(homePage.sefFooterGenelList);
         System.out.println(footerAltUstDizinList);
@@ -57,10 +64,14 @@ public class TC_L010footerAllproperties {
         String expectedUrl="https://qa.hauseheaven.com/properties";
         String actualUrl=Driver.getDriver().getCurrentUrl();
 
+        extentTest.pass("Ziyaretci guideline da verilen footer ogelerinin \"All Properties \"sayfasinin altinda yer aldigini  kontrol eder");
+
         Assert.assertEquals(actualUrl,expectedUrl);
 
         //Ziyratci tarayiciyi kapatir
 
         Driver.quitDriver();
+
+        extentTest.pass("Ziyratci tarayiciyi kapatir");
     }
 }
