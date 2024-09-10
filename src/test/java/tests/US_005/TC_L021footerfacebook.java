@@ -18,7 +18,9 @@ public class TC_L021footerfacebook extends TestBaseRapor {
         extentTest.pass("Ziyaretci hausehaen Url'ine giris saglar ve footer bolumune scroll yapar");
         LeventMethods.footerhomepageScroll();
         //Ziyaretci footer bolumunde yer alan "FaceBook" logosuna  tiklar
+
         homePage.SeffooterfacebookBoxElementi.click();
+
         ReusableMethods.getFullScreenshot(Driver.getDriver());
         extentTest.pass("Ziyaretci footer bolumunde yer alan \"FaceBook\" logosuna  tiklar");
         //Ziyaretci yeni sekmede "Hauseheaven-Facebook" sayfasinin ayri sekmede acildigini kontrol eder
