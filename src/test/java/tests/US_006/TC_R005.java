@@ -1,5 +1,6 @@
 package tests.US_006;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utilities.ConfigReader;
@@ -26,6 +27,13 @@ public class TC_R005 extends TestBaseRapor {
 
         homePage.listingSayfasiBakuMulku.click();
         extentTest.pass("Listingdeki listelenen bir ilana tiklanildi");
+
+        String expectedBakuMulku="Baku";
+        String actualBakuMulku=homePage.listingSayfasiBakuMulku.getText();
+
+        Assert.assertEquals(actualBakuMulku,expectedBakuMulku);
+        extentTest.pass("Baku mulkunun yazisinin olup olmadigi dogrulanir.");
+
 
         Driver.getDriver().navigate().back();
         extentTest.pass("Listingdeki listelenen bir ilandan ana sayfaya geri donuldu");
