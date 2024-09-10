@@ -11,6 +11,8 @@ import org.testng.asserts.SoftAssert;
 import pages.AdminDashboard;
 import pages.TeamPages.IsmailPage;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +38,17 @@ public class IsmailMethods extends TestBaseRapor {
         extentTest.info(password);
         ismailPage.adminSignInButonu.click();
         extentTest.pass("Admin Sign In Butonuna basar");
+    }
+
+    public static void hauseHeavenLogin(IsmailPage ismailPage, String username, String password){
+        ismailPage.emailTextbox.sendKeys(username);
+        extentTest.pass("Admin Email/Username textbox'a belirlenmiş email'i girer");
+        extentTest.info(username);
+        ismailPage.passwordTextbox.sendKeys(password);
+        extentTest.pass("Admin Password textbox'a belirlenmiş password girer");
+        extentTest.info(password);
+        ismailPage.loginButonu.click();
+        extentTest.pass("Admin Login Butonuna basar");
     }
 
     public static void sayfaDogrulama(WebElement buton, String expectedText, SoftAssert softAssert) {
