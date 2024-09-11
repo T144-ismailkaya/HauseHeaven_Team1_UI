@@ -387,6 +387,30 @@ public class AdminDashboard {
 
     //---------------Mehmet Muavviz---------------\\
 
+    @FindBy (xpath = "(//*[@class='d-none d-sm-inline'])[1]")
+    public WebElement adminViewWebsiteLinki;
+
+    @FindBy (xpath = "//*[@class='fas fa-bell']")
+    public WebElement adminHeaderNotificationsLinki;
+
+    @FindBy (xpath = "//*[@class='sidebar show-notification-sidebar']")
+    public WebElement adminDashboardNotificationsLinki;
+
+    @FindBy (xpath = "//*[@class='close-btn']")
+    public WebElement adminDashboardNotificationsCloseButtonLinki;
+
+    @FindBy (xpath = "(//*[@class='icon-envelope-open'])[1]")
+    public WebElement adminDashboardNewMessagesLinki;
+
+    @FindBy (xpath = "(//*[@class='icon-envelope-open'])[2]")
+    public WebElement adminDashboardNewConsultsLinki;
+
+    @FindBy (xpath = "//*/h3[text()=' New Messages']")
+    public WebElement adminDashboardNewMessagesDropdownLinki;
+
+    @FindBy (xpath = "//*/h3[text()=' New Consults']")
+    public WebElement adminDashboardNewConsultsDropdownLinki;
+
     //---------------Mehmet Muavviz Son---------------\\
 
     //---------------Merve Nur---------------\\
