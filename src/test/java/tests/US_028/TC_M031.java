@@ -1,3 +1,4 @@
+
 package tests.US_028;
 
 import org.testng.Assert;
@@ -10,13 +11,13 @@ import utilities.TestBaseRapor;
 
 import static utilities.Driver.driver;
 
-public class TC_M029 extends TestBaseRapor {
+public class TC_M031 extends TestBaseRapor {
 
     @Test
-    public void Test29 (){
+    public void Test31 (){
 
         extentTest = extentReports.createTest("Admin giriş sayfasından " +
-                "Admin Dashboard sayfasına girildiğinde Header'daki View Website linki görünür ve aktif olduğu testi");
+                "Admin Dashboard sayfasına girildiğinde Copyright ve Page Load bilgilerinin görünür olduğu testi");
 
         //Ziyaretçi browser’ı açar, HauseHeaven Admin giriş URL’ini girer ve enter’a basar
 
@@ -42,20 +43,13 @@ public class TC_M029 extends TestBaseRapor {
         Assert.assertTrue(adminDashboard.sefadminHeaderUserNameButtonu.isDisplayed());
         extentTest.pass("Açılan sayfanın Admin Dashboard sayfası olduğu test edildi.");
 
-        //Header bölümündeki View Website linkinin görünür olduğunu test eder.
-        Assert.assertTrue(adminDashboard.adminViewWebsiteLinki.isDisplayed());
-        extentTest.pass("Header bölümündeki View Website linkinin görünür olduğu test edildi.");
+        //Admin Dashboard'da Copyright bilgisinin görünür olduğunu doğrular
+        Assert.assertTrue(adminDashboard.adminDashboardCopyrightLinki.isDisplayed());
+        extentTest.pass("Admin Dashboard'da Copyright bilgisinin görünür olduğu test edildi.");
 
-        //View Website linkine tıklar
-        adminDashboard.adminViewWebsiteLinki.click();
-        extentTest.info("Header bölümündeki View Website linkine tıklandı.");
-
-        //HauseHeaven Admin giriş sayfasında olduğunu doğrular.
-        expectedUrl="https://qa.hauseheaven.com/";
-        actualUrl= driver.getCurrentUrl();
-
-        Assert.assertEquals(actualUrl,expectedUrl);
-        extentTest.pass("Açılan Sayfanın Hause Heaven Websitesi olduğu test edildi.");
+        //Admin Dashboard'da Page Load bilgisinin görünür olduğunu doğrular
+        Assert.assertTrue(adminDashboard.adminDashboardPageLoadLinki.isDisplayed());
+        extentTest.pass("Admin Dashboard'da Page Load bilgisinin görünür olduğu test edildi.");
 
         //Admin Dashboard sayfasında Kullanıcı adına tıklar.
         adminDashboard.sefadminHeaderUserNameButtonu.click();
