@@ -30,7 +30,7 @@ public class TC_ME01 extends TestBaseRapor {
         homePage.listingseciliilan.click();
 
         extentTest.pass("Ziyaretçi mülk ayrıntılarını görür ve consults kısmına gelir . ");
-        ReusableMethods.hover(homePage.listingsendmesajbutonu);
+        ReusableMethods.hover(homePage.listinglocation);
         Assert.assertTrue(homePage.listingconsultnamekutusu.isDisplayed());
         extentTest.pass("Ziyaretçi consults kısmında name kutusuna isim , email kutusuna email,phone kutusuna telefon numarsası ve message kısmına  da gondermek istedediği mesaja yazar . ");
 
@@ -44,6 +44,10 @@ public class TC_ME01 extends TestBaseRapor {
         homePage.listingsendmesajbutonu.click();
         ReusableMethods.bekle(7);
        extentTest.pass(" Ziyaretçi send consult successfully penceresini gördüğünde mesajın gonderildiğini doğrular") ;
+
+
+       //ReusableMethods.waitForVisibility(homePage.listingsuccessfully,10);
+        ReusableMethods.bekle(3);
         Assert.assertTrue(homePage.listingsuccessfully.isDisplayed());
       extentTest.pass(" Ziyaretçi açılan sekmeyi kapatır.");
       Driver.getDriver().quit();

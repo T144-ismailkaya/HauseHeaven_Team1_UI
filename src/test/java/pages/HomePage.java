@@ -589,7 +589,7 @@ public class HomePage {
     public WebElement listingpuancleanlines;
 
 
-    @FindBy(xpath = "textarea[placeholder='Messages']")
+    @FindBy(id = "//*[@class='form-control ht-80']")
     public WebElement listingmesajkutusuElementi;
 
     @FindBy(xpath = "(//button[normalize-space()='Submit Review'])[1]") //*[@class='btn btn-theme-light-2 rounded']
@@ -603,9 +603,9 @@ public class HomePage {
     public WebElement listingemailbutonu;
     @FindBy(xpath = " //*[@name='content']")
     public  WebElement listingmesajkutusu;
-    @FindBy(xpath = "//*[@id=\"consult-form\"]/div/div[6]/button")
+    @FindBy(xpath = "//button[normalize-space()='Send Message']")
     public WebElement listingsendmesajbutonu;
-    @FindBy (xpath = "(//div[@id='alert-container'])[1]")
+    @FindBy (xpath = "//div[@class='alert alert-success alert-dismissible']")
     public WebElement listingsuccessfully;
 
     @FindBy(xpath = " (//div[@id='alert-container'])[1]")
@@ -758,6 +758,22 @@ public class HomePage {
     public WebElement dasboardeditbutonu;
     @FindBy(xpath = "//*[@id=\"botble-real-estate-forms-consult-form\"]/div/div[1]/div/div[2]/p/i")
     public WebElement daosboarddetailsbutonu;
+    @FindBy(xpath = "//a[normalize-space()='Sign In']")
+    public WebElement singinbutonu;
+    @FindBy(xpath = "//*[@id='email']")
+    public WebElement singinemailbutonu;
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement singinpasswordbutonu;
+    @FindBy(xpath = "//button[normalize-space()='Login']")
+    public WebElement singinloginbutonu;
+    @FindBy (xpath = " //a[@class='cl-facebook']")
+    public WebElement listingfacebookbutonu;
+    @FindBy(xpath = "//i[@class='lni-twitter']")
+    public WebElement listingtwitterbutonu;
+    @FindBy(xpath = "//i[@class='lni-linkedin']")
+    public WebElement listinglinkedinbutonu;
+    @FindBy(xpath = "//h4[normalize-space()='Location']")
+    public WebElement listinglocation;
 
 
 

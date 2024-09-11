@@ -24,15 +24,10 @@ public class TC_ME02 extends TestBaseRapor {
         extentTest.pass(" Kayıtlı kullanıcı HauseHeaven anasayfa header a ulaşır.");
         Assert.assertTrue(homePage.hauseheavenlogo.isDisplayed());
 
-       Faker faker=new Faker();
         homePage.signinButonu.click();
-        String fakeEmail=faker.internet().emailAddress();
-        String fakeSifre=faker.internet().password();
-        homePage.emailTextbox.sendKeys(fakeEmail);
-        ReusableMethods.bekle(2);
-        homePage.passwordTextbox.sendKeys(fakeSifre);
-        ReusableMethods.bekle(2);
-        homePage.loginButonu.click();
+        homePage.singinemailbutonu.sendKeys("elif@gmail.com");
+        homePage.singinpasswordbutonu.sendKeys("123456789.elif");
+        homePage.singinloginbutonu.click();
 
 
 

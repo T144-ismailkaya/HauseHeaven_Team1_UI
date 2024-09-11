@@ -2,15 +2,18 @@ package tests.US_045;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.AdminDashboard;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 public class TC_ME07 extends TestBaseRapor {
     @Test
     public void test07(){
         HomePage homePage=new HomePage();
+        AdminDashboard adminDashboard=new AdminDashboard();
         extentTest=extentReports.createTest("Gelen consults' un edit butonuna tıklayarak gerekli düzenlemelerden sonra save&edit butonuna tıklayarak değişikliklerin kaydedildiğinin doğrulanması testi. ");
 
         extentTest.pass("Ziyaretçi hauseheaven.com/admin url girer ") ;
@@ -33,13 +36,25 @@ public class TC_ME07 extends TestBaseRapor {
 
         extentTest.pass("Admin consults sayfasında düzenlemek istediği yorumun edit butonona tıklar. ");
         homePage.dasboardeditbutonu.click();
-              //  Admine bu sayfada sadece yorumun okunup okunmadığı konusunda değişiklik yapılmasına izin veriliyor.
+        extentTest.pass("Admine bu sayfada sadece yorumun okunup okunmadığı konusunda değişiklik yapılmasına izin veriliyor. ");
 
         extentTest.pass("admin yorumu düzenlemek için details kısmına tıklar. ") ;
         homePage.daosboarddetailsbutonu.click();
 
-              // Admin update successfully penceresini gördüğünde düzenlemenin kaydedildiğini doğrular.
-               // Admin açtığı sayfayı kapatır.
+        String expectedresult="edit successfully";
+        String actualresult= adminDashboard.adminconsults.getText();
+
+        ReusableMethods.getFullScreenshot(Driver.getDriver());
+        Assert.assertEquals(actualresult,expectedresult);
+
+
+
+
+
+
+               extentTest.pass(" Admin açtığı sayfayı kapatır.") ;
+
+        Driver.getDriver().quit();
 
 
 

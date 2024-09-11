@@ -44,6 +44,7 @@ public class TC_ME06 extends TestBaseRapor {
        extentTest.pass("Admin deleted successfully penceresini gördüğünde mailin silindiğini doğrular ");
         Assert.assertTrue(homePage.daosboarddeletedsuccessfullybutonu.isDisplayed());
        extentTest.pass("  Admin açtığı sayfayı kapatır.") ;
+       Driver.getDriver().quit();
 
     }
 }
