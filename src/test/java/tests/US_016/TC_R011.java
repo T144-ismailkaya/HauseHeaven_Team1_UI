@@ -79,6 +79,7 @@ public class TC_R011 extends TestBaseRapor {
         extentTest.pass("Ilan yayinlanmak icin save&exit butonuna tiklanilir.");
 
         String actualmessage=homePage.ilanCreatedSuccesfuly.getText();
+        ReusableMethods.getFullScreenshot(Driver.getDriver());
         if (actualmessage.equalsIgnoreCase("Created successfully")){
             Assert.fail("Ilanda zorunlu birakilan alan olmasina ragmen kayit yapildi.");
         }

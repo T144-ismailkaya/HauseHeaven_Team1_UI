@@ -38,6 +38,9 @@ public class TC_ME03 extends TestBaseRapor {
         ReusableMethods.hover(homePage.listingilangalery);
         Assert.assertTrue(homePage.listingilangalery.isDisplayed());
 
+       //homePage.listingsayfasiilanfacebookElementi.click();
+       // homePage.listingsayfasiilanfacebookElementi.click();
+
         extentTest.pass(" Kayıtlı kullanıcı mük sayfasında share butonunun üzerine gelerek facebook ikonunu üzerine tıklayarak yeni sekmede facebook  platformuna gonderdiğini dogrular");
 
         ReusableMethods.hover(homePage.listingshare);

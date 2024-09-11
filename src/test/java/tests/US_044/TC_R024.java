@@ -30,6 +30,7 @@ public void Test01(){
 
             adminDashboard.CSVFormatIndirme.click();
             extentTest.pass("CSV formatinda liste indirmek icin CSV butonuna tiklar");
+
         ReusableMethods.bekle(3);
         boolean fileExists = RanaMethod.check_file_exist_and_delete("NewsletterTable");
         RanaMethod.deleteDownloadFolder();

@@ -37,16 +37,17 @@ public class TC_R010 extends TestBaseRapor {
 
         String unexpectedCreditBilgisi="0 credits";
         String actualCreditBilgisi=homePage.ilanGirmeBuyCreditsKrediBilgisi.getText();
+
         if (unexpectedCreditBilgisi.equalsIgnoreCase(actualCreditBilgisi)) {
             homePage.ilanGirmeBuyCreditsLinki.click();
             homePage.ilanGirmeBuyCreditSinglePostPurchase.click();
-            //homePage.krediKartiCardNumberKutusu.click();
+            ReusableMethods.bekle(3);
             homePage.krediKartiCardNumberKutusu.sendKeys("4242 4242 4242 4242");
-            //homePage.krediKartiAyGunButonu.click();
+
             homePage.krediKartiAyGunButonu.sendKeys("1224");
-            //homePage.krediKartiAdSoyadButonu.click();
+
             homePage.krediKartiAdSoyadButonu.sendKeys("Rana nur Ülker");
-           // homePage.krediKartiGuvenlikBilgisiButonu.click();
+
             homePage.krediKartiGuvenlikBilgisiButonu.sendKeys("456");
             homePage.krediKartiPurchasebutonu.click();
         }

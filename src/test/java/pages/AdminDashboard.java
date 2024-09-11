@@ -46,7 +46,7 @@ public class AdminDashboard {
     @FindBy(id = "cms-plugins-investor")
     public WebElement investorsButonu;
 
-    @FindBy(xpath = "//a[@href='https://qa.hauseheaven.com/admin/blog/categories']")
+    @FindBy(id = "cms-plugins-real-estate-category")
     public WebElement categoriesButonu;
 
     @FindBy(id = "cms-plugins-real-estate-type")
@@ -166,10 +166,137 @@ public class AdminDashboard {
     //---------------Levent Seflek Son------------\\
 
     //---------------Dilek---------------\\
+    @FindBy (xpath = "//*[@name='username']")
+    public WebElement adminUSerNameKutusu;
+
+    @FindBy (xpath = "//*[@name='password']")
+    public WebElement adminPasswordKutusu;
+
+    @FindBy (xpath = "//*[@class='signin']")
+    public WebElement adminSigInButonu;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[5]")
+    public WebElement adminRealEstateButonu;
+
+    @FindBy (xpath = "(//*[@class='nav-link'])[5]")
+    public WebElement adminProjectsLink;
+
+    @FindBy (xpath = "(//*[@class='breadcrumb-item active'])[2]")
+    public WebElement projectsayfasiProjectYazisi;
+
+    @FindBy (xpath = "//*[@class='fa fa-plus']")
+    public WebElement projectCreateButonu;
+
+    @FindBy (xpath = "//*[@id='name']")
+    public WebElement projectFOrmuNameKutusu;
+
+    @FindBy (xpath = "//*[@class='ck-placeholder']")
+    public WebElement projectFormuContentKutusu;
+
+    @FindBy (xpath = "//*[@id='location']")
+    public WebElement projectFOrmulocationKutusu;
+
+    @FindBy (xpath = "(//*[@class='btn btn-info'])[2]")
+    public WebElement projectFormuSaveExitButonu;
+
+    @FindBy (xpath = "//*[@class='toast-message']")
+    public WebElement projectFormUpdatesSuccessfullyYazisi;
+
+    @FindBy (xpath = "(//*[@class='fa fa-trash'])[1]")
+    public WebElement projectFormuDeleteButonu;
+
+    @FindBy (xpath = "//*[@class='float-end btn btn-danger delete-crud-entry']")
+    public WebElement projectSayfasiConfirmDeleteButonu;
+
+    @FindBy (xpath = "//*[@class='toast-message']")
+    public WebElement projectSayfasiProjesilindiktensonraSuccessfullyMesaji;
+
+    @FindBy (xpath = "(//*[@class='nav-link'])[11]")
+    public WebElement reviewLinki;
+
+    @FindBy (xpath = "(//*[@class='breadcrumb-item active'])[2]")
+    public WebElement reviewSayfasiReviewYazisi;
+
+    @FindBy (xpath = "//*[@title='Star']")
+    public WebElement reviewSayfasiStarYazisi;
+
+    @FindBy (xpath = "//*[@title='User']")
+    public WebElement reviewSayfasiUserYazisi;
+
+    @FindBy (xpath = "//*[@title='Comment']")
+    public WebElement reviewSayfasiCommetnYazisi;
+
+    @FindBy (xpath = "//*[@title='Created At']")
+    public WebElement reviewSayfasiCreatedAtYazisi;
+
+    @FindBy (xpath = "//*[@title='Operations']")
+    public WebElement reviewSayfasiOperationsYazisi;
+
+    @FindBy (xpath = "(//*[@class='fa fa-trash'])[1]")
+    public WebElement reviewSayfasiDeleteBUtonu;
+
+
+
+
+
 
     //---------------Dilek Son---------------\\
 
     //---------------Mustafa İsmail--------------\\
+
+    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[1]")
+    public WebElement adminDashboardBodyActivePropertiesLinki;
+
+    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[2]")
+    public WebElement adminDashboardBodyPendingPropertiesLinki;
+
+    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[3]")
+    public WebElement adminDashboardBodyExpiredPropertiesLinki;
+
+    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[4]")
+    public WebElement adminDashboardBodyAgentsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[1]")
+    public WebElement adminSidebarDashboardLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[3]")
+    public WebElement adminSidebarBlogLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[4]")
+    public WebElement adminSidebarTestimonialsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[5]")
+    public WebElement adminSidebarRealEstateLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[7]")
+    public WebElement adminSidebarNewslettersLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[8]")
+    public WebElement adminSidebarConsultsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[9]")
+    public WebElement adminSidebarAccountsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[10]")
+    public WebElement adminSidebarPackagesLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[13]")
+    public WebElement adminSidebarContactLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[14]")
+    public WebElement adminSidebarPaymentsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[15]")
+    public WebElement adminSidebarLocationsLinki;
+
+    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[16]")
+    public WebElement adminSidebarMediaLinki;
+
+    @FindBy (xpath = "//*[@class='col-md-6']")
+    public WebElement adminDashboardCopyrightLinki;
+
+    @FindBy (xpath = "//*[@class='col-md-6 text-end']")
+    public WebElement adminDashboardPageLoadLinki;
 
     //---------------Mustafa İsmail Son---------------\\
 
@@ -201,6 +328,51 @@ public class AdminDashboard {
 
     @FindBy (xpath = "(//*[@class='form-control input-sm'])[2]")
     public WebElement mesajlariSiralamaButonu;
+
+    @FindBy (xpath = "//*[@class='far fa-envelope']")
+    public WebElement adminContactLink;
+
+    @FindBy (xpath = "//*[@class='breadcrumb-item active']")
+    public WebElement adminContactYazisiDogrulama;
+
+    @FindBy (xpath = "(//*[@class='form-control input-sm'])[1]")
+    public WebElement adminContactSeacrhKutusu;
+
+    @FindBy (xpath = "//*[@class='dataTables_empty']")
+    public WebElement adminContactNoRecordYazisi;
+
+    @FindBy (xpath = "(//*[@class='btn btn-icon btn-sm btn-danger deleteDialog'])[1]")
+    public WebElement adminContactSayfasiDeleteButonu;
+
+    @FindBy (xpath = "//*[@class='float-end btn btn-danger delete-crud-entry']")
+    public WebElement adminContactSayfasiConfirmDeleteButonu;
+
+    @FindBy (xpath = "//*[@class='toast-message']")
+    public WebElement adminContactDeletedSuccessfullyYazisi;
+
+    @FindBy (xpath = "(//*[@class='btn btn-icon btn-sm btn-primary'])[1]")
+    public WebElement adminContactEditButonu;
+
+    @FindBy (xpath = "(//*[@class='breadcrumb-item active'])[1]")
+    public WebElement adminContactEditViewContactYazisi;
+
+    @FindBy (xpath = "//*[@id='status']")
+    public WebElement contactEditPageStatusDDM;
+
+    @FindBy (xpath = "//*[@class='btn btn-info']")
+    public WebElement contactSayfasiEditSaveExitButonu;
+
+    @FindBy (xpath = "//*[@class='toast-message']")
+    public WebElement contactSayfasiUpdatedSuccessfullyYazisi;
+
+    @FindBy (xpath = "//*[@class='fa fa-download']")
+    public WebElement adminContactExport;
+
+    @FindBy (xpath = "//*[@class='fas fa-file-csv']")
+    public WebElement adminContactCSV;
+
+    @FindBy (xpath = "//*[@name='botble-contact-tables-contact-table_length']")
+    public WebElement contactSayfasiMesajSIralama10lu;
 
 
     //---------------Rana Nur Son---------------\\

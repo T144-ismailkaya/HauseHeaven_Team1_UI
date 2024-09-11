@@ -49,6 +49,6 @@ public class TC_M001 extends TestBaseRapor {
 
         //Sayfayı kapatır
         Driver.quitDriver();
-        extentTest.pass("Sayfa Kapatıldı.");
+        extentTest.info("Sayfa kapatıldı.");
     }
 }
