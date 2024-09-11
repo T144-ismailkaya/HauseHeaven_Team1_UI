@@ -47,12 +47,12 @@ public class TC_ME05 extends TestBaseRapor {
        extentTest.pass("  Admin create/add media butonuyla görsellerden bir tanesini secip insert butonuna tıklayarak yorumuna görsel ekleyebildiğini doğrular ") ;
 
         homePage.createaddmediabutonu.click();
-       // homePage.addmediaresim.click();
-        ReusableMethods.bekle(1);
-       // homePage.createaddmediainserbutonu.click();
+        homePage.addmediaresim.click();
+        ReusableMethods.bekle(2);
+        homePage.createaddmediainserbutonu.click();
 
         ReusableMethods.bekle(2);
-       // Admin name , position, ve content alanlarını doldurur
+       extentTest.pass(" Admin name , position, ve content alanlarını doldurur ");
         homePage.admintestimonialscreatenamekutusu.click();
         homePage.admintestimonialscreatenamekutusu.sendKeys("nur");
         homePage.admintestimonialscreatepositionkutusu.click();
@@ -60,9 +60,9 @@ public class TC_ME05 extends TestBaseRapor {
         homePage.admintestimonialscreatemesajkutusu.click();
         homePage.admintestimonialscreatemesajkutusu.sendKeys("İlanınız hakkında bilgi almak istiyorum.");
 
-      //  Admin gerekli alanları doldurduktan sonra save butonuna tıklar.sayfada created successfully penceresini görunce eklediği yorumu kaydedebildiğini doğrular.
+      extentTest.pass("Admin gerekli alanları doldurduktan sonra save butonuna tıklar.sayfada created successfully penceresini görunce eklediği yorumu kaydedebildiğini doğrular.") ;
         homePage.admintestimonialssavebutonu.click();
-               // Admin açılan sekmeyi kapatır.
+               extentTest.pass(" Admin açılan sekmeyi kapatır.");
         Driver.getDriver().quit();
 
     }

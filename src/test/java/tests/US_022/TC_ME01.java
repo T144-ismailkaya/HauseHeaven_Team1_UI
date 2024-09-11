@@ -22,7 +22,11 @@ public class TC_ME01 extends TestBaseRapor {
         Assert.assertTrue(homePage.hauseheavenlogo.isDisplayed());
 
 
-        Faker faker=new Faker();
+        homePage.signinButonu.click();
+        homePage.singinemailbutonu.sendKeys("elif@gmail.com");
+        homePage.singinpasswordbutonu.sendKeys("123456789.elif");
+        homePage.singinloginbutonu.click();
+
 
 
 

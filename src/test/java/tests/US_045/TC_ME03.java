@@ -29,5 +29,6 @@ public class TC_ME03 extends TestBaseRapor {
               extentTest.pass(" Ziyaretçi açılan sekmeyi kapatır.") ;
 
 
+              Driver.getDriver().quit();
     }
 }

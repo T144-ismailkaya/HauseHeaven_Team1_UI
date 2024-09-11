@@ -219,6 +219,9 @@ public class AdminDashboard {
 
     //---------------Merve Nur---------------\\
 
+    @FindBy (xpath = "//span[normalize-space()='Consult information']")
+    public WebElement adminconsults;
+
     //---------------Merve Nur Son---------------\\
 
 }
