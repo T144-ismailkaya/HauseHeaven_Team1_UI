@@ -381,28 +381,6 @@ public class HomePage {
     @FindBy (xpath ="//*[@class='contact-message contact-error-message']")
     public WebElement contactSayfasiHataMesaji;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //Rana Nur Son-----/
 
     //Bünyamin---------/
@@ -523,12 +501,6 @@ public class HomePage {
 
     @FindBy (xpath = "//*[@xpath='1']")
     public WebElement RecentlyViewed;
-
-
-
-
-
-
 
     //Fatma (FDM) Son--/
 

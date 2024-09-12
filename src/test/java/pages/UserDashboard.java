@@ -63,11 +63,6 @@ public class UserDashboard {
     @FindBy (xpath = "//*[@class='search-sidebar_header']")
     public WebElement KullaniciDashboard;
 
-
-
-
-
-
     //---------------Fatma (FDM) Son---------------\\
 
     //---------------Mehmet Muavviz---------------\\
