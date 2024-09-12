@@ -1,36 +1,52 @@
 package tests.US_01;
 
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.ConfigReader;
+import utilities.Driver;
+import utilities.TestBaseRapor;
 
-import java.time.Duration;
+import static utilities.Driver.driver;
 
-public class D002 {
-    WebDriver driver;
-    @Test
-    public void testChromeDriver() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        driver.manage().window().maximize();
-        // 1. Ziyaretçi Hause Heaven URL'ini girer
-        driver.get("https://www.hauseheaven.com");
-        driver.quit();
+public class D002 extends TestBaseRapor {
 
-    }
 
     @Test
-    public void testEdgeDriver() {
-        driver = new EdgeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        driver.manage().window().maximize();
-        // 1. Ziyaretçi Hause Heaven URL'ini girer
-        driver.get("https://www.hauseheaven.com");
-        driver.quit();
-    }
+    public void chromeSayfaErisimTesti() {
 
+            extentTest = extentReports.createTest("Ziyaretçi olarak hause heaven a browser üzerinden ulaşabilme testi");
+
+            Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+            extentTest.pass("Hause Heaven Anasayfası'na gidildi.");
+
+
+            String expectedUrl="https://qa.hauseheaven.com/";
+            String actualUrl= driver.getCurrentUrl();
+            Assert.assertEquals(actualUrl,expectedUrl);
+            extentTest.pass("Hause Heaven'ın anasayfasında olduğu test edildi.");
+
+            Driver.quitDriver();
+            extentTest.info("Sayfa kapatıldı.");}
+
+    @Test
+    public void edgeSayfaErisimTesti() {
+            extentTest = extentReports.createTest("Ziyaretçi olarak hause heaven a browser üzerinden ulaşabilme testi");
+
+            Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));
+            extentTest.pass("Hause Heaven Anasayfası'na gidildi.");
+
+
+            String expectedUrl="https://qa.hauseheaven.com/";
+            String actualUrl= driver.getCurrentUrl();
+            Assert.assertEquals(actualUrl,expectedUrl);
+            extentTest.pass("Hause Heaven'ın anasayfasında olduğu test edildi.");
+
+            Driver.quitDriver();
+            extentTest.info("Sayfa kapatıldı.");
+
+    }
 }

@@ -235,6 +235,22 @@ public class AdminDashboard {
     @FindBy (xpath = "(//*[@class='fa fa-trash'])[1]")
     public WebElement reviewSayfasiDeleteBUtonu;
 
+    @FindBy(xpath = "//*[@title='Profile']")
+    public WebElement daschboardLinki;
+    @FindBy (xpath = "//*[@title='Product']")
+    public WebElement reviewSayfasiProductButonu;
+
+    @FindBy (xpath = "//*[@title='ID']")
+    public WebElement reviewSayfasiIDButonu;
+    @FindBy (xpath = "//*[@type='search']")
+    public WebElement dilekSearchKutusu;
+
+    @FindBy (xpath = "//*[@class='dataTables_empty']")
+    public WebElement dilekNoreccordyazisi;
+    @FindBy (xpath = "(//*[@class='d-none d-sm-inline'])[2]")
+    public WebElement dilekShovFromYazisi;
+
+
 
 
 

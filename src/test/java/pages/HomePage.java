@@ -167,6 +167,7 @@ public class HomePage {
 
     //Dilek------------/
 
+
     @FindBy (xpath = "(//*[@class='prt-link-detail'])[1]")
     public WebElement anasayfadaHerhangiBirIlan;
 
@@ -191,7 +192,7 @@ public class HomePage {
     @FindBy (xpath = "//*[@id='password-confirm']")
     public WebElement registerSayfasiConfirmPasswordKutusu;
 
-    @FindBy (xpath = "//*[@class='btn btn-md full-width btn-theme-light-2 rounded']")
+    @FindBy (xpath = "(//*[@type='submit'])" )
     public WebElement registerSayfasiRegisterButonu;
 
     @FindBy (xpath = "(//*[@class='mr-2'])[2]")
@@ -203,14 +204,21 @@ public class HomePage {
     @FindBy(id = "password")
     public WebElement KullaniciGirisiPasswordKutusu;
 
-    @FindBy(xpath = "(//*[normalize-space(text())='Login'])[3]")
+    @FindBy(xpath = "//*[@class='btn btn-md full-width btn-theme-light-2 rounded']")
     public WebElement KullaniciGirisiLoginButonu;
 
     @FindBy (xpath = "//*[@class='fas fa-sign-out-alt']")
     public WebElement kulaniciLogoutButonu;
 
-    @FindBy (xpath = "//*[@class='invalid-feedback d-block']")
+    @FindBy (xpath = "//*[@class='alert alert-danger alert-dismissible']")
     public WebElement kullaniciYanlisGirisHataMesaji;
+
+    @FindBy (xpath = "//*[@class='active']")
+    public WebElement dashboardButonu;
+
+
+
+
 
 
 
