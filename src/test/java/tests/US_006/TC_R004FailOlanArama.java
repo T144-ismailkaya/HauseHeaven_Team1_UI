@@ -1,7 +1,5 @@
 package tests.US_006;
 
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -10,7 +8,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class TC_R004 extends TestBaseRapor {
+public class TC_R004FailOlanArama extends TestBaseRapor {
     @Test
     public void Test01() throws InterruptedException {
 

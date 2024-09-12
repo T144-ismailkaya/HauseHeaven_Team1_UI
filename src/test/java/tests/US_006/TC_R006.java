@@ -12,6 +12,8 @@ public class TC_R006 extends TestBaseRapor {
     @Test
     public void Test01(){
 
+        //Siralamalar yapiliyor ancak herhangi bir tarih belirtme soz konusu olmadigi icin siralamalari test edemiyoruz.
+
         extentTest=extentReports.createTest("Listing sayfasindaki sort butonu testi");
 
         Driver.getDriver().get(ConfigReader.getProperty("hauseUrl"));

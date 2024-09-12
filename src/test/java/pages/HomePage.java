@@ -166,56 +166,6 @@ public class HomePage {
     //Levent Son-------/
 
     //Dilek------------/
-
-    @FindBy (xpath = "(//*[@class='prt-link-detail'])[1]")
-    public WebElement anasayfadaHerhangiBirIlan;
-
-    @FindBy (xpath = "//*[normalize-space(text())='Sign Up']")
-    public WebElement headerSignUpButonu;
-
-    @FindBy (xpath = "//*[@id='first_name']")
-    public WebElement registerSayfasiFirstNameKutusu;
-
-    @FindBy (xpath = "//*[@id='last_name']")
-    public WebElement registerSayfasiLastNameKutusu;
-
-    @FindBy (xpath = "//*[@id='email']")
-    public WebElement registerSayfasiEmailKutusu;
-
-    @FindBy (xpath = "//*[@id='username']")
-    public WebElement registerSayfasiUsernameKutusu;
-
-    @FindBy (xpath = "//*[@id='password']")
-    public WebElement registerSayfasiPasswordKutusu;
-
-    @FindBy (xpath = "//*[@id='password-confirm']")
-    public WebElement registerSayfasiConfirmPasswordKutusu;
-
-    @FindBy (xpath = "//*[@class='btn btn-md full-width btn-theme-light-2 rounded']")
-    public WebElement registerSayfasiRegisterButonu;
-
-    @FindBy (xpath = "(//*[@class='mr-2'])[2]")
-    public WebElement kullaniciGirisiSignInButonu;
-
-    @FindBy(id = "email")
-    public WebElement kullaniciGirisiEmailKutusu;
-
-    @FindBy(id = "password")
-    public WebElement KullaniciGirisiPasswordKutusu;
-
-    @FindBy(xpath = "(//*[normalize-space(text())='Login'])[3]")
-    public WebElement KullaniciGirisiLoginButonu;
-
-    @FindBy (xpath = "//*[@class='fas fa-sign-out-alt']")
-    public WebElement kulaniciLogoutButonu;
-
-    @FindBy (xpath = "//*[@class='invalid-feedback d-block']")
-    public WebElement kullaniciYanlisGirisHataMesaji;
-
-
-
-
-
     //Dilek Son--------/
 
     //Mustafa İsmail---/
@@ -341,7 +291,7 @@ public class HomePage {
     @FindBy (xpath = "//*[@class='fas fa-user']")
     public WebElement kayitliKullaniciUserLinki;
 
-    @FindBy (xpath = "//*[@class='far fa-edit mr1']")
+    @FindBy (xpath = "//*[@title='Write a property']")
     public WebElement ilanGirmeWriteaPropertyLinki;
 
     @FindBy (xpath = "//*[@class='badge badge-info']")
@@ -568,7 +518,7 @@ public class HomePage {
     public WebElement listingpuancleanlines;
 
 
-    @FindBy(xpath = "textarea[placeholder='Messages']")
+    @FindBy(xpath = "//*[@class='form-control ht-80']")
     public WebElement listingmesajkutusuElementi;
 
     @FindBy(xpath = "(//button[normalize-space()='Submit Review'])[1]") //*[@class='btn btn-theme-light-2 rounded']
@@ -592,7 +542,14 @@ public class HomePage {
     @FindBy(xpath = "(//div[@id='stack-footer'])[1]")
     public WebElement loginuyarımesajı;
 
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement singinpasswordbutonu;
 
+    @FindBy(xpath = "//*[@id='email']")
+    public WebElement singinemailbutonu;
+
+    @FindBy(xpath = "//button[normalize-space()='Login']")
+    public WebElement singinloginbutonu;
 
 
     @FindBy(xpath = "//*[@id=\"cms-plugins-testimonial\"]/a")

@@ -26,6 +26,7 @@ public class TC_R009 extends TestBaseRapor {
 
         Assert.assertTrue(homePage.emailTextbox.isDisplayed());
         extentTest.pass("Mail text box goruntulenir.");
+
         Assert.assertTrue(homePage.passwordTextbox.isDisplayed());
         extentTest.pass("Password text box goruntulenir.");
 

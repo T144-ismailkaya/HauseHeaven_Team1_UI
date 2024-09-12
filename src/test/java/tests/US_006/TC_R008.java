@@ -1,5 +1,6 @@
 package tests.US_006;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import utilities.ConfigReader;
@@ -23,16 +24,21 @@ public class TC_R008 extends TestBaseRapor {
 
         ReusableMethods.hover(homePage.listingPageDigerSayfayaGecmeButonu);
         homePage.sayfaDegistirmeButonu2.click();
+        int expectedresult=3;
+        int actualResult= Integer.parseInt(homePage.listingPageDigerSayfayaGecmeButonu.getText());
+        Assert.assertEquals(actualResult,expectedresult);
 
         ReusableMethods.hover(homePage.listingPageDigerSayfayaGecmeButonu);
         homePage.sayfaDegistirmeButonu3.click();
+        int expectedresult1=4;
+        int actualResult1= Integer.parseInt(homePage.listingPageDigerSayfayaGecmeButonu.getText());
+        Assert.assertEquals(actualResult,expectedresult);
 
         ReusableMethods.hover(homePage.listingPageDigerSayfayaGecmeButonu);
         homePage.sayfaDegistirmeButonuSagaOk.click();
 
         ReusableMethods.hover(homePage.listingPageDigerSayfayaGecmeButonu);
         homePage.sayfaDegistirmeButonu4.click();
-
 
 
         ReusableMethods.hover(homePage.listingPageDigerSayfayaGecmeButonu);
