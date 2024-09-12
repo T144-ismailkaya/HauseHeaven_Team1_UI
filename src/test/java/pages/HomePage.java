@@ -145,7 +145,7 @@ public class HomePage {
     public WebElement sefFooterHeaderTitle;
 
     @FindBy(xpath = "//*[@title=\"Facebook\"]")
-    public WebElement SeffooterfacebookBoxElementi;
+    public WebElement SefFooterFacebookBoxElementi;
 
     @FindBy(xpath = "//*[@title='Twitter']")
     public WebElement SeftwitterBoxButtonElementi;
@@ -162,67 +162,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='alert alert-success alert-dismissible']")
     public WebElement seffooterSubscribeConfirmYaziElementi;
 
-
     //Levent Son-------/
 
     //Dilek------------/
-
-
-    @FindBy (xpath = "(//*[@class='prt-link-detail'])[1]")
-    public WebElement anasayfadaHerhangiBirIlan;
-
-    @FindBy (xpath = "//*[normalize-space(text())='Sign Up']")
-    public WebElement headerSignUpButonu;
-
-    @FindBy (xpath = "//*[@id='first_name']")
-    public WebElement registerSayfasiFirstNameKutusu;
-
-    @FindBy (xpath = "//*[@id='last_name']")
-    public WebElement registerSayfasiLastNameKutusu;
-
-    @FindBy (xpath = "//*[@id='email']")
-    public WebElement registerSayfasiEmailKutusu;
-
-    @FindBy (xpath = "//*[@id='username']")
-    public WebElement registerSayfasiUsernameKutusu;
-
-    @FindBy (xpath = "//*[@id='password']")
-    public WebElement registerSayfasiPasswordKutusu;
-
-    @FindBy (xpath = "//*[@id='password-confirm']")
-    public WebElement registerSayfasiConfirmPasswordKutusu;
-
-    @FindBy (xpath = "(//*[@type='submit'])" )
-    public WebElement registerSayfasiRegisterButonu;
-
-    @FindBy (xpath = "(//*[@class='mr-2'])[2]")
-    public WebElement kullaniciGirisiSignInButonu;
-
-    @FindBy(id = "email")
-    public WebElement kullaniciGirisiEmailKutusu;
-
-    @FindBy(id = "password")
-    public WebElement KullaniciGirisiPasswordKutusu;
-
-    @FindBy(xpath = "//*[@class='btn btn-md full-width btn-theme-light-2 rounded']")
-    public WebElement KullaniciGirisiLoginButonu;
-
-    @FindBy (xpath = "//*[@class='fas fa-sign-out-alt']")
-    public WebElement kulaniciLogoutButonu;
-
-    @FindBy (xpath = "//*[@class='alert alert-danger alert-dismissible']")
-    public WebElement kullaniciYanlisGirisHataMesaji;
-
-    @FindBy (xpath = "//*[@class='active']")
-    public WebElement dashboardButonu;
-
-
-
-
-
-
-
-
 
     //Dilek Son--------/
 
@@ -267,29 +209,8 @@ public class HomePage {
     @FindBy (xpath = "//*[@class=\"alert alert-success alert-dismissible\"]")
     public WebElement alert;
 
-    @FindBy (xpath = "(//*[@class='agents-grid'])[1]")
-    public WebElement agentsPageIlkAgent;
 
-    @FindBy (xpath = "(//*[@class='img-fluid mx-auto'])[1]")
-    public WebElement agentsPageIlkAgentFoto;
 
-    @FindBy (xpath = "(//*[@class='fr-grid-deatil'])[1]")
-    public WebElement agentsPageIlkAgentIsim;
-
-    @FindBy (xpath = "(//div/ul/li/strong[text()='Phone:'])[1]")
-    public WebElement agentsPageIlkAgentTel;
-
-    @FindBy (xpath = "(//div/ul/li/strong[text()='Email:'])[1]")
-    public WebElement agentsPageIlkAgentEmail;
-
-    @FindBy (xpath = "(//*[@class='fr-position'])[1]")
-    public WebElement agentsPageIlkAgentIlanSayisi;
-
-    @FindBy (xpath = "(//*[@class='prt-view'])[1]")
-    public WebElement agentsPageIlkAgentViewLinki;
-
-    @FindBy (xpath = "//*[@class='ipt-title']")
-    public WebElement agentsDetailPageTitleLinki;
 
     //Mustafa İsmail Son/
 
@@ -460,6 +381,28 @@ public class HomePage {
     @FindBy (xpath ="//*[@class='contact-message contact-error-message']")
     public WebElement contactSayfasiHataMesaji;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //Rana Nur Son-----/
 
     //Bünyamin---------/
@@ -511,6 +454,81 @@ public class HomePage {
 
     @FindBy (xpath = "(//*[@class='middle-icon-features-content'])[3]")
     public WebElement CloseTheDeal;
+
+    @FindBy (xpath = "//*[@class='fas fa-user']")
+    public WebElement anasayfaIsim;
+
+    @FindBy (xpath = "//h2[normalize-space()='Explore Good Places']")
+    public WebElement ExploreGoodPlaces;
+
+    @FindBy (xpath = "//*[@class='slick-slide slick-current slick-active']")
+    public List<WebElement> ExploreGoodPlacesList;
+
+    @FindBy (xpath = "//*[@class='listing-card-info-icon']")
+    public List<WebElement> ExploreGoodPlacesIkonList;
+
+    @FindBy (xpath = "//*[@class='listing-short-detail-wrap']")
+    public List<WebElement> ExploreGoodPlacesDetayList;
+
+    @FindBy (xpath = "//*[@class='foot-location d-flex']")
+    public List<WebElement> ExploreGoodPlacesLokasyonList;
+
+    @FindBy (xpath = "//*[@class='far fa-heart']")
+    public List<WebElement> KalpEmojiList;
+
+    @FindBy (xpath = "(//*[@class='fas fa-heart'])[1]")
+    public WebElement KalpEmoji;
+
+    @FindBy (xpath = "//*[@class='text-white']")
+    public WebElement Wishlist;
+
+    @FindBy (xpath = "(//*[@class='prt-view'])[1]")
+    public WebElement View;
+
+    @FindBy (xpath = "(//*[@class='property_block_title'])[2]")
+    public WebElement Description;
+
+    @FindBy (xpath = "(//*[@class='btn btn-theme-light-2 rounded'])[1]")
+    public WebElement BrowseMoreProperties;
+
+    @FindBy (xpath = "//ul[@class='pagination']")
+    public WebElement PropertiesSayfasi;
+
+    @FindBy (xpath = "//h2[normalize-space()='Find By Locations']")
+    public WebElement FindByLocations;
+
+    @FindBy (xpath = "//*[@class='w-100 lazy entered loaded']")
+    public List<WebElement> FindByLocationsList;
+
+    @FindBy (xpath = "//*[@class='lp-content-title']")
+    public List<WebElement> FindByLocTitleList;
+
+    @FindBy (xpath = "//*[@class='listing-content']")
+    public List<WebElement> LosAngelesPropertiesList;
+
+    @FindBy (xpath = "(//*[@class='btn btn-theme-light-2 rounded'])[2]")
+    public WebElement BrowseByLocations;
+
+    @FindBy (xpath = "//h2[normalize-space()='Good Reviews By Customers']")
+    public WebElement GoodReviews;
+
+    @FindBy (xpath = "//h2[normalize-space()='See Our Packages']")
+    public WebElement SeeOurPackages;
+
+    @FindBy (xpath = "//*[@class='pricing-header']")
+    public List<WebElement> PostPlanList;
+
+    @FindBy (xpath = "//*[@class='pricing-bottom']")
+    public WebElement ChoosePlan;
+
+    @FindBy (xpath = "//*[@xpath='1']")
+    public WebElement RecentlyViewed;
+
+
+
+
+
+
 
     //Fatma (FDM) Son--/
 
@@ -597,7 +615,7 @@ public class HomePage {
     public WebElement listingpuancleanlines;
 
 
-    @FindBy(id = "//*[@class='form-control ht-80']")
+    @FindBy(xpath = "textarea[placeholder='Messages']")
     public WebElement listingmesajkutusuElementi;
 
     @FindBy(xpath = "(//button[normalize-space()='Submit Review'])[1]") //*[@class='btn btn-theme-light-2 rounded']
@@ -611,9 +629,9 @@ public class HomePage {
     public WebElement listingemailbutonu;
     @FindBy(xpath = " //*[@name='content']")
     public  WebElement listingmesajkutusu;
-    @FindBy(xpath = "//button[normalize-space()='Send Message']")
+    @FindBy(xpath = "//*[@id=\"consult-form\"]/div/div[6]/button")
     public WebElement listingsendmesajbutonu;
-    @FindBy (xpath = "//div[@class='alert alert-success alert-dismissible']")
+    @FindBy (xpath = "(//div[@id='alert-container'])[1]")
     public WebElement listingsuccessfully;
 
     @FindBy(xpath = " (//div[@id='alert-container'])[1]")
@@ -766,22 +784,6 @@ public class HomePage {
     public WebElement dasboardeditbutonu;
     @FindBy(xpath = "//*[@id=\"botble-real-estate-forms-consult-form\"]/div/div[1]/div/div[2]/p/i")
     public WebElement daosboarddetailsbutonu;
-    @FindBy(xpath = "//a[normalize-space()='Sign In']")
-    public WebElement singinbutonu;
-    @FindBy(xpath = "//*[@id='email']")
-    public WebElement singinemailbutonu;
-    @FindBy(xpath = "//*[@id='password']")
-    public WebElement singinpasswordbutonu;
-    @FindBy(xpath = "//button[normalize-space()='Login']")
-    public WebElement singinloginbutonu;
-    @FindBy (xpath = " //a[@class='cl-facebook']")
-    public WebElement listingfacebookbutonu;
-    @FindBy(xpath = "//i[@class='lni-twitter']")
-    public WebElement listingtwitterbutonu;
-    @FindBy(xpath = "//i[@class='lni-linkedin']")
-    public WebElement listinglinkedinbutonu;
-    @FindBy(xpath = "//h4[normalize-space()='Location']")
-    public WebElement listinglocation;
 
 
 

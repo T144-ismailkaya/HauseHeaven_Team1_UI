@@ -166,153 +166,10 @@ public class AdminDashboard {
     //---------------Levent Seflek Son------------\\
 
     //---------------Dilek---------------\\
-    @FindBy (xpath = "//*[@name='username']")
-    public WebElement adminUSerNameKutusu;
-
-    @FindBy (xpath = "//*[@name='password']")
-    public WebElement adminPasswordKutusu;
-
-    @FindBy (xpath = "//*[@class='signin']")
-    public WebElement adminSigInButonu;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[5]")
-    public WebElement adminRealEstateButonu;
-
-    @FindBy (xpath = "(//*[@class='nav-link'])[5]")
-    public WebElement adminProjectsLink;
-
-    @FindBy (xpath = "(//*[@class='breadcrumb-item active'])[2]")
-    public WebElement projectsayfasiProjectYazisi;
-
-    @FindBy (xpath = "//*[@class='fa fa-plus']")
-    public WebElement projectCreateButonu;
-
-    @FindBy (xpath = "//*[@id='name']")
-    public WebElement projectFOrmuNameKutusu;
-
-    @FindBy (xpath = "//*[@class='ck-placeholder']")
-    public WebElement projectFormuContentKutusu;
-
-    @FindBy (xpath = "//*[@id='location']")
-    public WebElement projectFOrmulocationKutusu;
-
-    @FindBy (xpath = "(//*[@class='btn btn-info'])[2]")
-    public WebElement projectFormuSaveExitButonu;
-
-    @FindBy (xpath = "//*[@class='toast-message']")
-    public WebElement projectFormUpdatesSuccessfullyYazisi;
-
-    @FindBy (xpath = "(//*[@class='fa fa-trash'])[1]")
-    public WebElement projectFormuDeleteButonu;
-
-    @FindBy (xpath = "//*[@class='float-end btn btn-danger delete-crud-entry']")
-    public WebElement projectSayfasiConfirmDeleteButonu;
-
-    @FindBy (xpath = "//*[@class='toast-message']")
-    public WebElement projectSayfasiProjesilindiktensonraSuccessfullyMesaji;
-
-    @FindBy (xpath = "(//*[@class='nav-link'])[11]")
-    public WebElement reviewLinki;
-
-    @FindBy (xpath = "(//*[@class='breadcrumb-item active'])[2]")
-    public WebElement reviewSayfasiReviewYazisi;
-
-    @FindBy (xpath = "//*[@title='Star']")
-    public WebElement reviewSayfasiStarYazisi;
-
-    @FindBy (xpath = "//*[@title='User']")
-    public WebElement reviewSayfasiUserYazisi;
-
-    @FindBy (xpath = "//*[@title='Comment']")
-    public WebElement reviewSayfasiCommetnYazisi;
-
-    @FindBy (xpath = "//*[@title='Created At']")
-    public WebElement reviewSayfasiCreatedAtYazisi;
-
-    @FindBy (xpath = "//*[@title='Operations']")
-    public WebElement reviewSayfasiOperationsYazisi;
-
-    @FindBy (xpath = "(//*[@class='fa fa-trash'])[1]")
-    public WebElement reviewSayfasiDeleteBUtonu;
-
-    @FindBy(xpath = "//*[@title='Profile']")
-    public WebElement daschboardLinki;
-    @FindBy (xpath = "//*[@title='Product']")
-    public WebElement reviewSayfasiProductButonu;
-
-    @FindBy (xpath = "//*[@title='ID']")
-    public WebElement reviewSayfasiIDButonu;
-    @FindBy (xpath = "//*[@type='search']")
-    public WebElement dilekSearchKutusu;
-
-    @FindBy (xpath = "//*[@class='dataTables_empty']")
-    public WebElement dilekNoreccordyazisi;
-    @FindBy (xpath = "(//*[@class='d-none d-sm-inline'])[2]")
-    public WebElement dilekShovFromYazisi;
-
-
-
-
-
-
 
     //---------------Dilek Son---------------\\
 
     //---------------Mustafa İsmail--------------\\
-
-    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[1]")
-    public WebElement adminDashboardBodyActivePropertiesLinki;
-
-    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[2]")
-    public WebElement adminDashboardBodyPendingPropertiesLinki;
-
-    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[3]")
-    public WebElement adminDashboardBodyExpiredPropertiesLinki;
-
-    @FindBy (xpath = "(//*[@class='dashboard-stat dashboard-stat-v2 text-white'])[4]")
-    public WebElement adminDashboardBodyAgentsLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[1]")
-    public WebElement adminSidebarDashboardLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[3]")
-    public WebElement adminSidebarBlogLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[4]")
-    public WebElement adminSidebarTestimonialsLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[5]")
-    public WebElement adminSidebarRealEstateLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[7]")
-    public WebElement adminSidebarNewslettersLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[8]")
-    public WebElement adminSidebarConsultsLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[9]")
-    public WebElement adminSidebarAccountsLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[10]")
-    public WebElement adminSidebarPackagesLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[13]")
-    public WebElement adminSidebarContactLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[14]")
-    public WebElement adminSidebarPaymentsLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[15]")
-    public WebElement adminSidebarLocationsLinki;
-
-    @FindBy (xpath = "(//*[@class='nav-link nav-toggle'])[16]")
-    public WebElement adminSidebarMediaLinki;
-
-    @FindBy (xpath = "//*[@class='col-md-6']")
-    public WebElement adminDashboardCopyrightLinki;
-
-    @FindBy (xpath = "//*[@class='col-md-6 text-end']")
-    public WebElement adminDashboardPageLoadLinki;
 
     //---------------Mustafa İsmail Son---------------\\
 
@@ -399,40 +256,107 @@ public class AdminDashboard {
 
     //---------------Fatma (FDM)---------------\\
 
+
+    @FindBy (xpath = "(//*[@class='form-control'])[1]")
+    public WebElement adminUsername;
+
+    @FindBy (xpath = "(//*[@class='form-control'])[2]")
+    public WebElement adminPassword;
+
+    @FindBy (xpath = "//*[@class='signin']")
+    public WebElement adminSignin;
+
+    @FindBy (xpath = "//*[@class='fa fa-edit']")
+    public WebElement blog;
+
+    @FindBy (xpath = "//li[@id='cms-plugins-blog-post']")
+    public WebElement posts;
+
+    @FindBy (xpath = "//*[@class='btn btn-secondary action-item']")
+    public WebElement create;
+
+    @FindBy (xpath = "//input[@id='name']")
+    public WebElement createNewpostName;
+
+    @FindBy (xpath = "(//*[@class='mb-2'])[3]")
+    public WebElement createHousedesign;
+
+    @FindBy (xpath = "(//input[@type='checkbox']")
+    public  WebElement createHouseArchitecture;
+
+    @FindBy (xpath = "(//*[@class='btn btn-info'])[1]")
+    public WebElement createSaveExit;
+
+    @FindBy (xpath = "//*[@class='text-start column-key-name sorting']")
+    public WebElement PostName;
+
+    @FindBy (xpath = "(//*[@class='fa fa-edit'])[2]")
+    public WebElement PostEdit;
+
+    @FindBy (xpath = "(//*[@class='invalid-feedback'])[1]")
+    public WebElement PostNameError;
+
+    @FindBy (xpath = "(//*[@class='invalid-feedback'])[3]")
+    public WebElement elemTexts;
+
+    @FindBy (xpath = "(//*[@class='btn btn-icon btn-sm btn-danger deleteDialog'])[1]")
+    public WebElement PostsDelete;
+
+    @FindBy (xpath = "//*[@class='float-end btn btn-danger delete-crud-entry']")
+    public WebElement ConfirmDelete;
+
+    @FindBy (xpath = "//div[@id='stack-footer']")
+    public WebElement Success;
+
+    @FindBy (xpath = "//*[@class='fa fa-bed']")
+    public WebElement RealEstate;
+
+    @FindBy (xpath = "//*[@id='cms-plugins-real-estate-category']")
+    public WebElement Categories;
+
+    @FindBy (xpath = "//tr[@role='row']")
+    public  List<WebElement> CategoriesList;
+
+    @FindBy (xpath = "//*[@data-action='create']")
+    public  WebElement RealEstateCreate;
+
+    @FindBy (xpath = "//*[@id='name']")
+    public  WebElement RealEstateCreateName;
+
+    @FindBy (xpath = "(//button[@type='submit'])[1]")
+    public  WebElement RealEstateSaveExit;
+
+    @FindBy (xpath = "//*[@id='stack-footer']")
+    public  WebElement RealEstateSuccess;
+
+    @FindBy (xpath = "(//*[@class='fa fa-edit'])[2]")
+    public  WebElement RealEstateEdit;
+
+    @FindBy (xpath = "(//*[@class='btn btn-icon btn-sm btn-danger deleteDialog'])[1]")
+    public  WebElement RealEstateDelete;
+
+    @FindBy (xpath = "//button[@class='float-end btn btn-danger delete-crud-entry']")
+    public  WebElement RealEstateConfirmDelete;
+
+
+
+
+
+
+
+
+
+
+
+
+
     //---------------Fatma (FDM) Son---------------\\
 
     //---------------Mehmet Muavviz---------------\\
 
-    @FindBy (xpath = "(//*[@class='d-none d-sm-inline'])[1]")
-    public WebElement adminViewWebsiteLinki;
-
-    @FindBy (xpath = "//*[@class='fas fa-bell']")
-    public WebElement adminHeaderNotificationsLinki;
-
-    @FindBy (xpath = "//*[@class='sidebar show-notification-sidebar']")
-    public WebElement adminDashboardNotificationsLinki;
-
-    @FindBy (xpath = "//*[@class='close-btn']")
-    public WebElement adminDashboardNotificationsCloseButtonLinki;
-
-    @FindBy (xpath = "(//*[@class='icon-envelope-open'])[1]")
-    public WebElement adminDashboardNewMessagesLinki;
-
-    @FindBy (xpath = "(//*[@class='icon-envelope-open'])[2]")
-    public WebElement adminDashboardNewConsultsLinki;
-
-    @FindBy (xpath = "//*/h3[text()=' New Messages']")
-    public WebElement adminDashboardNewMessagesDropdownLinki;
-
-    @FindBy (xpath = "//*/h3[text()=' New Consults']")
-    public WebElement adminDashboardNewConsultsDropdownLinki;
-
     //---------------Mehmet Muavviz Son---------------\\
 
     //---------------Merve Nur---------------\\
-
-    @FindBy (xpath = "//span[normalize-space()='Consult information']")
-    public WebElement adminconsults;
 
     //---------------Merve Nur Son---------------\\
 
