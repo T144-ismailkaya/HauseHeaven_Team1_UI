@@ -1,4 +1,4 @@
-package tests.US_037;
+package tests.US_038;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,10 +7,10 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class TC_MI010 extends TestBaseRapor {
+public class TC_MI014 extends TestBaseRapor {
 
     @Test
-    public void test10(){
+    public void test14(){
 
         extentTest = extentReports.createTest("Admin dashboard erişim testi.");
 
@@ -40,11 +40,5 @@ public class TC_MI010 extends TestBaseRapor {
 
         Driver.getDriver().quit();
         extentTest.pass("Driver kapatıldı.");
-
-
-
-
-
-
     }
 }

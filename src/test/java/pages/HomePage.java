@@ -145,7 +145,7 @@ public class HomePage {
     public WebElement sefFooterHeaderTitle;
 
     @FindBy(xpath = "//*[@title=\"Facebook\"]")
-    public WebElement SeffooterfacebookBoxElementi;
+    public WebElement SefFooterFacebookBoxElementi;
 
     @FindBy(xpath = "//*[@title='Twitter']")
     public WebElement SeftwitterBoxButtonElementi;
@@ -162,67 +162,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='alert alert-success alert-dismissible']")
     public WebElement seffooterSubscribeConfirmYaziElementi;
 
-
     //Levent Son-------/
 
     //Dilek------------/
-
-
-    @FindBy (xpath = "(//*[@class='prt-link-detail'])[1]")
-    public WebElement anasayfadaHerhangiBirIlan;
-
-    @FindBy (xpath = "//*[normalize-space(text())='Sign Up']")
-    public WebElement headerSignUpButonu;
-
-    @FindBy (xpath = "//*[@id='first_name']")
-    public WebElement registerSayfasiFirstNameKutusu;
-
-    @FindBy (xpath = "//*[@id='last_name']")
-    public WebElement registerSayfasiLastNameKutusu;
-
-    @FindBy (xpath = "//*[@id='email']")
-    public WebElement registerSayfasiEmailKutusu;
-
-    @FindBy (xpath = "//*[@id='username']")
-    public WebElement registerSayfasiUsernameKutusu;
-
-    @FindBy (xpath = "//*[@id='password']")
-    public WebElement registerSayfasiPasswordKutusu;
-
-    @FindBy (xpath = "//*[@id='password-confirm']")
-    public WebElement registerSayfasiConfirmPasswordKutusu;
-
-    @FindBy (xpath = "(//*[@type='submit'])" )
-    public WebElement registerSayfasiRegisterButonu;
-
-    @FindBy (xpath = "(//*[@class='mr-2'])[2]")
-    public WebElement kullaniciGirisiSignInButonu;
-
-    @FindBy(id = "email")
-    public WebElement kullaniciGirisiEmailKutusu;
-
-    @FindBy(id = "password")
-    public WebElement KullaniciGirisiPasswordKutusu;
-
-    @FindBy(xpath = "//*[@class='btn btn-md full-width btn-theme-light-2 rounded']")
-    public WebElement KullaniciGirisiLoginButonu;
-
-    @FindBy (xpath = "//*[@class='fas fa-sign-out-alt']")
-    public WebElement kulaniciLogoutButonu;
-
-    @FindBy (xpath = "//*[@class='alert alert-danger alert-dismissible']")
-    public WebElement kullaniciYanlisGirisHataMesaji;
-
-    @FindBy (xpath = "//*[@class='active']")
-    public WebElement dashboardButonu;
-
-
-
-
-
-
-
-
 
     //Dilek Son--------/
 
@@ -267,29 +209,8 @@ public class HomePage {
     @FindBy (xpath = "//*[@class=\"alert alert-success alert-dismissible\"]")
     public WebElement alert;
 
-    @FindBy (xpath = "(//*[@class='agents-grid'])[1]")
-    public WebElement agentsPageIlkAgent;
 
-    @FindBy (xpath = "(//*[@class='img-fluid mx-auto'])[1]")
-    public WebElement agentsPageIlkAgentFoto;
 
-    @FindBy (xpath = "(//*[@class='fr-grid-deatil'])[1]")
-    public WebElement agentsPageIlkAgentIsim;
-
-    @FindBy (xpath = "(//div/ul/li/strong[text()='Phone:'])[1]")
-    public WebElement agentsPageIlkAgentTel;
-
-    @FindBy (xpath = "(//div/ul/li/strong[text()='Email:'])[1]")
-    public WebElement agentsPageIlkAgentEmail;
-
-    @FindBy (xpath = "(//*[@class='fr-position'])[1]")
-    public WebElement agentsPageIlkAgentIlanSayisi;
-
-    @FindBy (xpath = "(//*[@class='prt-view'])[1]")
-    public WebElement agentsPageIlkAgentViewLinki;
-
-    @FindBy (xpath = "//*[@class='ipt-title']")
-    public WebElement agentsDetailPageTitleLinki;
 
     //Mustafa İsmail Son/
 
@@ -666,7 +587,7 @@ public class HomePage {
     public WebElement listingpuancleanlines;
 
 
-    @FindBy(id = "//*[@class='form-control ht-80']")
+    @FindBy(xpath = "textarea[placeholder='Messages']")
     public WebElement listingmesajkutusuElementi;
 
     @FindBy(xpath = "(//button[normalize-space()='Submit Review'])[1]") //*[@class='btn btn-theme-light-2 rounded']
@@ -680,9 +601,9 @@ public class HomePage {
     public WebElement listingemailbutonu;
     @FindBy(xpath = " //*[@name='content']")
     public  WebElement listingmesajkutusu;
-    @FindBy(xpath = "//button[normalize-space()='Send Message']")
+    @FindBy(xpath = "//*[@id=\"consult-form\"]/div/div[6]/button")
     public WebElement listingsendmesajbutonu;
-    @FindBy (xpath = "//div[@class='alert alert-success alert-dismissible']")
+    @FindBy (xpath = "(//div[@id='alert-container'])[1]")
     public WebElement listingsuccessfully;
 
     @FindBy(xpath = " (//div[@id='alert-container'])[1]")
@@ -835,22 +756,6 @@ public class HomePage {
     public WebElement dasboardeditbutonu;
     @FindBy(xpath = "//*[@id=\"botble-real-estate-forms-consult-form\"]/div/div[1]/div/div[2]/p/i")
     public WebElement daosboarddetailsbutonu;
-    @FindBy(xpath = "//a[normalize-space()='Sign In']")
-    public WebElement singinbutonu;
-    @FindBy(xpath = "//*[@id='email']")
-    public WebElement singinemailbutonu;
-    @FindBy(xpath = "//*[@id='password']")
-    public WebElement singinpasswordbutonu;
-    @FindBy(xpath = "//button[normalize-space()='Login']")
-    public WebElement singinloginbutonu;
-    @FindBy (xpath = " //a[@class='cl-facebook']")
-    public WebElement listingfacebookbutonu;
-    @FindBy(xpath = "//i[@class='lni-twitter']")
-    public WebElement listingtwitterbutonu;
-    @FindBy(xpath = "//i[@class='lni-linkedin']")
-    public WebElement listinglinkedinbutonu;
-    @FindBy(xpath = "//h4[normalize-space()='Location']")
-    public WebElement listinglocation;
 
 
 
