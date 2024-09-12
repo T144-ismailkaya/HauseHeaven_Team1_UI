@@ -512,6 +512,75 @@ public class HomePage {
     @FindBy (xpath = "(//*[@class='middle-icon-features-content'])[3]")
     public WebElement CloseTheDeal;
 
+    @FindBy (xpath = "//*[@class='fas fa-user']")
+    public WebElement anasayfaIsim;
+
+    @FindBy (xpath = "//h2[normalize-space()='Explore Good Places']")
+    public WebElement ExploreGoodPlaces;
+
+    @FindBy (xpath = "//*[@class='slick-slide slick-current slick-active']")
+    public List<WebElement> ExploreGoodPlacesList;
+
+    @FindBy (xpath = "//*[@class='listing-card-info-icon']")
+    public List<WebElement> ExploreGoodPlacesIkonList;
+
+    @FindBy (xpath = "//*[@class='listing-short-detail-wrap']")
+    public List<WebElement> ExploreGoodPlacesDetayList;
+
+    @FindBy (xpath = "//*[@class='foot-location d-flex']")
+    public List<WebElement> ExploreGoodPlacesLokasyonList;
+
+    @FindBy (xpath = "//*[@class='far fa-heart']")
+    public List<WebElement> KalpEmojiList;
+
+    @FindBy (xpath = "(//*[@class='fas fa-heart'])[1]")
+    public WebElement KalpEmoji;
+
+    @FindBy (xpath = "//*[@class='text-white']")
+    public WebElement Wishlist;
+
+    @FindBy (xpath = "(//*[@class='prt-view'])[1]")
+    public WebElement View;
+
+    @FindBy (xpath = "(//*[@class='property_block_title'])[2]")
+    public WebElement Description;
+
+    @FindBy (xpath = "(//*[@class='btn btn-theme-light-2 rounded'])[1]")
+    public WebElement BrowseMoreProperties;
+
+    @FindBy (xpath = "//ul[@class='pagination']")
+    public WebElement PropertiesSayfasi;
+
+    @FindBy (xpath = "//h2[normalize-space()='Find By Locations']")
+    public WebElement FindByLocations;
+
+    @FindBy (xpath = "//*[@class='w-100 lazy entered loaded']")
+    public List<WebElement> FindByLocationsList;
+
+    @FindBy (xpath = "//*[@class='lp-content-title']")
+    public List<WebElement> FindByLocTitleList;
+
+    @FindBy (xpath = "//*[@class='listing-content']")
+    public List<WebElement> LosAngelesPropertiesList;
+
+    @FindBy (xpath = "(//*[@class='btn btn-theme-light-2 rounded'])[2]")
+    public WebElement BrowseByLocations;
+
+    @FindBy (xpath = "//h2[normalize-space()='Good Reviews By Customers']")
+    public WebElement GoodReviews;
+
+    @FindBy (xpath = "//h2[normalize-space()='See Our Packages']")
+    public WebElement SeeOurPackages;
+
+    @FindBy (xpath = "//*[@class='pricing-header']")
+    public List<WebElement> PostPlanList;
+
+    @FindBy (xpath = "//*[@class='pricing-bottom']")
+    public WebElement ChoosePlan;
+
+    @FindBy (xpath = "//*[@xpath='1']")
+    public WebElement RecentlyViewed;
+
     //Fatma (FDM) Son--/
 
     //Mehmet Muavviz---/
