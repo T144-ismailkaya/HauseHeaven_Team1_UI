@@ -25,7 +25,7 @@ public class TC_F009 extends TestBaseRapor {
         homePage.emailTextbox.sendKeys(ConfigReader.getProperty("gecerliUsername"));
         homePage.passwordTextbox.sendKeys(ConfigReader.getProperty("gecerliPassword"));
         ReusableMethods.wait(2);
-        userDashboard.kayitliKullaniciUsernameButonu.click();
+        userDashboard.KayitliKullaniciLoginButonu.click();
         extentTest.pass("Ziyaretçi login olur.");
 
         ReusableMethods.hover(userDashboard.Logout);
@@ -34,6 +34,8 @@ public class TC_F009 extends TestBaseRapor {
 
         Assert.assertTrue(userDashboard.SignIn.isDisplayed());
         extentTest.pass("Kayitli kullanici artik adinin Header'da adinin gorulmedigini test eder");
+
+        Driver.quitDriver();
 
     }
 
