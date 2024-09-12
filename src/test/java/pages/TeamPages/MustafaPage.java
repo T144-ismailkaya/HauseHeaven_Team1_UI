@@ -80,10 +80,74 @@ public class MustafaPage {
     @FindBy (xpath = "//*[@href=\"https://qa.hauseheaven.com/admin/real-estate/property-features\"]")
     public WebElement adRealEstateFeatures;
 
+    @FindBy (xpath = "//*[@class=\" text-start column-key-name\"]")
+    public List <WebElement> featuresPageFeaturesList;
 
+    @FindBy (xpath = "//*[@class=\"btn btn-icon btn-sm btn-primary\"]")
+    public List <WebElement> featuresEditButonuList;
 
+    @FindBy (xpath = "//*[@class=\"btn btn-secondary action-item\"]")
+    public WebElement featuresCreateButonu;
 
+    @FindBy (xpath = "//*[@class=\"form-control\"]")
+    public WebElement featuresCreateTitleTextBox;
 
+    @FindBy (id = "icon")
+    public WebElement featuresCreateIconDropdownBox;
+
+    @FindBy (xpath = "(//*[@type=\"submit\"])[1]")
+    public WebElement featuresSaveExitButonu;
+
+    @FindBy (xpath = "//*[@class=\"toast toast-success\"]")
+    public WebElement featuresAlertBox;
+
+    @FindBy (xpath = "//*[text()=\"Features Test\"]")
+    public WebElement featuresTest;
+
+    @FindBy (xpath = "(//*[@class=\"btn btn-icon btn-sm btn-primary\"])[1]")
+    public WebElement featuresIlkOzellikEditButonu;
+
+    @FindBy (xpath = "(//*[@class=\"btn btn-icon btn-sm btn-danger deleteDialog\"])[1]")
+    public WebElement featuresIlkOzellikDeleteButonu;
+
+    @FindBy (xpath = "//*[@class=\"float-end btn btn-danger delete-crud-entry\"]")
+    public WebElement alertDeleteButonu;
+
+    @FindBy (xpath = "//*[@class=\"toast toast-success\"]")
+    public WebElement alertDeleteText;
+
+    @FindBy (xpath = "//*[@href=\"https://qa.hauseheaven.com/admin/real-estate/facilities\"]")
+    public WebElement adRealEstateFacilities;
+
+    @FindBy (xpath = "//*[@class=\" text-start column-key-name\"]")
+    public List <WebElement> facilitiesPageFacilitiesList;
+
+    @FindBy (xpath = "//*[@class=\"btn btn-secondary action-item\"]")
+    public WebElement facilitiesCreateButonu;
+
+    @FindBy (id = "icon")
+    public WebElement facilitiesCreateIconDropdownBox;
+
+    @FindBy (xpath = "(//*[@type=\"submit\"])[1]")
+    public WebElement facilitiesSaveExitButonu;
+
+    @FindBy (xpath = "//*[@class=\"toast toast-success\"]")
+    public WebElement facilitiesAlertBox;
+
+    @FindBy (xpath = "//*[@class=\"form-control\"]")
+    public WebElement facilitiesCreateTitleTextBox;
+
+    @FindBy (xpath = "//*[text()=\"Facilities Test\"]")
+    public WebElement facilitiesTest;
+
+    @FindBy (xpath = "//*[@class=\"btn btn-icon btn-sm btn-primary\"]")
+    public List <WebElement> facilitiesEditButonuList;
+
+    @FindBy (xpath = "(//*[@class=\"btn btn-icon btn-sm btn-primary\"])[1]")
+    public WebElement facilitiesIlkOzellikEditButonu;
+
+    @FindBy (xpath = "(//*[@class=\"btn btn-icon btn-sm btn-danger deleteDialog\"])[1]")
+    public WebElement facilitiesIlkOzellikDeleteButonu;
 
 
 
