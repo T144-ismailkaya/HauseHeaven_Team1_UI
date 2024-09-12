@@ -7,7 +7,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class TC_R009 extends TestBaseRapor {
+public class TC_R009CrossBrowser extends TestBaseRapor {
     @Test
     public void Test01(){
 

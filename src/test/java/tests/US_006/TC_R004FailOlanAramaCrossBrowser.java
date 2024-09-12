@@ -8,7 +8,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class TC_R004FailOlanArama extends TestBaseRapor {
+public class TC_R004FailOlanAramaCrossBrowser extends TestBaseRapor {
     @Test
     public void Test01() throws InterruptedException {
 

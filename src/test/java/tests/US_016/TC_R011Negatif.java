@@ -8,7 +8,7 @@ import utilities.Driver;
 import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
-public class TC_R011 extends TestBaseRapor {
+public class TC_R011Negatif extends TestBaseRapor {
     @Test
     public void Test01() {
 
